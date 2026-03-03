@@ -1,3 +1,5 @@
+<!-- Login container, style using CSS "login-container"-->
+
 <template>
     <div class="login-container">
         <h1>Welcome to TripLingo!</h1>
