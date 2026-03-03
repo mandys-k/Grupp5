@@ -2,8 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomeView from "./views/HomeView.vue";
 import QuizView from "./views/QuizView.vue";
-import loginView from "./views/loginView.vue";
-import levelsView from "./views/levelsView.vue";
+import LoginView from "./views/LoginView.vue";
+import LevelsView from "./views/LevelsView.vue";
 
 
 export default createRouter({
@@ -18,12 +18,12 @@ export default createRouter({
             path: "/quiz",
         },
          {
-            component: levelsView,
-            path: "./views/levelsView.vue",
+            component: LevelsView,
+            path: "levels",
         },
         {
-            component: loginView,
-            path: ".views/loginView.vue",
+            component: LoginView,
+            path: "/login",
         },
     ],
 });

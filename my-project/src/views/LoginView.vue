@@ -3,7 +3,13 @@
 <template>
     <div class="login-container">
         <h1>Welcome to TripLingo!</h1>
-        <p>Login to continue</p>
+        <p>Login to continue
+        <input v-model="nameInput" type="text" placeholder="Enter your Username" />
+        <br>        
+        
+        <button @click="userStore.login(nameInput); router.push('/levels')">Login</button>
+
+        </p>
     </div>
 </template>
 
