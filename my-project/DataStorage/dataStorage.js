@@ -1,21 +1,34 @@
+  // Logic for handling localStorage.
+  // default level is 1. If there is data in localStorage, 
+  // it will be used instead - SAK
+
 import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    // Logic for handling localStorage. First set to null, default level is 1. If there is data in localStorage, it will be used instead - SAK
-    user: JSON.parse(localStorage.getItem('tripLingoUser')) || null,
-    currentLevel: parseInt(localStorage.getItem('tripLingoLevel')) || 1,
+    // Load existing data from localStorage or set default values - SAK
+    username: localStorage.getItem('tripLingo_user') || '',
+    currentLevel: parseInt(localStorage.getItem('tripLingo_level')) || 1,
+    isLoggedIn: !!localStorage.getItem('tripLingo_user')
   }),
   actions: {
-    login(name) {
-      this.user = { name };
-      localStorage.setItem('tripLingUser', JSON.stringify(this.user));
+    registerUser(name) {
+      this.username = name;
+      this.isLoggedIn = true;
+      localStorage.setItem('tripLingo_user', name);
+      localStorage.setItem('tripLingo_level', this.currentLevel);
     },
-    updateProgress(newLevel) {
-      if (newLevel > this.currentLevel) {
-        this.currentLevel = newLevel;
-        localStorage.setItem('tripLingLevel', this.currentLevel);
+    completeLevel(levelId) {
+      // Only unlock next level if the user just finished their highest reached level-SAK
+      if (levelId === this.currentLevel) {
+        this.currentLevel++;
+        localStorage.setItem('tripLingo_level', this.currentLevel);
       }
+    },
+    logout() {
+      this.username = '';
+      this.isLoggedIn = false;
+      localStorage.clear();
     }
   }
 })
