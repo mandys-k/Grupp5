@@ -15,6 +15,7 @@
 </script>
 
 <template>
+    <Hero msg="Your next adventure begins with the next word."/>
     <GroupInfoCard />
 </template>
 
