@@ -1,18 +1,28 @@
 <script>
-import NavbarHome from './components/NavbarHome.vue';
+    import DarkMode from "./components/DarkMode.vue"
 
-export default {
-    components: {
-        NavbarHome
-    },
-};
+    export default {
+        components: {
+            DarkMode
+        }
+    }
 </script>
 
 <template>
-    <header>
-        <NavbarHome />
-    </header>
+    <DarkMode />
+
     <main>
         <RouterView />
     </main>
 </template>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap");
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+</style>

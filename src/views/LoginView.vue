@@ -5,16 +5,16 @@
         <h1>Welcome to TripLingo!</h1>
         <p>Login to continue
         <input v-model="nameInput" type="text" placeholder="Enter your Username" />
-        <br>        
-        
+        <br>
+
        <button @click="userStore.registerUser(nameInput); router.push('/levels')">Login</button>
 
         </p>
     </div>
 </template>
 
-<!--Script logic for the LoginView. 
-If user is registered their values will be imported 
+<!--Script logic for the LoginView.
+If user is registered their values will be imported
 Added placeholder variables for use later in template - SAK -->
 
 <script setup>
@@ -27,4 +27,3 @@ const nameInput = ref('')
 const userStore = useUserStore()
 const router = useRouter()
 </script>
-
