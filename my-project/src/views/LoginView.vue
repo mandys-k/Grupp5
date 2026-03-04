@@ -7,7 +7,7 @@
         <input v-model="nameInput" type="text" placeholder="Enter your Username" />
         <br>        
         
-        <button @click="userStore.login(nameInput); router.push('/levels')">Login</button>
+       <button @click="userStore.registerUser(nameInput); router.push('/levels')">Login</button>
 
         </p>
     </div>
@@ -19,7 +19,7 @@ Added placeholder variables for use later in template - SAK -->
 
 <script setup>
 import { ref } from 'vue'
-import { useUserStore } from '../dataStorage/dataStorage'
+import { useUserStore } from '../dataStorage/dataStorage.js'
 import { useRouter } from 'vue-router'
 
 
