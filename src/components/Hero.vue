@@ -12,7 +12,7 @@
       
           <b-img src="/assets/Logo.png" fluid alt="Responsive image"></b-img>
           <h1>{{ msg }}</h1>
-          <b-button href="#" variant="success">Sign in</b-button>
+          <b-button to="/login" variant="success">Sign in</b-button>
 
     </b-container>
   </div>
@@ -27,6 +27,7 @@
     );
   min-height: 60vh;
   padding-bottom: 80px;
+  margin-bottom: 40px;
 }
 </style>
 

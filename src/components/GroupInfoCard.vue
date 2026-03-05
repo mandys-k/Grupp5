@@ -1,11 +1,11 @@
-<script>
-</script>
-
 <template>
-    <div class="d-flex justify-content-center">
-    <b-card-group deck>
+    
+    <h2 class="text-center" >Why do you want to learn a new language?</h2>
+
+    <div class="d-flex justify-content-center ">
+    <b-card-group deck >
     <div>
-    <b-card
+    <b-card 
         title="Leisure Travelers"
         img-src="/assets/groupimage/InterestTravelers.jpg"
         img-alt="Leisure Travelers"
@@ -182,6 +182,6 @@
 
 </template>
 
-<style>
+<script>
+</script>
 
-</style>

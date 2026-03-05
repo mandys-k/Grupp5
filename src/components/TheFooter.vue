@@ -4,7 +4,7 @@
       <b-row>
       
         <b-col sm="4">
-          <h2>TripLingo</h2>
+          <h2><b>TripLingo</b></h2>
           <p>Your partner in language learning and global adventures. We make communication simple — wherever you are in the world.</p>
         </b-col>
         <b-col sm="4">
