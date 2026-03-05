@@ -11,12 +11,13 @@
 </script>
 
 <template>
-    <TheHeader />
-    <DarkMode />
-
-    <main>
-        <RouterView />
-    </main>
+    <div :class= "darkMode ? 'dark-mode' : 'light-mode'">
+        <TheHeader />
+        <DarkMode />
+        <main>
+            <RouterView />
+        </main>
+    </div>
 </template>
 
 <style>
@@ -27,5 +28,15 @@
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
+    }
+
+    .light-mode {
+        color: black;
+        background-color: white;
+    }
+
+    .dark-mode {
+        color: white;
+        background-color: black;
     }
 </style>
