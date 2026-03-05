@@ -21,7 +21,7 @@ export default createRouter({
         },
          {
             component: LevelsView,
-            path: "levels",
+            path: "/levels",
         },
         {
             component: LoginView,
