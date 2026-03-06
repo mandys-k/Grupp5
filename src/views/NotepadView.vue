@@ -1,5 +1,5 @@
 <template>
-    <h1>Levels</h1>
+    <h1>Notepad</h1>
 </template>
 
 <script></script>

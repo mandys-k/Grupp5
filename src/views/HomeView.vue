@@ -20,7 +20,8 @@
       Hero,
       GroupInfoCard,
       BusinessSection,
-      TheFooter
+      TheFooter,
+
     }
   }
 </script>

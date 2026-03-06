@@ -34,7 +34,12 @@
   padding-bottom: 80px;
 
 }
+h2 {
+  font-weight: bold;
+  margin-bottom: 10%;
+}
 p {
   font-size: large;
+  margin-right:5%
 }
 </style>

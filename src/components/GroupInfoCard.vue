@@ -19,7 +19,7 @@
         Learn essential phrases to feel confident, connect with locals, and navigate new places with ease.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -38,7 +38,7 @@
         Build practical language skills for meetings, networking, and frequent international travel.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -58,7 +58,7 @@
         Develop deeper language skills to integrate, work remotely, and thrive abroad long-term.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -77,7 +77,7 @@
         Learn a new language for personal growth, curiosity, and the joy of communication.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -97,7 +97,7 @@
         Support employees with structured language training for smoother international operations.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -116,7 +116,7 @@
         Offer travelers language support to improve confidence and customer experience abroad.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -135,7 +135,7 @@
         Offer travelers language support to improve confidence and customer experience abroad.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -155,7 +155,7 @@
         Invest in scalable language solutions designed for a global, mobile audience.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
 
@@ -174,7 +174,7 @@
         Leverage insights and user engagement tools to reach international markets effectively.
         </b-card-text>
 
-        <b-button href="#" variant="primary">Start Learning</b-button>
+        <b-button to="/levels" variant="primary">Start Learning</b-button>
     </b-card>
     </div>
     </b-card-group>
