@@ -1,17 +1,22 @@
 <script>
     import DarkMode from "./components/DarkMode.vue"
     import TheHeader from "./components/TheHeader.vue"
+    import { mapStores } from "pinia"
+    import { useThemeStore } from "./stores/themeStore.js"
 
     export default {
         components: {
             DarkMode,
             TheHeader
+        },
+        computed: {
+            ...mapStores(useThemeStore)
         }
     }
 </script>
 
 <template>
-    <div :class= "darkMode ? 'dark-mode' : 'light-mode'">
+    <div :class="themeStore.darkMode ? 'dark-mode' : 'light-mode'">
         <TheHeader />
         <DarkMode />
         <main>
@@ -31,12 +36,12 @@
     }
 
     .light-mode {
-        color: black;
-        background-color: white;
+        color: #000;
+        background-color: #fff;
     }
 
     .dark-mode {
-        color: white;
-        background-color: black;
+        color: #fff;
+        background-color: #000;
     }
 </style>

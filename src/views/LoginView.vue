@@ -19,7 +19,7 @@ Added placeholder variables for use later in template - SAK -->
 
 <script setup>
 import { ref } from 'vue'
-import { useUserStore } from '../dataStorage/dataStorage.js'
+import { useUserStore } from '../stores/dataStorage.js'
 import { useRouter } from 'vue-router'
 
 

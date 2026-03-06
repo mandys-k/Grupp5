@@ -1,12 +1,15 @@
-<!-- <script>
-import { mapStores } from "pinia"
-import { useThemeStore } from "../dataStorage/themeStore.js"
+<script>
+    import { mapStores } from "pinia"
+    import { useThemeStore } from "../stores/themeStore.js"
 
-export default {
-    computed: {
-        ...mapStores(useThemeStore)
+    export default {
+        computed: {
+            ...mapStores(useThemeStore)
+        },
+        created() {
+            this.themeStore.saveTheme()
+        }
     }
-}
 </script>
 
 <template>
@@ -15,4 +18,3 @@ export default {
         Dark mode
     </button>
 </template>
- -->

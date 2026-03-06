@@ -73,7 +73,7 @@
             type="button"
             class="timer-button"
         >
-            Five minutes
+            5 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
         </button>
 
@@ -83,7 +83,7 @@
             type="button"
             class="timer-button"
         >
-            Ten minutes
+            10 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
         </button>
 
@@ -93,8 +93,7 @@
             type="button"
             class="timer-button"
         >
-            <!-- :disabled="timer" -->
-            Fifteen minutes
+            15 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
         </button>
 
