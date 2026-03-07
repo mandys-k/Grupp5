@@ -10,7 +10,7 @@
 
 
         <b-col cols="6" class="d-md-none text-end">
-          <button class="hamburger" @click="toggleMenu">
+          <button class="hamburger" @click="navbarmenu">
             ☰
           </button>
         </b-col>
@@ -29,12 +29,12 @@
 
 
     <div v-if="hamburgerClicked" class="mobile-menu d-md-none">
-      <RouterLink to="/" @click="toggleMenu">Home</RouterLink>
-      <RouterLink to="/levelmap" @click="toggleMenu">Levelmap</RouterLink>
-      <RouterLink to="/notepad" @click="toggleMenu">Notepad</RouterLink>
-      <RouterLink to="/saved" @click="toggleMenu">Saved</RouterLink>
-      <RouterLink to="/quiz" @click="toggleMenu">Quiz</RouterLink>
-      <RouterLink to="/user" @click="toggleMenu">User</RouterLink>
+      <RouterLink to="/" @click="navbarmenu">Home</RouterLink>
+      <RouterLink to="/levelmap" @click="navbarmenu">Levelmap</RouterLink>
+      <RouterLink to="/notepad" @click="navbarmenu">Notepad</RouterLink>
+      <RouterLink to="/saved" @click="navbarmenu">Saved</RouterLink>
+      <RouterLink to="/quiz" @click="navbarmenu">Quiz</RouterLink>
+      <RouterLink to="/user" @click="navbarmenu">User</RouterLink>
     </div>
 
   </header>
@@ -48,7 +48,7 @@ export default {
     }
   },
   methods:{
-    toggleMenu(){
+    navbarmenu(){
       this.hamburgerClicked = !this.hamburgerClicked
     }
   }
