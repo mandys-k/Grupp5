@@ -12,9 +12,13 @@
       
           <b-img src="/assets/Logo.png" fluid alt="Responsive image"></b-img>
           <h1>{{ msg }}</h1>
-          <b-button href="#" variant="success">Sign in</b-button>
+          <b-button href="#" variant="success">Sign in</b-button><br><br>
+          <p>New User?</p>
+          <b-button href='#'variant="success">Register Here</b-button>
+          
 
     </b-container>
+    
   </div>
 </template>
 
