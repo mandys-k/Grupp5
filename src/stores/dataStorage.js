@@ -1,34 +1,112 @@
-  // Logic for handling localStorage.
-  // default level is 1. If there is data in localStorage, 
-  // it will be used instead - SAK
-
+// Imports — pulls in Pinia's defineStore to create the shared user store - SAK
 import { defineStore } from 'pinia'
 
+// Help functions — read and write user data to localStorage - SAK
+function loadUsers() {
+  try {
+    return JSON.parse(localStorage.getItem('tripLingo_users')) || []
+  } catch {
+    return []
+  }
+}
+
+function saveUsers(users) {
+  localStorage.setItem('tripLingo_users', JSON.stringify(users))
+}
+
 export const useUserStore = defineStore('user', {
-  state: () => ({
-    // Load existing data from localStorage or set default values - SAK
-    username: localStorage.getItem('tripLingo_user') || '',
-    currentLevel: parseInt(localStorage.getItem('tripLingo_level')) || 1,
-    isLoggedIn: !!localStorage.getItem('tripLingo_user')
-  }),
-  actions: {
-    registerUser(name) {
-      this.username = name;
-      this.isLoggedIn = true;
-      localStorage.setItem('tripLingo_user', name);
-      localStorage.setItem('tripLingo_level', this.currentLevel);
+
+  state: () => {
+    const users = loadUsers()
+    const currentEmail = localStorage.getItem('tripLingo_session') || null
+    const currentUser = users.find(u => u.email === currentEmail) || null
+
+    return {
+      users,
+      currentEmail,
+      currentName: currentUser ? currentUser.name : '',
+      currentLevel: currentUser ? currentUser.level : 1,
+      currentTravellerType: currentUser ? currentUser.travellerType : '',
+      currentLanguage: currentUser ? currentUser.language : '',
+      isLoggedIn: !!currentEmail && !!currentUser,
+    }
+  },
+
+  
+  getters: {
+    travellerType: (state) => {
+      if (state.currentLevel <= 3) return 'Beginner Traveller'
+      if (state.currentLevel <= 6) return 'Intermediate Traveller'
+      if (state.currentLevel <= 8) return 'Experienced Traveller'
+      return 'Expert Traveller'
     },
+  },
+
+  // Actions — functions that update state and sync changes to localStorage - SAK
+  actions: {
+    registerUser(name, email, password, language, travellerType) {
+      if (this.users.find(u => u.name.toLowerCase() === name.toLowerCase())) {
+        return { success: false, message: 'That username is already taken. Please choose another.' }
+      }
+
+      if (this.users.find(u => u.email === email)) {
+        return { success: false, message: 'An account with this email already exists.' }
+      }
+
+      const newUser = { name, email, password, level: 1, language, travellerType }
+      this.users.push(newUser)
+      saveUsers(this.users)
+
+      this.currentEmail = email
+      this.currentName = name
+      this.currentLevel = 1
+      this.currentTravellerType = travellerType
+      this.currentLanguage = language
+      this.isLoggedIn = true
+      localStorage.setItem('tripLingo_session', email)
+
+      return { success: true }
+    },
+
+    loginUser(email, password) {
+      const user = this.users.find(u => u.email === email && u.password === password)
+
+      if (!user) {
+        return {
+          success: false,
+          message: 'Incorrect email or password. Please check your credentials or register an account.',
+        }
+      }
+
+      this.currentEmail = email
+      this.currentName = user.name
+      this.currentLevel = user.level
+      this.currentTravellerType = user.travellerType || ''
+      this.currentLanguage = user.language || ''
+      this.isLoggedIn = true
+      localStorage.setItem('tripLingo_session', email)
+
+      return { success: true }
+    },
+
     completeLevel(levelId) {
-      // Only unlock next level if the user just finished their highest reached level-SAK
       if (levelId === this.currentLevel) {
-        this.currentLevel++;
-        localStorage.setItem('tripLingo_level', this.currentLevel);
+        this.currentLevel++
+
+        const user = this.users.find(u => u.email === this.currentEmail)
+        if (user) {
+          user.level = this.currentLevel
+          saveUsers(this.users)
+        }
       }
     },
+
     logout() {
-      this.username = '';
-      this.isLoggedIn = false;
-      localStorage.clear();
-    }
-  }
+      this.currentEmail = null
+      this.currentName = ''
+      this.isLoggedIn = false
+      this.currentLevel = 1
+      localStorage.removeItem('tripLingo_session')
+    },
+  },
 })
