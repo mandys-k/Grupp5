@@ -5,6 +5,8 @@ export const useThemeStore = defineStore("theme", {
         onDarkMode() {
             this.darkMode = !this.darkMode
 
+            this.darkModeOn = !this.darkModeOn
+
             localStorage.setItem("theme", JSON.stringify(this.darkMode))
         },
         saveTheme() {
@@ -14,5 +16,5 @@ export const useThemeStore = defineStore("theme", {
             }
         }
     },
-    state: () => ({ darkMode: false })
+    state: () => ({ darkMode: false, darkModeOn: false })
 })
