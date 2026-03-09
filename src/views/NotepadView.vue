@@ -1,5 +1,16 @@
+
 <template>
-    <h1>Notepad</h1>
+    <MyNotes />
 </template>
 
-<script></script>
+<script>
+  import MyNotes from "../components/MyNotes.vue";
+
+  export default {
+    components: {
+      MyNotes,
+
+    }
+  }
+
+</script>
