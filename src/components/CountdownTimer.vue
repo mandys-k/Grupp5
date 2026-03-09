@@ -13,8 +13,6 @@
         },
         methods: {
             onStartTimer() {
-                if (this.timer) return
-
                 this.totalSeconds = this.startingMinutes * 60
 
                 this.timer = setInterval(() => {
@@ -59,25 +57,19 @@
 </script>
 
 <template>
-    <div class="timer-container">
-        <p>Pick how long you want to study</p>
-        <div v-if="timer">
-            <span>{{ minutes }}</span>
-            <span>:</span>
-            <span>{{ seconds }}</span>
-        </div>
+    <p>Pick how long you want to study</p>
 
-        <button
+    <div class="time-container">
+        <BButton
             v-if="!timer"
             @click="onShortTimer"
             type="button"
-            class="timer-button"
+            class="timer-button five-min-button"
         >
             5 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
-        </button>
-
-        <button
+        </BButton>
+        <BButton
             v-if="!timer"
             @click="onStartTimer"
             type="button"
@@ -85,9 +77,8 @@
         >
             10 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
-        </button>
-
-        <button
+        </BButton>
+        <BButton
             v-if="!timer"
             @click="onLongTimer"
             type="button"
@@ -95,13 +86,17 @@
         >
             15 minutes
             <span class="material-symbols-outlined"> play_arrow </span>
-        </button>
+        </BButton>
+    </div>
 
-        <button v-if="timer" type="button" class="play-button">
-            <span class="material-symbols-outlined"> timer_play </span>
-        </button>
+    <div class="timer-container">
+        <div class="min-sec-container" v-if="timer">
+            <span>{{ minutes }}</span>
+            <span>:</span>
+            <span>{{ seconds }}</span>
+        </div>
 
-        <p v-if="replay">Time's up!</p>
+        <span v-if="timer" class="material-symbols-outlined"> timer_play </span>
 
         <span
             v-if="replay"
@@ -112,20 +107,34 @@
         </span>
     </div>
 
-    <h2>Testar fonts</h2>
-    <h3>Testar fonts</h3>
+    <p v-if="replay">Time's up!</p>
 </template>
 
 <style scoped>
-    button {
+    .timer-button {
         font-family: "Varela Round", sans-serif;
+        display: flex;
+        padding: 0.5em;
     }
 
-    h2 {
+    .timer-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .time-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    /*
         font-family: "PT serif", serif;
-    }
-
-    h3 {
         font-family: "Jost", sans-serif;
-    }
+    */
 </style>
