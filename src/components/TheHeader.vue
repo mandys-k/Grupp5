@@ -17,11 +17,9 @@
 
         <b-col md="8" class="d-none d-md-flex justify-content-end nav-links">
           <RouterLink to="/UserDashboard">Dashboard</RouterLink>
-          <RouterLink to="/levelCard">Levels</RouterLink>
+          <RouterLink to="/levels">Levels</RouterLink>
           <RouterLink to="/notepad">Notepad</RouterLink>
           <RouterLink to="/saved">Saved</RouterLink>
-          <RouterLink to="/quiz">Quiz</RouterLink>
-          <RouterLink to="/user">User</RouterLink>
         </b-col>
 
       </b-row>
@@ -30,11 +28,9 @@
 
     <div v-if="hamburgerClicked" class="mobile-menu d-md-none">
       <RouterLink to="/UserDashboard" @click="navbarmenu">Dashboard</RouterLink>
-      <RouterLink to="/levelCard" @click="navbarmenu">Levels</RouterLink>
+      <RouterLink to="/levels" @click="navbarmenu">Levels</RouterLink>
       <RouterLink to="/notepad" @click="navbarmenu">Notepad</RouterLink>
       <RouterLink to="/saved" @click="navbarmenu">Saved</RouterLink>
-      <RouterLink to="/quiz" @click="navbarmenu">Quiz</RouterLink>
-      <RouterLink to="/user" @click="navbarmenu">User</RouterLink>
     </div>
 
   </header>
