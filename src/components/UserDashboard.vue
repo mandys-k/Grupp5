@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-wrap gap-3 mx-auto my-5 px-3" style="max-width: 860px;">
 
-    <!-- LEFT CARD — Profile summary - SAK-->
+    <!-- LEFT CARD (Desktop) — Profile summary - SAK-->
     <div class="card p-4 d-flex flex-column align-items-center text-center flex-grow-1" style="min-width: 240px;">
 
       <img src="/assets/happy-bird.png" alt="TripLingo userimage" class="userimage mb-3" />
@@ -15,7 +15,7 @@
       <button class="btn btn-outline-danger" @click="handleLogout">Log Out</button>
     </div>
 
-    <!-- RIGHT CARD — Progress summary - SAK -->
+    <!-- RIGHT CARD (Desktop) — Progress summary - SAK -->
     <div class="card p-4 flex-grow-1" style="min-width: 260px;">
       <h2 class="fw-bold mb-4" style="font-size: 1.3rem;">Your Progress</h2>
 

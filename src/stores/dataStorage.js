@@ -34,12 +34,7 @@ export const useUserStore = defineStore('user', {
 
   
   getters: {
-    travellerType: (state) => {
-      if (state.currentLevel <= 3) return 'Beginner Traveller'
-      if (state.currentLevel <= 6) return 'Intermediate Traveller'
-      if (state.currentLevel <= 8) return 'Experienced Traveller'
-      return 'Expert Traveller'
-    },
+    travellerType: (state) => state.currentTravellerType,
   },
 
   // Actions — functions that update state and sync changes to localStorage - SAK

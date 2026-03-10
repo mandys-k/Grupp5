@@ -53,15 +53,17 @@ const password = ref('')
 const errorMessage = ref('')
 const userStore = useUserStore()
 const router = useRouter()
-const result = userStore.loginUser(email.value, password.value)
+
 
 function handleLogin() {
+
+const result = userStore.loginUser(email.value, password.value)
 
   errorMessage.value = ''
 
   if (result.success) {
     
-    router.push('/')
+    router.push('/UserDashboard')
   } else {
     errorMessage.value = result.message
   }
