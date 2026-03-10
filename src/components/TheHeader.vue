@@ -5,7 +5,7 @@
 
 
         <b-col cols="6" md="4" class="triplingo">
-          <RouterLink to="/"><h2>TripLingo</h2></RouterLink>
+          <RouterLink to="/"><img src="/assets/Logotext.png" alt="TripLingo" class="logo-img" /></RouterLink>
         </b-col>
 
 
@@ -55,11 +55,23 @@ export default {
 
 .header-navbar{
   background-color: rgba(11, 11, 98, 0.9);
+  padding: 10px;
 }
 
 .triplingo a{
   color: white;
   text-decoration: none;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    height: 44px;
+  }
 }
 
 .nav-links{
