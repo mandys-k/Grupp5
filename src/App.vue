@@ -1,12 +1,10 @@
 <script>
-    import DarkMode from "./components/DarkMode.vue"
     import TheHeader from "./components/TheHeader.vue"
     import { mapStores } from "pinia"
     import { useThemeStore } from "./stores/themeStore.js"
 
     export default {
         components: {
-            DarkMode,
             TheHeader
         },
         computed: {
@@ -18,7 +16,6 @@
 <template>
     <div :class="themeStore.darkMode ? 'dark-mode' : 'light-mode'">
         <TheHeader />
-        <DarkMode />
         <main>
             <RouterView />
         </main>
