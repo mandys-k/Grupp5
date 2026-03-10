@@ -54,7 +54,7 @@ export default {
 <style>
 
 .header-navbar{
-  background-color: rgba(11, 11, 98, 0.9);
+  background-color: rgba(255, 255, 255, 0);
   padding: 10px;
 }
 
@@ -80,7 +80,7 @@ export default {
 }
 
 .nav-links a{
-  color:white;
+  color: rgba(11,11,98,0.95);
   text-decoration:none;
 }
 
@@ -92,7 +92,7 @@ export default {
 .hamburger{
   background:none;
   border:none;
-  color:white;
+  color:rgba(11,11,98,0.95);;
 
 }
 
