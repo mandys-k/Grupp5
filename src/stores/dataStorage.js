@@ -64,6 +64,7 @@ export const useUserStore = defineStore('user', {
     },
 
     loginUser(email, password) {
+      this.users = loadUsers()
       const user = this.users.find(u => u.email === email && u.password === password)
 
       if (!user) {
@@ -101,6 +102,8 @@ export const useUserStore = defineStore('user', {
       this.currentName = ''
       this.isLoggedIn = false
       this.currentLevel = 1
+      this.currentTravellerType = ''
+      this.currentLanguage = ''
       localStorage.removeItem('tripLingo_session')
     },
   },
