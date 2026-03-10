@@ -2,6 +2,8 @@
     <div class="reading-container">
 
 
+
+
     <h1>Reading Comprehension Italiano</h1>
     <div class="text-box">
         <h2>Testo</h2>
@@ -14,22 +16,26 @@
         </p>
         </div>
 
+
     <div class="question">
         <h2>Domande</h2>
-        
-            
+       
+           
     <div class="question">
             <p>1. Perché Maria è a Roma?</p>
+
 
             <label>
                 <input type="radio" value="vacanza" v-model="answers.q1">
                 Per vacanza
                     </label>
 
+
          <label>
                     <input type="radio" value="lavoro" v-model="answers.q1">
                     Per lavoro
                 </label>
+
 
                 <label>
                     <input type="radio" value="studio" v-model="answers.q1">
@@ -37,18 +43,22 @@
                 </label>
             </div>
 
+
             <div class="question">
                 <p>2. Dove incontra i suoi colleghi?</p>
+
 
                 <label>
                     <input type="radio" value="bar" v-model="answers.q2">
                     In un bar
                 </label>
 
+
                 <label>
                     <input type="radio" value="hotel" v-model="answers.q2">
                     In hotel
                 </label>
+
 
                 <label>
                     <input type="radio" value="ristorante" v-model="answers.q2">
@@ -56,18 +66,22 @@
                 </label>
             </div>
 
+
             <div class="question">
                 <p>3. Cosa mangia Maria?</p>
+
 
                 <label>
                     <input type="radio" value="pizza" v-model="answers.q3">
                     Pizza
                 </label>
 
+
                 <label>
                     <input type="radio" value="pasta" v-model="answers.q3">
                     Pasta
                 </label>
+
 
                 <label>
                     <input type="radio" value="insalata" v-model="answers.q3">
@@ -75,12 +89,18 @@
                 </label>
             </div>
 
+
         <button @click="checkAnswers">Check answers</button>
+
 
         <p v-if="result !== null" class="result">
             You got {{ result }} / 3 correct
         </p>
 
+
     </div>
     </div>
 </template>
+
+
+
