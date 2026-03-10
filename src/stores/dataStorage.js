@@ -11,7 +11,9 @@ function loadUsers() {
 }
 
 function saveUsers(users) {
-  localStorage.setItem('tripLingo_users', JSON.stringify(users))
+  const plain = users.map(u => ({ ...u }))
+  console.log('[saveUsers] saving:', plain)
+  localStorage.setItem('tripLingo_users', JSON.stringify(plain))
 }
 
 export const useUserStore = defineStore('user', {
@@ -64,8 +66,10 @@ export const useUserStore = defineStore('user', {
     },
 
     loginUser(email, password) {
-      this.users = loadUsers()
-      const user = this.users.find(u => u.email === email && u.password === password)
+      const latestUsers = loadUsers()
+      console.log('[loginUser] loaded users:', latestUsers)
+      console.log('[loginUser] attempting login with email:', email, 'password:', password)
+      const user = latestUsers.find(u => u.email === email && u.password === password)
 
       if (!user) {
         return {
@@ -74,6 +78,7 @@ export const useUserStore = defineStore('user', {
         }
       }
 
+      this.users = latestUsers
       this.currentEmail = email
       this.currentName = user.name
       this.currentLevel = user.level
