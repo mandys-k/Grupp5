@@ -10,7 +10,9 @@ import RegisterView from "./views/RegisterView.vue";
 import UserDashboard from "./components/UserDashboard.vue";
 
 
-export default createRouter({
+const protectedRoutes = ['/UserDashboard', '/levels', '/quiz', '/notepad', '/saved']
+
+const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
@@ -36,13 +38,22 @@ export default createRouter({
             component: LoginView,
             path: "/login",
         },
-                {
+        {
             component: NotepadView,
             path: "/notepad",
         },
-                {
+        {
             component: SavedView,
             path: "/saved",
         },
     ],
 });
+
+router.beforeEach((to) => {
+    const isLoggedIn = !!localStorage.getItem('tripLingo_session')
+    if (protectedRoutes.includes(to.path) && !isLoggedIn) {
+        return '/login'
+    }
+})
+
+export default router

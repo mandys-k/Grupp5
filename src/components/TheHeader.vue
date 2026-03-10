@@ -49,7 +49,12 @@
 
             <b-row class="align-items-center">
                 <b-col cols="6" md="4" class="triplingo">
-                    <RouterLink to="/"><h2>TripLingo</h2></RouterLink>
+                    <RouterLink to="/"
+                        ><img
+                            src="/assets/Logotext.png"
+                            alt="TripLingo"
+                            class="logo-img"
+                    /></RouterLink>
                 </b-col>
 
                 <b-col cols="6" class="d-md-none text-end">
@@ -60,23 +65,21 @@
                     md="8"
                     class="d-none d-md-flex justify-content-end nav-links"
                 >
-                    <RouterLink to="/">Dashboard</RouterLink>
-                    <RouterLink to="/levelmap">Levelmap</RouterLink>
+                    <RouterLink to="/UserDashboard">Dashboard</RouterLink>
+                    <RouterLink to="/levels">Levels</RouterLink>
                     <RouterLink to="/notepad">Notepad</RouterLink>
                     <RouterLink to="/saved">Saved</RouterLink>
-                    <RouterLink to="/quiz">Quiz</RouterLink>
-                    <RouterLink to="/user">User</RouterLink>
                 </b-col>
             </b-row>
         </b-container>
 
         <div v-if="hamburgerClicked" class="mobile-menu d-md-none">
-            <RouterLink to="/" @click="navbarmenu">Dashboard</RouterLink>
-            <RouterLink to="/levelmap" @click="navbarmenu">Levelmap</RouterLink>
+            <RouterLink to="/UserDashboard" @click="navbarmenu"
+                >Dashboard</RouterLink
+            >
+            <RouterLink to="/levels" @click="navbarmenu">Levels</RouterLink>
             <RouterLink to="/notepad" @click="navbarmenu">Notepad</RouterLink>
             <RouterLink to="/saved" @click="navbarmenu">Saved</RouterLink>
-            <RouterLink to="/quiz" @click="navbarmenu">Quiz</RouterLink>
-            <RouterLink to="/user" @click="navbarmenu">User</RouterLink>
         </div>
     </header>
 </template>
@@ -89,6 +92,10 @@
     .triplingo a {
         color: white;
         text-decoration: none;
+    }
+    .header-navbar {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 10px;
     }
 
     .nav-links {
@@ -103,6 +110,26 @@
 
     .nav-links a:hover {
         text-decoration: underline;
+    }
+    .logo-img {
+        height: 32px;
+        width: auto;
+    }
+
+    @media (min-width: 768px) {
+        .logo-img {
+            height: 44px;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        color: rgba(11, 11, 98, 0.95);
+        text-decoration: none;
     }
 
     .hamburger {
@@ -122,6 +149,12 @@
     .mobile-menu a {
         color: white;
         text-decoration: none;
+    }
+
+    .hamburger {
+        background: none;
+        border: none;
+        color: rgba(11, 11, 98, 0.95);
     }
 
     .mobile-menu a:hover {
