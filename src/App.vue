@@ -13,7 +13,8 @@
         computed: {
             ...mapStores(useThemeStore, useUserStore),
             showHeader() {
-                return this.userStore.isLoggedIn && this.$route.path !== '/'
+                const hiddenRoutes = ['/', '/login', '/register']
+                return this.userStore.isLoggedIn && !hiddenRoutes.includes(this.$route.path)
             }
         }
     }
