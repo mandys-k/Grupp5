@@ -6,6 +6,8 @@ import LoginView from "./views/LoginView.vue";
 import LevelsView from "./views/LevelsView.vue";
 import NotepadView from "./views/NotepadView.vue";
 import SavedView from "./views/SavedView.vue";
+import RegisterView from "./views/RegisterView.vue";
+import UserDashboard from "./components/UserDashboard.vue";
 
 
 export default createRouter({
@@ -15,6 +17,9 @@ export default createRouter({
             component: HomeView,
             path: "/",
         },
+        {   component: UserDashboard,
+            path: "/UserDashboard",
+        },
         {
             component: QuizView,
             path: "/quiz",
@@ -22,6 +27,10 @@ export default createRouter({
          {
             component: LevelsView,
             path: "/levels",
+        },
+        {
+            component: RegisterView,
+            path: "/register",
         },
         {
             component: LoginView,

@@ -1,29 +1,7 @@
-<!-- Login container, style using CSS "login-container"-->
-
 <template>
-    <div class="login-container">
-        <h1>Welcome to TripLingo!</h1>
-        <p>Login to continue
-        <input v-model="nameInput" type="text" placeholder="Enter your Username" />
-        <br>
-
-       <button @click="userStore.registerUser(nameInput); router.push('/levels')">Login</button>
-
-        </p>
-    </div>
+  <LoginComponent />
 </template>
 
-<!--Script logic for the LoginView.
-If user is registered their values will be imported
-Added placeholder variables for use later in template - SAK -->
-
 <script setup>
-import { ref } from 'vue'
-import { useUserStore } from '../stores/dataStorage.js'
-import { useRouter } from 'vue-router'
-
-
-const nameInput = ref('')
-const userStore = useUserStore()
-const router = useRouter()
+import LoginComponent from '../components/LoginComponent.vue'
 </script>

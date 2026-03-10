@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.43.8",
+    "flag-icons": "^7.5.0",
     "pinia": "^3.0.4",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"
@@ -9,6 +10,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@vitejs/plugin-vue": "^6.0.3",
+    "cypress": "^15.11.0",
     "eslint": "^10.0.2",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
