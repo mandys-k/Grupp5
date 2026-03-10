@@ -168,7 +168,7 @@ function handleRegister() {
   const result = userStore.registerUser(name.value, email.value, password.value, language.value, travellerType.value)
 
   if (result.success) {
-    router.push('/dashboard')
+    router.push('/UserDashboard')
   } else {
     errorMessage.value = result.message
   }

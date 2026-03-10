@@ -3,6 +3,7 @@
     import TheHeader from "./components/TheHeader.vue"
     import { mapStores } from "pinia"
     import { useThemeStore } from "./stores/themeStore.js"
+    import { useUserStore } from "./stores/dataStorage.js"
 
     export default {
         components: {
@@ -10,14 +11,17 @@
             TheHeader
         },
         computed: {
-            ...mapStores(useThemeStore)
+            ...mapStores(useThemeStore, useUserStore),
+            showHeader() {
+                return this.userStore.isLoggedIn && this.$route.path !== '/'
+            }
         }
     }
 </script>
 
 <template>
     <div :class="themeStore.darkMode ? 'dark-mode' : 'light-mode'">
-        <TheHeader />
+        <TheHeader v-if="showHeader" />
         <DarkMode />
         <main>
             <RouterView />
