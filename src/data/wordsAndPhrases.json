@@ -1,0 +1,913 @@
+{
+  "Greeting": [
+    {
+        "id": 1,
+        "word": "Ciao",
+        "Meaning": "Hi / Bye (informal)",
+        "sentence": "Ciao! Come stai?"
+    },
+    {
+        "id": 2,
+        "word": "Buongiorno",
+        "Meaning": "Good morning",
+        "sentence": "Buongiorno, signora!"
+    },
+    {
+        "id": 3,
+        "word": "Buonasera",
+        "Meaning": "Good evening",
+        "sentence": "Buonasera a tutti."
+    },
+    {
+        "id": 4,
+        "word": "Buonanotte",
+        "Meaning": "Good night",
+        "sentence": "Buonanotte, a domani."
+    },
+    {
+        "id": 5,
+        "word": "Salve",
+        "Meaning": "Hello (formal)",
+        "sentence": "Salve, come posso aiutarla?"
+    },
+    {
+        "id": 6,
+        "word": "Arrivederci",
+        "Meaning": "Goodbye (formal)",
+        "sentence": "Arrivederci, buona giornata!"
+    },
+    {
+        "id": 7,
+        "word": "A presto",
+        "Meaning": "See you soon",
+        "sentence": "A presto, ci vediamo dopo."
+    },
+    {
+        "id": 8,
+        "word": "A dopo",
+        "Meaning": "See you later",
+        "sentence": "A dopo al ristorante."
+    },
+    {
+        "id": 9,
+        "word": "A domani",
+        "Meaning": "See you tomorrow",
+        "sentence": "A domani a scuola."
+    },
+    {
+        "id": 10,
+        "word": "Piacere",
+        "Meaning": "Nice to meet you",
+        "sentence": "Piacere, mi chiamo Luca."
+    },
+    {
+        "id": 11,
+        "word": "Come stai?",
+        "Meaning": "How are you? (informal)",
+        "sentence": "Ciao Marco, come stai?"
+    },
+    {
+        "id": 12,
+        "word": "Come sta?",
+        "Meaning": "How are you? (formal)",
+        "sentence": "Buongiorno, come sta?"
+    },
+    {
+        "id": 13,
+        "word": "Tutto bene?",
+        "Meaning": "Everything good?",
+        "sentence": "Ciao! Tutto bene?"
+    },
+    {
+        "id": 14,
+        "word": "Benvenuto",
+        "Meaning": "Welcome (male)",
+        "sentence": "Benvenuto a Roma!"
+    },
+    {
+        "id": 15,
+        "word": "Benvenuta",
+        "Meaning": "Welcome (female)",
+        "sentence": "Benvenuta nel nostro hotel."
+    },
+    {
+        "id": 16,
+        "word": "Grazie",
+        "Meaning": "Thank you",
+        "sentence": "Grazie per l’aiuto."
+    },
+    {
+        "id": 17,
+        "word": "Grazie mille",
+        "Meaning": "Thank you very much",
+        "sentence": "Grazie mille per tutto!"
+    },
+    {
+        "id": 18,
+        "word": "Prego",
+        "Meaning": "You're welcome",
+        "sentence": "Grazie! — Prego."
+    },
+    {
+        "id": 19,
+        "word": "Scusa",
+        "Meaning": "Sorry / Excuse me (informal)",
+        "sentence": "Scusa, dov’è il bagno?"
+    },
+    {
+        "id": 20,
+        "word": "Scusi",
+        "Meaning": "Excuse me (formal)",
+        "sentence": "Scusi, può aiutarmi?"
+    },
+    {
+        "id": 21,
+        "word": "Permesso",
+        "Meaning": "May I / Excuse me (passing)",
+        "sentence": "Permesso, devo passare."
+    },
+    {
+        "id": 22,
+        "word": "Buona giornata",
+        "Meaning": "Have a good day",
+        "sentence": "Buona giornata!"
+    },
+    {
+        "id": 23,
+        "word": "Buona serata",
+        "Meaning": "Have a good evening",
+        "sentence": "Buona serata a tutti."
+    },
+    {
+        "id": 24,
+        "word": "Buon viaggio",
+        "Meaning": "Have a good trip",
+        "sentence": "Buon viaggio a Milano!"
+    },
+    {
+        "id": 25,
+        "word": "Buona fortuna",
+        "Meaning": "Good luck",
+        "sentence": "Buona fortuna per l’esame!"
+    },
+    {
+        "id": 26,
+        "word": "Come ti chiami?",
+        "Meaning": "What’s your name?",
+        "sentence": "Ciao, come ti chiami?"
+    },
+    {
+        "id": 27,
+        "word": "Mi chiamo...",
+        "Meaning": "My name is...",
+        "sentence": "Mi chiamo Anna."
+    },
+    {
+        "id": 28,
+        "word": "Da dove vieni?",
+        "Meaning": "Where are you from?",
+        "sentence": "Da dove vieni?"
+    },
+    {
+        "id": 29,
+        "word": "Piacere di conoscerti",
+        "Meaning": "Nice to meet you (informal)",
+        "sentence": "Piacere di conoscerti!"
+    },
+    {
+        "id": 30,
+        "word": "Ci vediamo",
+        "Meaning": "See you",
+        "sentence": "Ci vediamo presto."
+    }
+    ],
+
+  "Restaurant": [
+    {
+        "id": 1,
+        "word": "Ristorante",
+        "Meaning": "Restaurant",
+        "sentence": "Questo ristorante è molto buono."
+    },
+    {
+        "id": 2,
+        "word": "Tavolo",
+        "Meaning": "Table",
+        "sentence": "Vorrei un tavolo per due."
+    },
+    {
+        "id": 3,
+        "word": "Menù",
+        "Meaning": "Menu",
+        "sentence": "Possiamo vedere il menù?"
+    },
+    {
+        "id": 4,
+        "word": "Cameriere",
+        "Meaning": "Waiter",
+        "sentence": "Il cameriere è molto gentile."
+    },
+    {
+        "id": 5,
+        "word": "Cameriera",
+        "Meaning": "Waitress",
+        "sentence": "La cameriera porta il menù."
+    },
+    {
+        "id": 6,
+        "word": "Vorrei...",
+        "Meaning": "I would like...",
+        "sentence": "Vorrei una pizza, per favore."
+    },
+    {
+        "id": 7,
+        "word": "Per favore",
+        "Meaning": "Please",
+        "sentence": "Acqua naturale, per favore."
+    },
+    {
+        "id": 8,
+        "word": "Grazie",
+        "Meaning": "Thank you",
+        "sentence": "Grazie per il servizio."
+    },
+    {
+        "id": 9,
+        "word": "Il conto",
+        "Meaning": "The bill",
+        "sentence": "Possiamo avere il conto?"
+    },
+    {
+        "id": 10,
+        "word": "Conto separato",
+        "Meaning": "Separate bill",
+        "sentence": "Possiamo fare il conto separato?"
+    },
+    {
+        "id": 11,
+        "word": "Acqua",
+        "Meaning": "Water",
+        "sentence": "Prendiamo una bottiglia d’acqua."
+    },
+    {
+        "id": 12,
+        "word": "Vino",
+        "Meaning": "Wine",
+        "sentence": "Vorrei un bicchiere di vino rosso."
+    },
+    {
+        "id": 13,
+        "word": "Birra",
+        "Meaning": "Beer",
+        "sentence": "Prendo una birra."
+    },
+    {
+        "id": 14,
+        "word": "Antipasto",
+        "Meaning": "Appetizer / Starter",
+        "sentence": "Prendiamo un antipasto da condividere."
+    },
+    {
+        "id": 15,
+        "word": "Primo",
+        "Meaning": "First course (pasta/rice)",
+        "sentence": "Il primo è pasta al pomodoro."
+    },
+    {
+        "id": 16,
+        "word": "Secondo",
+        "Meaning": "Main course (meat/fish)",
+        "sentence": "Il secondo è pollo alla griglia."
+    },
+    {
+        "id": 17,
+        "word": "Contorno",
+        "Meaning": "Side dish",
+        "sentence": "Prendo un contorno di insalata."
+    },
+    {
+        "id": 18,
+        "word": "Dolce",
+        "Meaning": "Dessert",
+        "sentence": "Il dolce è tiramisù."
+    },
+    {
+        "id": 19,
+        "word": "Pizza",
+        "Meaning": "Pizza",
+        "sentence": "La pizza margherita è famosa."
+    },
+    {
+        "id": 20,
+        "word": "Pasta",
+        "Meaning": "Pasta",
+        "sentence": "La pasta è molto buona."
+    },
+    {
+        "id": 21,
+        "word": "Carne",
+        "Meaning": "Meat",
+        "sentence": "Preferisco la carne."
+    },
+    {
+        "id": 22,
+        "word": "Pesce",
+        "Meaning": "Fish",
+        "sentence": "Il pesce è fresco oggi."
+    },
+    {
+        "id": 23,
+        "word": "Vegetariano",
+        "Meaning": "Vegetarian",
+        "sentence": "Hai un piatto vegetariano?"
+    },
+    {
+        "id": 24,
+        "word": "Allergia",
+        "Meaning": "Allergy",
+        "sentence": "Ho un’allergia alle noci."
+    },
+    {
+        "id": 25,
+        "word": "È buono",
+        "Meaning": "It’s good / tasty",
+        "sentence": "Questo piatto è molto buono."
+    },
+    {
+        "id": 26,
+        "word": "È delizioso",
+        "Meaning": "It’s delicious",
+        "sentence": "La pasta è deliziosa."
+    },
+    {
+        "id": 27,
+        "word": "Posso ordinare?",
+        "Meaning": "Can I order?",
+        "sentence": "Scusi, posso ordinare?"
+    },
+    {
+        "id": 28,
+        "word": "Consiglia qualcosa?",
+        "Meaning": "Do you recommend something?",
+        "sentence": "Consiglia qualcosa del menù?"
+    },
+    {
+        "id": 29,
+        "word": "Da asporto",
+        "Meaning": "Takeaway / To go",
+        "sentence": "Vorrei questo da asporto."
+    },
+    {
+        "id": 30,
+        "word": "Prenotazione",
+        "Meaning": "Reservation",
+        "sentence": "Abbiamo una prenotazione per due."
+    }
+    ],
+   "Hotel": [
+    {
+        "id": 1,
+        "word": "Hotel",
+        "Meaning": "Hotel",
+        "sentence": "Questo hotel è molto bello."
+    },
+    {
+        "id": 2,
+        "word": "Reception",
+        "Meaning": "Reception / Front desk",
+        "sentence": "La reception è aperta 24 ore."
+    },
+    {
+        "id": 3,
+        "word": "Prenotazione",
+        "Meaning": "Reservation",
+        "sentence": "Ho una prenotazione."
+    },
+    {
+        "id": 4,
+        "word": "Check-in",
+        "Meaning": "Check-in",
+        "sentence": "Il check-in è alle tre."
+    },
+    {
+        "id": 5,
+        "word": "Check-out",
+        "Meaning": "Check-out",
+        "sentence": "Il check-out è alle undici."
+    },
+    {
+        "id": 6,
+        "word": "Camera",
+        "Meaning": "Room",
+        "sentence": "La camera è molto grande."
+    },
+    {
+        "id": 7,
+        "word": "Camera singola",
+        "Meaning": "Single room",
+        "sentence": "Vorrei una camera singola."
+    },
+    {
+        "id": 8,
+        "word": "Camera doppia",
+        "Meaning": "Double room",
+        "sentence": "Abbiamo prenotato una camera doppia."
+    },
+    {
+        "id": 9,
+        "word": "Chiave",
+        "Meaning": "Key",
+        "sentence": "Ecco la chiave della camera."
+    },
+    {
+        "id": 10,
+        "word": "Ascensore",
+        "Meaning": "Elevator",
+        "sentence": "L’ascensore è a destra."
+    },
+    {
+        "id": 11,
+        "word": "Scala",
+        "Meaning": "Stairs",
+        "sentence": "Le scale sono qui."
+    },
+    {
+        "id": 12,
+        "word": "Colazione",
+        "Meaning": "Breakfast",
+        "sentence": "La colazione è inclusa."
+    },
+    {
+        "id": 13,
+        "word": "Buffet",
+        "Meaning": "Buffet",
+        "sentence": "La colazione è a buffet."
+    },
+    {
+        "id": 14,
+        "word": "Bagno",
+        "Meaning": "Bathroom",
+        "sentence": "Il bagno è nella camera."
+    },
+    {
+        "id": 15,
+        "word": "Doccia",
+        "Meaning": "Shower",
+        "sentence": "La doccia è molto grande."
+    },
+    {
+        "id": 16,
+        "word": "Asciugamano",
+        "Meaning": "Towel",
+        "sentence": "Può portare un asciugamano?"
+    },
+    {
+        "id": 17,
+        "word": "Wi-Fi",
+        "Meaning": "Wi-Fi",
+        "sentence": "Il Wi-Fi è gratuito."
+    },
+    {
+        "id": 18,
+        "word": "Password",
+        "Meaning": "Password",
+        "sentence": "Qual è la password del Wi-Fi?"
+    },
+    {
+        "id": 19,
+        "word": "Aria condizionata",
+        "Meaning": "Air conditioning",
+        "sentence": "La camera ha l’aria condizionata."
+    },
+    {
+        "id": 20,
+        "word": "Riscaldamento",
+        "Meaning": "Heating",
+        "sentence": "Il riscaldamento funziona bene."
+    },
+    {
+        "id": 21,
+        "word": "Pulizia",
+        "Meaning": "Cleaning",
+        "sentence": "La pulizia della camera è ogni giorno."
+    },
+    {
+        "id": 22,
+        "word": "Servizio in camera",
+        "Meaning": "Room service",
+        "sentence": "Il servizio in camera è disponibile."
+    },
+    {
+        "id": 23,
+        "word": "Parcheggio",
+        "Meaning": "Parking",
+        "sentence": "L’hotel ha un parcheggio."
+    },
+    {
+        "id": 24,
+        "word": "Valigia",
+        "Meaning": "Suitcase",
+        "sentence": "La valigia è pesante."
+    },
+    {
+        "id": 25,
+        "word": "Aiuto",
+        "Meaning": "Help",
+        "sentence": "Ho bisogno di aiuto."
+    },
+    {
+        "id": 26,
+        "word": "Potete aiutarmi?",
+        "Meaning": "Can you help me?",
+        "sentence": "Potete aiutarmi con la valigia?"
+    },
+    {
+        "id": 27,
+        "word": "Quanto costa?",
+        "Meaning": "How much does it cost?",
+        "sentence": "Quanto costa una notte?"
+    },
+    {
+        "id": 28,
+        "word": "Una notte",
+        "Meaning": "One night",
+        "sentence": "Restiamo una notte."
+    },
+    {
+        "id": 29,
+        "word": "Due notti",
+        "Meaning": "Two nights",
+        "sentence": "Restiamo due notti."
+    },
+    {
+        "id": 30,
+        "word": "Chiave della camera",
+        "Meaning": "Room key",
+        "sentence": "Ecco la chiave della camera."
+    }
+    ],
+  "Airport": [
+  {
+    "id": 1,
+    "word": "Aeroporto",
+    "Meaning": "Airport",
+    "sentence": "L’aeroporto è molto grande."
+  },
+  {
+    "id": 2,
+    "word": "Volo",
+    "Meaning": "Flight",
+    "sentence": "Il mio volo parte alle dieci."
+  },
+  {
+    "id": 3,
+    "word": "Biglietto",
+    "Meaning": "Ticket",
+    "sentence": "Ho il biglietto elettronico."
+  },
+  {
+    "id": 4,
+    "word": "Carta d’imbarco",
+    "Meaning": "Boarding pass",
+    "sentence": "Questa è la mia carta d’imbarco."
+  },
+  {
+    "id": 5,
+    "word": "Check-in",
+    "Meaning": "Check-in",
+    "sentence": "Il check-in apre alle otto."
+  },
+  {
+    "id": 6,
+    "word": "Bagaglio",
+    "Meaning": "Luggage",
+    "sentence": "Il bagaglio è pesante."
+  },
+  {
+    "id": 7,
+    "word": "Bagaglio a mano",
+    "Meaning": "Carry-on luggage",
+    "sentence": "Questo è il mio bagaglio a mano."
+  },
+  {
+    "id": 8,
+    "word": "Valigia",
+    "Meaning": "Suitcase",
+    "sentence": "La valigia è blu."
+  },
+  {
+    "id": 9,
+    "word": "Banco check-in",
+    "Meaning": "Check-in counter",
+    "sentence": "Il banco check-in è lì."
+  },
+  {
+    "id": 10,
+    "word": "Controllo di sicurezza",
+    "Meaning": "Security check",
+    "sentence": "Passiamo dal controllo di sicurezza."
+  },
+  {
+    "id": 11,
+    "word": "Passaporto",
+    "Meaning": "Passport",
+    "sentence": "Ecco il mio passaporto."
+  },
+  {
+    "id": 12,
+    "word": "Documento",
+    "Meaning": "ID / Document",
+    "sentence": "Mostro il documento."
+  },
+  {
+    "id": 13,
+    "word": "Imbarco",
+    "Meaning": "Boarding",
+    "sentence": "L’imbarco inizia ora."
+  },
+  {
+    "id": 14,
+    "word": "Gate",
+    "Meaning": "Gate",
+    "sentence": "Il gate è il numero venti."
+  },
+  {
+    "id": 15,
+    "word": "Partenza",
+    "Meaning": "Departure",
+    "sentence": "La partenza è alle nove."
+  },
+  {
+    "id": 16,
+    "word": "Arrivo",
+    "Meaning": "Arrival",
+    "sentence": "L’arrivo è alle undici."
+  },
+  {
+    "id": 17,
+    "word": "Ritardo",
+    "Meaning": "Delay",
+    "sentence": "Il volo ha un ritardo."
+  },
+  {
+    "id": 18,
+    "word": "Cancellato",
+    "Meaning": "Canceled",
+    "sentence": "Il volo è cancellato."
+  },
+  {
+    "id": 19,
+    "word": "Dogana",
+    "Meaning": "Customs",
+    "sentence": "Passiamo dalla dogana."
+  },
+  {
+    "id": 20,
+    "word": "Controllo passaporti",
+    "Meaning": "Passport control",
+    "sentence": "Il controllo passaporti è qui."
+  },
+  {
+    "id": 21,
+    "word": "Uscita",
+    "Meaning": "Exit",
+    "sentence": "L’uscita è a sinistra."
+  },
+  {
+    "id": 22,
+    "word": "Entrata",
+    "Meaning": "Entrance",
+    "sentence": "L’entrata è davanti."
+  },
+  {
+    "id": 23,
+    "word": "Informazioni",
+    "Meaning": "Information desk",
+    "sentence": "Chiedo alle informazioni."
+  },
+  {
+    "id": 24,
+    "word": "Quanto pesa?",
+    "Meaning": "How much does it weigh?",
+    "sentence": "Quanto pesa il bagaglio?"
+  },
+  {
+    "id": 25,
+    "word": "Dov’è il gate?",
+    "Meaning": "Where is the gate?",
+    "sentence": "Scusi, dov’è il gate?"
+  },
+  {
+    "id": 26,
+    "word": "A che ora parte?",
+    "Meaning": "What time does it depart?",
+    "sentence": "A che ora parte il volo?"
+  },
+  {
+    "id": 27,
+    "word": "Il volo è in orario",
+    "Meaning": "The flight is on time",
+    "sentence": "Il volo è in orario oggi."
+  },
+  {
+    "id": 28,
+    "word": "Il volo è in ritardo",
+    "Meaning": "The flight is delayed",
+    "sentence": "Il volo è in ritardo di un’ora."
+  },
+  {
+    "id": 29,
+    "word": "Destinazione",
+    "Meaning": "Destination",
+    "sentence": "La destinazione è Roma."
+  },
+  {
+    "id": 30,
+    "word": "Viaggio",
+    "Meaning": "Trip / Journey",
+    "sentence": "Buon viaggio!"
+  }
+],
+  "Travel-Trouble": [
+  {
+    "id": 1,
+    "word": "Aiuto!",
+    "Meaning": "Help!",
+    "sentence": "Aiuto! Ho un problema."
+  },
+  {
+    "id": 2,
+    "word": "Ho un problema",
+    "Meaning": "I have a problem",
+    "sentence": "Scusi, ho un problema."
+  },
+  {
+    "id": 3,
+    "word": "Ho perso...",
+    "Meaning": "I lost...",
+    "sentence": "Ho perso il passaporto."
+  },
+  {
+    "id": 4,
+    "word": "Passaporto",
+    "Meaning": "Passport",
+    "sentence": "Non trovo il passaporto."
+  },
+  {
+    "id": 5,
+    "word": "Portafoglio",
+    "Meaning": "Wallet",
+    "sentence": "Ho perso il portafoglio."
+  },
+  {
+    "id": 6,
+    "word": "Telefono",
+    "Meaning": "Phone",
+    "sentence": "Non trovo il telefono."
+  },
+  {
+    "id": 7,
+    "word": "Valigia",
+    "Meaning": "Suitcase",
+    "sentence": "La mia valigia manca."
+  },
+  {
+    "id": 8,
+    "word": "La valigia è persa",
+    "Meaning": "The suitcase is lost",
+    "sentence": "La mia valigia è persa."
+  },
+  {
+    "id": 9,
+    "word": "Furto",
+    "Meaning": "Theft",
+    "sentence": "C’è stato un furto."
+  },
+  {
+    "id": 10,
+    "word": "Qualcuno ha rubato...",
+    "Meaning": "Someone stole...",
+    "sentence": "Qualcuno ha rubato il mio portafoglio."
+  },
+  {
+    "id": 11,
+    "word": "Polizia",
+    "Meaning": "Police",
+    "sentence": "Chiama la polizia."
+  },
+  {
+    "id": 12,
+    "word": "Dov’è la polizia?",
+    "Meaning": "Where is the police?",
+    "sentence": "Scusi, dov’è la polizia?"
+  },
+  {
+    "id": 13,
+    "word": "Stazione di polizia",
+    "Meaning": "Police station",
+    "sentence": "La stazione di polizia è vicina."
+  },
+  {
+    "id": 14,
+    "word": "Emergenza",
+    "Meaning": "Emergency",
+    "sentence": "È un’emergenza."
+  },
+  {
+    "id": 15,
+    "word": "Chiama un medico",
+    "Meaning": "Call a doctor",
+    "sentence": "Per favore, chiama un medico."
+  },
+  {
+    "id": 16,
+    "word": "Medico",
+    "Meaning": "Doctor",
+    "sentence": "Ho bisogno di un medico."
+  },
+  {
+    "id": 17,
+    "word": "Ospedale",
+    "Meaning": "Hospital",
+    "sentence": "Dov’è l’ospedale?"
+  },
+  {
+    "id": 18,
+    "word": "Farmacia",
+    "Meaning": "Pharmacy",
+    "sentence": "Cerco una farmacia."
+  },
+  {
+    "id": 19,
+    "word": "Sto male",
+    "Meaning": "I feel sick",
+    "sentence": "Scusi, sto male."
+  },
+  {
+    "id": 20,
+    "word": "Mi fa male...",
+    "Meaning": "My ... hurts",
+    "sentence": "Mi fa male la testa."
+  },
+  {
+    "id": 21,
+    "word": "Incidente",
+    "Meaning": "Accident",
+    "sentence": "C’è stato un incidente."
+  },
+  {
+    "id": 22,
+    "word": "Mi sono perso",
+    "Meaning": "I am lost",
+    "sentence": "Mi sono perso in città."
+  },
+  {
+    "id": 23,
+    "word": "Dov’è...?",
+    "Meaning": "Where is...?",
+    "sentence": "Dov’è la stazione?"
+  },
+  {
+    "id": 24,
+    "word": "Non capisco",
+    "Meaning": "I don't understand",
+    "sentence": "Scusi, non capisco."
+  },
+  {
+    "id": 25,
+    "word": "Parla inglese?",
+    "Meaning": "Do you speak English?",
+    "sentence": "Scusi, parla inglese?"
+  },
+  {
+    "id": 26,
+    "word": "Può aiutarmi?",
+    "Meaning": "Can you help me?",
+    "sentence": "Per favore, può aiutarmi?"
+  },
+  {
+    "id": 27,
+    "word": "È urgente",
+    "Meaning": "It’s urgent",
+    "sentence": "È urgente, per favore."
+  },
+  {
+    "id": 28,
+    "word": "Ho bisogno di aiuto",
+    "Meaning": "I need help",
+    "sentence": "Ho bisogno di aiuto subito."
+  },
+  {
+    "id": 29,
+    "word": "Ho perso la strada",
+    "Meaning": "I lost my way",
+    "sentence": "Ho perso la strada."
+  },
+  {
+    "id": 30,
+    "word": "Può ripetere?",
+    "Meaning": "Can you repeat?",
+    "sentence": "Scusi, può ripetere?"
+  }
+]
+}
