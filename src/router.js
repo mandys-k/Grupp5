@@ -8,6 +8,7 @@ import NotepadView from "./views/NotepadView.vue";
 import SavedView from "./views/SavedView.vue";
 import RegisterView from "./views/RegisterView.vue";
 import UserDashboard from "./components/UserDashboard.vue";
+import wordsAndPhrases from "./components/wordsAndPhrases.vue";
 
 
 export default createRouter({
@@ -43,6 +44,10 @@ export default createRouter({
                 {
             component: SavedView,
             path: "/saved",
+        },
+        {
+            component: wordsAndPhrases,
+            path: "/wordsandphrases",
         },
     ],
 });
