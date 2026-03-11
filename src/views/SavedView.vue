@@ -1,7 +1,7 @@
 <template>
  <!--Temporary validation code until LearningCategoryView.vue is connected to the level map-->
  <div class="study-category">
-  
+
     <h1><b>Level 1</b></h1>
     <h2>Study categories</h2>
 
@@ -56,25 +56,25 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  
+
 }
 
 .study-card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
   width: 100%;
   max-width: 500px;
 }
 
 .study-card .card{
-  width: 420px;    
-  height: 70px; 
+  width: 420px;
+  height: 70px;
   text-align: center;
-  font-size: 1.6rem;   
+  font-size: 1.6rem;
   transition: all 0.25s ease;
-  background-color: rgb(32, 103, 208); 
+  background-color: rgb(32, 103, 208);
   color: white;
 }
 
