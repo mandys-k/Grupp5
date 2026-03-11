@@ -42,7 +42,7 @@
 
         <RouterLink
           v-if="userStore.isLoggedIn && level.id <= userStore.currentLevel"
-          :to="`/quiz?level=${level.id}`"
+          :to="`/learning/${level.id}`"
           class="btn-play"
         >
           {{ level.id < userStore.currentLevel ? 'Replay' : 'Start' }}

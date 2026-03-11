@@ -9,6 +9,7 @@ import SavedView from "./views/SavedView.vue";
 import RegisterView from "./views/RegisterView.vue";
 import UserDashboard from "./components/UserDashboard.vue";
 import wordsAndPhrases from "./components/wordsAndPhrases.vue";
+import LearningCategoryView from "./views/LearningCategoryView.vue";
 
 
 const protectedRoutes = ['/UserDashboard', '/levels', '/quiz', '/notepad', '/saved']
@@ -51,12 +52,17 @@ const router = createRouter({
             component: wordsAndPhrases,
             path: "/wordsandphrases",
         },
+        {
+            component: LearningCategoryView,
+            path: "/learning/:level",
+        },
     ],
 });
 
 router.beforeEach((to) => {
     const isLoggedIn = !!localStorage.getItem('tripLingo_session')
-    if (protectedRoutes.includes(to.path) && !isLoggedIn) {
+    const isProtected = protectedRoutes.includes(to.path) || to.path.startsWith('/learning/')
+    if (isProtected && !isLoggedIn) {
         return '/login'
     }
 })
