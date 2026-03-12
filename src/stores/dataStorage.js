@@ -31,6 +31,7 @@ export const useUserStore = defineStore('user', {
       currentTravellerType: currentUser ? currentUser.travellerType : '',
       currentLanguage: currentUser ? currentUser.language : '',
       isLoggedIn: !!currentEmail && !!currentUser,
+      pendingReg: null,
     }
   },
 
@@ -41,6 +42,36 @@ export const useUserStore = defineStore('user', {
 
   // Actions — functions that update state and sync changes to localStorage - SAK
   actions: {
+    // Step 1 of registration: validate and store pending data without creating account yet
+    validateNewUser(name, email, password) {
+      if (this.users.find(u => u.name.toLowerCase() === name.toLowerCase())) {
+        return { success: false, message: 'That username is already taken. Please choose another.' }
+      }
+      if (this.users.find(u => u.email === email)) {
+        return { success: false, message: 'An account with this email already exists.' }
+      }
+      this.pendingReg = { name, email, password }
+      return { success: true }
+    },
+
+    // Step 2: complete registration after language and traveller type are selected
+    completeRegistration(language, travellerType) {
+      if (!this.pendingReg) return { success: false, message: 'No pending registration found.' }
+      const { name, email, password } = this.pendingReg
+      const newUser = { name, email, password, level: 1, language, travellerType }
+      this.users.push(newUser)
+      saveUsers(this.users)
+      this.currentEmail = email
+      this.currentName = name
+      this.currentLevel = 1
+      this.currentTravellerType = travellerType
+      this.currentLanguage = language
+      this.isLoggedIn = true
+      this.pendingReg = null
+      localStorage.setItem('tripLingo_session', email)
+      return { success: true }
+    },
+
     registerUser(name, email, password, language, travellerType) {
       if (this.users.find(u => u.name.toLowerCase() === name.toLowerCase())) {
         return { success: false, message: 'That username is already taken. Please choose another.' }

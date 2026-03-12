@@ -10,6 +10,8 @@ import RegisterView from "./views/RegisterView.vue";
 import UserDashboard from "./components/UserDashboard.vue";
 import wordsAndPhrases from "./components/wordsAndPhrases.vue";
 import LearningCategoryView from "./views/LearningCategoryView.vue";
+import LanguageSelectView from "./views/LanguageSelectView.vue";
+import TravellerSelectView from "./views/TravellerSelectView.vue";
 
 
 const protectedRoutes = ['/UserDashboard', '/levels', '/quiz', '/notepad', '/saved']
@@ -35,6 +37,14 @@ const router = createRouter({
         {
             component: RegisterView,
             path: "/register",
+        },
+        {
+            component: LanguageSelectView,
+            path: "/register/language",
+        },
+        {
+            component: TravellerSelectView,
+            path: "/register/traveller",
         },
         {
             component: LoginView,
