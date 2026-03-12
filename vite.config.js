@@ -7,7 +7,14 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   base: '/Grupp5/',
   plugins: [
-    vue(),
+    vue({
+      template: {
+        transformAssetUrls: {
+          'b-img': ['src'],
+          'b-card': ['img-src'],
+        }
+      }
+    }),
     Components({
       resolvers: [BootstrapVueNextResolver()]
     })

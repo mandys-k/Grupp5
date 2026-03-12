@@ -17,7 +17,6 @@
 </script>
 
 <template>
-    <Hero msg="Your next adventure begins with the next word." />
     <HeroHome />
     <GroupInfoCard />
     <BusinessSection />
