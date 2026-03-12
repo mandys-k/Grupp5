@@ -1,92 +1,57 @@
 <template>
- <!--Temporary validation code until LearningCategoryView.vue is connected to the level map-->
- <div class="study-category">
+  <h1>Saved</h1>
+   
+    <b-row class="g-3">
+      <b-col 
+        v-for="word in wordsByCategory" 
+        :key="word.word"
+        cols="12"
+        md="10"
+        lg="9"
+        class="mx-auto" >
+        <b-card border-variant="primary">
+          <div class="d-flex flex-column flex-md-row align-items-start word-row">
 
-    <h1><b>Level 1</b></h1>
-    <h2>Study categories</h2>
+            <div class="word-col">
+              <strong>{{ word.word }}</strong>
+            </div>
 
-    <div class="study-card">
-      <router-link to="/wordsAndPhrases">
-        <b-card>
-        <b-card-text>Words and Phrases</b-card-text>
+            <div class="word-col">
+              {{ word.Meaning }}
+            </div>
+
+            <div class="word-col sentence-col">
+              <strong>{{ word.sentence }}</strong>
+            </div>
+
+            <div class="icon-col">
+              <span
+                class="material-symbols-outlined bookmark-icon"
+                @click.stop="store.toggleSaved(word)"
+              >
+                {{ store.isSaved(word) ? 'bookmark_added' : 'bookmark_add' }}
+              </span> 
+            </div>
+
+          </div>
         </b-card>
-      </router-link>
+      </b-col>
+    </b-row>
 
-      <b-card>
-        <b-card-text>Reading comprehension</b-card-text>
-      </b-card>
 
-      <b-card>
-        <b-card-text>Listening comprehension</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Vocabulary quiz</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Pronunciation guide</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Level up quiz</b-card-text>
-      </b-card>
-    </div>
- </div>
 </template>
 
-<script>
-import wordsAndPhrases from "../components/wordsAndPhrases.vue";
+<script setup>
+import { computed } from 'vue';
+import { useWordsStore } from '../stores/wordsPhrasesStore';
 
-export default {
-    components: {
-      wordsAndPhrases,
-    }
-  }
 
+const store = useWordsStore();
+
+
+const toggleSaved = computed(() => store.toggleSaved);
+const wordsByCategory = computed(() => {
+  return toggleSaved.value ? store.wordsData[toggleSaved.value] : [];
+});
 </script>
 
-<style scoped>
-
-h2 {
-    margin-bottom: 20px;
-}
-.study-category{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-
-}
-
-.study-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  max-width: 500px;
-}
-
-.study-card .card{
-  width: 420px;
-  height: 70px;
-  text-align: center;
-  font-size: 1.6rem;
-  transition: all 0.25s ease;
-  background-color: rgb(32, 103, 208);
-  color: white;
-}
-
-.study-card .card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.study-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-</style>
