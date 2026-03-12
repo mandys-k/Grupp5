@@ -4,7 +4,7 @@
     <!-- LEFT CARD (Desktop) — Profile summary - SAK-->
     <div class="card p-4 d-flex flex-column align-items-center text-center flex-grow-1" style="min-width: 240px;">
 
-      <img src="assets/happy-bird.png" alt="TripLingo userimage" class="userimage mb-3" />
+      <img src="/assets/happy-bird.png" alt="TripLingo userimage" class="userimage mb-3" />
 
       <h1 class="fw-bold fs-4 mb-1">Welcome back, {{ userStore.currentName }}!</h1>
 
@@ -97,7 +97,7 @@
       <h3 class="fw-bold mb-4" style="font-size: 1.1rem;">Friends &amp; Leaderboard</h3>
 
       <div class="d-flex align-items-center gap-3 py-2 border-bottom">
-        <img src="assets/avatar-alex.png" alt="Alex" class="friend-avatar" />
+        <img src="/assets/avatar-alex.png" alt="Alex" class="friend-avatar" />
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between">
             <span class="fw-bold small">Alex</span>
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center gap-3 py-2 border-bottom">
-        <img src="assets/avatar-jamie.png" alt="Jamie" class="friend-avatar" />
+        <img src="/assets/avatar-jamie.png" alt="Jamie" class="friend-avatar" />
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between">
             <span class="fw-bold small">Jamie</span>
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center gap-3 py-2">
-        <img src="assets/avatar-sam.png" alt="Sam" class="friend-avatar" />
+        <img src="/assets/avatar-sam.png" alt="Sam" class="friend-avatar" />
         <div class="flex-grow-1">
           <div class="d-flex justify-content-between">
             <span class="fw-bold small">Sam</span>

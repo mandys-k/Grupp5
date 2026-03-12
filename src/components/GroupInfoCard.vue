@@ -7,7 +7,7 @@
     <div>
     <b-card 
         title="Leisure Travelers"
-        img-src="assets/groupimage/InterestTravelers.jpg"
+        img-src="/assets/groupimage/InterestTravelers.jpg"
         img-alt="Leisure Travelers"
         img-top
         img-height="300"
@@ -26,7 +26,7 @@
     <div>
     <b-card
         title="Business Travelers"
-        img-src="assets/groupimage/BusinessTravelers.jpg"
+        img-src="/assets/groupimage/BusinessTravelers.jpg"
         img-alt="BusinessTravelers"
         img-top
         img-height="300"
@@ -46,7 +46,7 @@
     <div>
     <b-card
         title="Digital Nomads"
-        img-src="assets/groupimage/DigitalNomads.jpg"
+        img-src="/assets/groupimage/DigitalNomads.jpg"
         img-alt="DigitalNomads"
         img-top
         img-height="300"
@@ -65,7 +65,7 @@
     <div>
     <b-card
         title="Language Enthusiasts"
-        img-src="assets/groupimage/LanguageLearners.jpg"
+        img-src="/assets/groupimage/LanguageLearners.jpg"
         img-alt="LanguageLearners"
         img-top
         img-height="300"
@@ -85,7 +85,7 @@
     <div>
     <b-card
         title="Traveling Companies"
-        img-src="assets/groupimage/TravelingCompanies.jpg"
+        img-src="/assets/groupimage/TravelingCompanies.jpg"
         img-alt="TravelingCompanies"
         img-top
         img-height="300"
@@ -104,7 +104,7 @@
     <div>
     <b-card
         title="Educational Institutions"
-        img-src="assets/groupimage/EducationalInstitutions.jpg"
+        img-src="/assets/groupimage/EducationalInstitutions.jpg"
         img-alt="EducationalInstitutions"
         img-top
         img-height="300"
@@ -123,7 +123,7 @@
     <div>
     <b-card
         title="Tourism Agencies"
-        img-src="assets/groupimage/TourismAgencies.jpg"
+        img-src="/assets/groupimage/TourismAgencies.jpg"
         img-alt="TourismAgencies"
         img-top
         img-height="300"
@@ -143,7 +143,7 @@
     <div>
     <b-card
         title="Financiers"
-        img-src="assets/groupimage/Financiers.jpg"
+        img-src="/assets/groupimage/Financiers.jpg"
         img-alt="Financiers"
         img-top
         img-height="300"
@@ -162,7 +162,7 @@
     <div>
     <b-card
         title="Marketing Department"
-        img-src="assets/groupimage/MarketingDepartment.jpg"
+        img-src="/assets/groupimage/MarketingDepartment.jpg"
         img-alt="MarketingDepartment"
         img-top
         img-height="300"

@@ -51,7 +51,7 @@
                 <b-col cols="6" md="4" class="triplingo">
                     <RouterLink to="/"
                         ><img
-                            src="assets/Logotext.png"
+                            src="/assets/Logotext.png"
                             alt="TripLingo"
                             class="logo-img"
                     /></RouterLink>

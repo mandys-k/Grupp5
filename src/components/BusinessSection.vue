@@ -14,7 +14,7 @@
                 <li>Dedicated support and seamless onboarding</li>
             </ul>
         </b-col>
-        <b-col sm="4"><b-img thumbnail fluid src="assets/BusinessSection.png"  alt="Business image"></b-img></b-col>
+        <b-col sm="4"><b-img thumbnail fluid src="/assets/BusinessSection.png"  alt="Business image"></b-img></b-col>
       </b-row>
 
     </b-container>
