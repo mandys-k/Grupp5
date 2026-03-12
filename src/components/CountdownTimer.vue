@@ -1,4 +1,6 @@
 <script>
+    import readingBird from '@/assets/reading-bird.png'
+
     export default {
         data() {
             return {
@@ -10,7 +12,7 @@
                 replay: false,
                 replayTime: null,
                 timeWarning: false,
-                bird: "/assets/reading-bird.png"
+                bird: readingBird
             }
         },
         methods: {

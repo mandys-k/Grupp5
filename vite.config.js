@@ -10,6 +10,14 @@ export default defineConfig({
     vue({
       template: {
         transformAssetUrls: {
+          // Default HTML elements (must be re-declared when overriding)
+          img: ['src', 'srcset'],
+          image: ['xlink:href', 'href'],
+          use: ['xlink:href', 'href'],
+          source: ['src', 'srcset'],
+          video: ['src', 'poster'],
+          audio: ['src'],
+          // BootstrapVue Next components
           'b-img': ['src'],
           'b-card': ['img-src'],
         }
