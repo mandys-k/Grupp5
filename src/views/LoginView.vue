@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <RouterLink to="/" class="logo-link">
-      <img src="/assets/Logotext.png" alt="TripLingo" class="logo-img" />
+      <img src="@/assets/Logotext.png" alt="TripLingo" class="logo-img" />
       <span class="logo-back-text">Back to Home</span>
     </RouterLink>
     <LoginComponent />

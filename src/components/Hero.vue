@@ -10,7 +10,7 @@
   <div class="hero-image-container d-flex align-items-center justify-content-center text-white text-center">
     <b-container>
       
-          <b-img src="/assets/Logo.png" fluid alt="Responsive image"></b-img>
+          <b-img src="@/assets/Logo.png" fluid alt="Responsive image"></b-img>
           <h1>{{ msg }}</h1>
           <b-button to="login" variant="success">Log in</b-button><br><br>
           <p>New User?</p>
