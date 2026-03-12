@@ -102,5 +102,30 @@
     </div>
 </template>
 
+<script setup>
+import { ref } from "vue"
+
+const answers = ref({
+    q1: null,
+    q2:null,
+    q3:null
+})
+
+const result = ref(null)
+
+const checkAnswers = () => {
+    let score = 0
+
+    if (answers.value.q1 === "lavoro") score++
+     if (answers.value.q2 === "bar") score++
+      if (answers.value.q3 === "pizza") score++
+
+    result.value = score
+
+}
+</script>
+
+<style>
 
 
+</style>
