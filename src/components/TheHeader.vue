@@ -1,10 +1,12 @@
 <script>
     import { mapStores } from "pinia"
     import { useThemeStore } from "../stores/themeStore.js"
+    import { useUserStore } from "../stores/dataStorage.js"
 
     export default {
         computed: {
-            ...mapStores(useThemeStore)
+            ...mapStores(useThemeStore),
+            ...mapStores(useUserStore)
         },
         created() {
             this.themeStore.saveTheme()
@@ -49,7 +51,7 @@
 
             <b-row class="align-items-center">
                 <b-col cols="6" md="4" class="triplingo">
-                    <RouterLink to="/"
+                    <RouterLink :to="userStore.isLoggedIn ? '/UserDashboard' : '/'"
                         ><img
                             src="@/assets/Logotext.png"
                             alt="TripLingo"
