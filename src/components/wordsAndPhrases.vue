@@ -46,12 +46,11 @@
               </div>
 
               <div class="icon-col">
-               <span
-                  class="material-symbols-outlined bookmark-icon"
+                <img
+                  class="bookmark-icon"
+                  :src="store.isSaved(word) ? '/assets/bookmark-fill.svg' : '/assets/bookmark.svg'"
                   @click.stop="store.toggleSaved(word)"
-                >
-                  {{ store.isSaved(word) ? 'bookmark_added' : 'bookmark_add' }}
-                </span> 
+                />
               </div>
 
             </div>

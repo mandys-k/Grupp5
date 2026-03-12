@@ -1,9 +1,13 @@
 <template>
-  <h1>Saved</h1>
-   
+
+  <div class="saved-header">
+    <img src="/assets/thumbs-up-bird.png" alt="TripLingo image" class="small-img"/>
+    <h1>Saved words</h1>
+  </div>
+  <b-container class="mt-4">
     <b-row class="g-3">
       <b-col 
-        v-for="word in wordsByCategory" 
+        v-for="word in savedWord" 
         :key="word.word"
         cols="12"
         md="10"
@@ -24,34 +28,67 @@
               <strong>{{ word.sentence }}</strong>
             </div>
 
-            <div class="icon-col">
-              <span
-                class="material-symbols-outlined bookmark-icon"
-                @click.stop="store.toggleSaved(word)"
-              >
-                {{ store.isSaved(word) ? 'bookmark_added' : 'bookmark_add' }}
-              </span> 
-            </div>
+              <div class="icon-col">
+                <img
+                  class="bookmark-icon"
+                  :src="store.isSaved(word) ? '/assets/bookmark-fill.svg' : '/assets/bookmark.svg'"
+                  @click.stop="store.toggleSaved(word)"
+                />
+              </div>
+
 
           </div>
         </b-card>
       </b-col>
     </b-row>
-
+  </b-container>
 
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useWordsStore } from '../stores/wordsPhrasesStore';
+import { computed } from 'vue'
+import { useWordsStore } from '../stores/wordsPhrasesStore'
 
+const store = useWordsStore()
 
-const store = useWordsStore();
-
-
-const toggleSaved = computed(() => store.toggleSaved);
-const wordsByCategory = computed(() => {
-  return toggleSaved.value ? store.wordsData[toggleSaved.value] : [];
-});
+const savedWord = computed(() => store.saved)
 </script>
 
+<style scoped>
+ .saved-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .small-img {
+  width: 200px; 
+  height: auto;
+}
+
+.word-row{
+  gap: 20px;
+}
+
+.word-col {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .word-col {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-col {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .word-row {
+    position: relative;
+    gap: 10px; 
+  }
+}
+</style>

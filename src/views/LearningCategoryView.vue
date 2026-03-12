@@ -65,6 +65,8 @@ h2 {
   gap: 15px;
   width: 100%;
   max-width: 500px;
+  font-weight: 600;
+  
 }
 
 .study-card .card{
@@ -73,8 +75,11 @@ h2 {
   text-align: center;
   font-size: 1.6rem;
   transition: all 0.25s ease;
-  background-color: rgb(32, 103, 208);
-  color: white;
+  border-color: #0b0b62;
+  background-color: #f0f4ff;
+  border:2px solid;
+  color:#0b0b62;
+
 }
 
 .study-card .card:hover{
