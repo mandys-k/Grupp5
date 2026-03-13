@@ -2,35 +2,37 @@
  <div class="study-category">
 
     <h1><b>Level {{ level }}</b></h1>
-    <h2>Study categories</h2>
-
+    <img src="/assets/leisure-bird.png" alt="TripLingo image" class="small-img"/>
+    
     <div class="study-card">
       <router-link :to="`/wordsandphrases?level=${level}`">
         <b-card>
-        <b-card-text>Words and Phrases</b-card-text>
+        <b-card-text>Words and Phrases🔠</b-card-text>
         </b-card>
       </router-link>
-
-      <b-card>
-        <b-card-text>Reading comprehension</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Listening comprehension</b-card-text>
-      </b-card>
-
-      <router-link :to="`/quiz?level=${level}`">
+      
+      <router-link :to="`/readingComprehension?level=${level}`">
         <b-card>
-          <b-card-text>Vocabulary quiz</b-card-text>
+          <b-card-text>Reading comprehension📖</b-card-text>
         </b-card>
       </router-link>
 
       <b-card>
-        <b-card-text>Pronunciation guide</b-card-text>
+        <b-card-text>Listening comprehension👂</b-card-text>
+      </b-card>
+
+
+        <b-card>
+          <b-card-text>Vocabulary quiz❓</b-card-text>
+        </b-card>
+     
+
+      <b-card>
+        <b-card-text>Pronunciation guide👄</b-card-text>
       </b-card>
 
       <b-card>
-        <b-card-text>Level up quiz</b-card-text>
+        <b-card-text>Level up quiz🗝️</b-card-text>
       </b-card>
     </div>
 
@@ -49,6 +51,10 @@ const level = route.params.level
 
 h2 {
     margin-bottom: 20px;
+}
+ .small-img {
+  width: 200px; 
+  height: auto;
 }
 .study-category{
   display: flex;
@@ -79,7 +85,7 @@ h2 {
   background-color: #f0f4ff;
   border:2px solid;
   color:#0b0b62;
-
+  
 }
 
 .study-card .card:hover{

@@ -1,6 +1,6 @@
 <template>
-  <b-container class="mt-4">
-    <h2>Level 1</h2>
+  <b-container class=" word-container mt-4">
+    <h2><b>Level 1</b></h2>
     <!--Situation category for words and phrases-->
     <b-row class="category-card flex-nowrap overflow-auto g-3 justify-content-center">
       <b-col 
@@ -20,8 +20,8 @@
     <hr>
     
     <!--30 Words and phrases of selected situation category-->
-    <div v-if="selectedCategory" class="mt-4">
-      <h2>{{ selectedCategory }}</h2>
+    <div v-if="selectedCategory" class=" mt-4">
+      <h2>- {{ selectedCategory }} -</h2>
       <b-row class="g-3">
         <b-col 
           v-for="word in wordsByCategory" 
@@ -30,7 +30,7 @@
           md="10"
           lg="9"
           class="mx-auto" >
-          <b-card border-variant="primary">
+          <b-card class="word-card">
             <div class="d-flex flex-column flex-md-row align-items-start word-row">
 
               <div class="word-col">
@@ -65,6 +65,9 @@
 h2{
   text-align: center;
 }
+.word-container{
+  margin-bottom: 80px;
+}
 
 /* Situation category card*/
 .category-card{
@@ -75,10 +78,13 @@ h2{
 
 .category-card .card{
   text-align: center;
-  font-size: 1.6rem;   
+  font-size: 1.6rem;
+  font-weight: 600;   
   transition: all 0.25s ease;
-  background-color: rgb(33, 144, 234); 
-  color: white;
+  border-color: #0b0b62;
+  background-color: #f0f4ff;
+  border:2px solid;
+  color:#0b0b62;
 }
 
 .category-card .card:hover{
@@ -94,8 +100,15 @@ h2{
 
 
 /*card for words and phrases */
+.word-card{
+   border-color: #0b0b62;
+  background-color: #f0f4ff;
+  border:2px solid;
+  color:#0b0b62;
+}
 .word-row{
   gap: 20px;
+  
 }
 
 .word-col {

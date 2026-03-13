@@ -1,10 +1,10 @@
 <template>
 
   <div class="saved-header">
-    <img src="/assets/thumbs-up-bird.png" alt="TripLingo image" class="small-img"/>
     <h1>Saved words</h1>
+    <img src="/assets/thumbs-up-bird.png" alt="TripLingo image" class="small-img"/>
   </div>
-  <b-container class="mt-4">
+  <b-container class="mt-4 saved-container">
     <b-row class="g-3">
       <b-col 
         v-for="word in savedWord" 
@@ -13,7 +13,7 @@
         md="10"
         lg="9"
         class="mx-auto" >
-        <b-card border-variant="primary">
+        <b-card class="saved-card">
           <div class="d-flex flex-column flex-md-row align-items-start word-row">
 
             <div class="word-col">
@@ -61,10 +61,18 @@ const savedWord = computed(() => store.saved)
   align-items: center;
  }
  .small-img {
-  width: 200px; 
+  width: 300px; 
   height: auto;
 }
-
+.saved-card{
+  border-color: rgb(0,35,118);
+  background-color: #f0f4ff;
+  border:2px solid;
+  color:#0b0b62;
+}
+.saved-container{
+  margin-bottom: 80px;
+}
 .word-row{
   gap: 20px;
 }
