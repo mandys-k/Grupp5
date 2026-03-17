@@ -1,5 +1,5 @@
 {
-  "Greeting": [
+  "Greeting👋": [
     {
         "id": 1,
         "word": "Ciao",
@@ -182,7 +182,7 @@
     }
     ],
 
-  "Restaurant": [
+  "Restaurant👨‍🍳": [
     {
         "id": 1,
         "word": "Ristorante",
@@ -364,7 +364,7 @@
         "sentence": "Abbiamo una prenotazione per due."
     }
     ],
-   "Hotel": [
+   "Hotel🛌": [
     {
         "id": 1,
         "word": "Hotel",
@@ -546,7 +546,7 @@
         "sentence": "Ecco la chiave della camera."
     }
     ],
-  "Airport": [
+  "Airport✈️": [
   {
     "id": 1,
     "word": "Aeroporto",
@@ -728,7 +728,7 @@
     "sentence": "Buon viaggio!"
   }
 ],
-  "Travel-Trouble": [
+  "Travel-Trouble😨": [
   {
     "id": 1,
     "word": "Aiuto!",

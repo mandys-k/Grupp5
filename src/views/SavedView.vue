@@ -1,92 +1,102 @@
 <template>
- <!--Temporary validation code until LearningCategoryView.vue is connected to the level map-->
- <div class="study-category">
 
-    <h1><b>Level 1</b></h1>
-    <h2>Study categories</h2>
+  <div class="saved-header">
+    <h1>Saved words</h1>
+    <img src="../assets/thumbs-up-bird.png" alt="TripLingo image" class="small-img"/>
+  </div>
+  <b-container class="mt-4 saved-container">
+    <b-row class="g-3">
+      <b-col 
+        v-for="word in savedWord" 
+        :key="word.word"
+        cols="12"
+        md="10"
+        lg="8"
+        class="mx-auto" >
+        <b-card class="saved-card">
+          <div class="d-flex flex-column flex-md-row align-items-start word-row">
 
-    <div class="study-card">
-      <router-link to="/wordsAndPhrases">
-        <b-card>
-        <b-card-text>Words and Phrases</b-card-text>
+            <div class="word-col">
+              <strong>{{ word.word }}</strong>
+            </div>
+
+            <div class="word-col">
+              {{ word.Meaning }}
+            </div>
+
+            <div class="word-col sentence-col">
+              <strong>{{ word.sentence }}</strong>
+            </div>
+
+              <div class="icon-col">
+                <img
+                  class="bookmark-icon"
+                  :src="store.isSaved(word) ? '../assets/bookmark-fill.svg' : '../assets/bookmark.svg'"
+                  @click.stop="store.toggleSaved(word)"
+                />
+              </div>
+
+
+          </div>
         </b-card>
-      </router-link>
+      </b-col>
+    </b-row>
+  </b-container>
 
-      <b-card>
-        <b-card-text>Reading comprehension</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Listening comprehension</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Vocabulary quiz</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Pronunciation guide</b-card-text>
-      </b-card>
-
-      <b-card>
-        <b-card-text>Level up quiz</b-card-text>
-      </b-card>
-    </div>
- </div>
 </template>
 
-<script>
-import wordsAndPhrases from "../components/wordsAndPhrases.vue";
+<script setup>
+import { computed } from 'vue'
+import { useWordsStore } from '../stores/wordsPhrasesStore'
 
-export default {
-    components: {
-      wordsAndPhrases,
-    }
-  }
+const store = useWordsStore()
 
+const savedWord = computed(() => store.saved)
 </script>
 
 <style scoped>
-
-h2 {
-    margin-bottom: 20px;
-}
-.study-category{
+ .saved-header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-
+ }
+ .small-img {
+  width: 300px; 
+  height: auto;
+}
+.saved-card{
+  border-color: rgb(0,35,118);
+  background-color: #f0f4ff;
+  border:2px solid;
+  color:#0b0b62;
+}
+.saved-container{
+  margin-bottom: 80px;
+}
+.word-row{
+  gap: 10px;
 }
 
-.study-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+.word-col {
   width: 100%;
-  max-width: 500px;
 }
 
-.study-card .card{
-  width: 420px;
-  height: 70px;
-  text-align: center;
-  font-size: 1.6rem;
-  transition: all 0.25s ease;
-  background-color: rgb(32, 103, 208);
-  color: white;
+@media (min-width: 768px) {
+  .word-col {
+    flex: 1;
+    width: auto;
+  }
 }
 
-.study-card .card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+@media (max-width: 767px) {
+  .icon-col {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .word-row {
+    position: relative;
+    gap: 10px; 
+  }
 }
-
-.study-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
 </style>

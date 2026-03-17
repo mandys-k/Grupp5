@@ -10,6 +10,7 @@ import RegisterView from "./views/RegisterView.vue";
 import UserDashboard from "./components/UserDashboard.vue";
 import wordsAndPhrases from "./components/wordsAndPhrases.vue";
 import LearningCategoryView from "./views/LearningCategoryView.vue";
+import readingComprehension from "./components/readingComprehension.vue";
 
 
 const protectedRoutes = ['/UserDashboard', '/levels', '/quiz', '/notepad', '/saved']
@@ -20,6 +21,10 @@ const router = createRouter({
         {
             component: HomeView,
             path: "/",
+        },
+        {
+            component: readingComprehension,
+            path: "/readingComprehension",
         },
         {   component: UserDashboard,
             path: "/UserDashboard",
