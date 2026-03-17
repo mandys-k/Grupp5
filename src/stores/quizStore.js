@@ -1,64 +1,107 @@
 import { defineStore } from "pinia"
 
-export const useQuizStore = defineStore('quiz', {
+export const useQuizStore = defineStore("quiz", {
     actions: {
         startQuiz() {
             this.currentQuestionIndex = 0
             this.score = 0
+            this.finished = false
+            this.answersGiven = []
+
             this.showQuestion()
         },
         showQuestion() {
-            /* this.resetState() */
             this.currentQuestion = this.questions[this.currentQuestionIndex]
             this.questionNumber = this.currentQuestionIndex + 1
 
             this.showAnswers = true
+
+            this.selectedAnswer =
+                this.answersGiven[this.currentQuestionIndex] || null
         },
-        /* resetState() {
-
-        }, */
-        selectAnswer() {
-            if(this.currentQuestion.answers.correct) {
-                this.chosenAnswer = true
+        selectAnswer(answer) {
+            if (this.selectedAnswer === answer) {
+                this.selectedAnswer = null
+                return
             }
 
-            if(this.chosenAnswer) {
-                this.score++
-            }
+            this.selectedAnswer = answer
         },
         nextQuestion() {
-            this.showQuestion()
+            this.answersGiven[this.currentQuestionIndex] = this.selectedAnswer
+
+            if (this.currentQuestionIndex < this.questions.length - 1) {
+                this.currentQuestionIndex++
+                this.showQuestion()
+            }
+        },
+        showScore() {
+            this.finished = true
+
+            this.answersGiven[this.currentQuestionIndex] = this.selectedAnswer
+
+            this.score = 0
+
+            this.answersGiven.forEach((answer) => {
+                if (answer.correct) {
+                    this.score++
+                }
+            })
+        },
+        previousQuestion() {
+            if (this.currentQuestionIndex > 0) {
+                this.currentQuestionIndex--
+                this.showQuestion()
+            }
         }
     },
-    state: () => ({ currentQuestionIndex: 0, score: 0, currentQuestion: null, questionNumber: 0, showAnswers: false, chosenAnswer: null, questions: [
-        {
-            question: "How do you say 'Hello, I would like to order' in Italian?",
-            answers: [
-                { text: "A. Ciao, vorrei ordinare", correct: true},
-                { text: "B. Ciao, devo partire", correct: false},
-                { text: "C. Ciao, sto dormendo", correct: false},
-                { text: "D. Ciao, sto lavorando", correct: false}
-            ]
-        },
-        {
-            question: "What does 'Scusi, dov'è il bagno?' mean?",
-            answers: [
-                { text: "A. Excuse me, how much is this?", correct: false},
-                { text: "B. Excuse me, where is the hotel?", correct: false},
-                { text: "C. Excuse me, where is the bathroom?", correct: true},
-                { text: "D. Excuse me, what time is it?", correct: false}
-            ]
-        },
-        {
-            question: "How do you say 'I would like a coffee', please in Italian?",
-            answers: [
-                { text: "A. Vorrei un caffè, per favore", correct: true},
-                { text: "B. Voglio mangiare adesso", correct: false},
-                { text: "C. Devo andare via", correct: false},
-                { text: "D. Ho bisogno di dormire", correct: false}
-            ]
-        },
-        {
+    state: () => ({
+        currentQuestionIndex: 0,
+        score: 0,
+        currentQuestion: null,
+        questionNumber: 0,
+        showAnswers: false,
+        finished: false,
+        selectedAnswer: null,
+        answersGiven: [],
+
+        questions: [
+            {
+                question:
+                    "How do you say 'Hello, I would like to order' in Italian?",
+                answers: [
+                    { text: "A. Ciao, vorrei ordinare", correct: true },
+                    { text: "B. Ciao, devo partire", correct: false },
+                    { text: "C. Ciao, sto dormendo", correct: false },
+                    { text: "D. Ciao, sto lavorando", correct: false }
+                ]
+            },
+            {
+                question: "What does 'Scusi, dov'è il bagno?' mean?",
+                answers: [
+                    { text: "A. Excuse me, how much is this?", correct: false },
+                    {
+                        text: "B. Excuse me, where is the hotel?",
+                        correct: false
+                    },
+                    {
+                        text: "C. Excuse me, where is the bathroom?",
+                        correct: true
+                    },
+                    { text: "D. Excuse me, what time is it?", correct: false }
+                ]
+            },
+            {
+                question:
+                    "How do you say 'I would like a coffee', please in Italian?",
+                answers: [
+                    { text: "A. Vorrei un caffè, per favore", correct: true },
+                    { text: "B. Voglio mangiare adesso", correct: false },
+                    { text: "C. Devo andare via", correct: false },
+                    { text: "D. Ho bisogno di dormire", correct: false }
+                ]
+            }
+            /*    {
             question: "What does 'Il conto, per favore' mean?",
             answers: [
                 { text: "A. The menu, please", correct: false},
@@ -210,7 +253,7 @@ export const useQuizStore = defineStore('quiz', {
                 { text: "C. 'Qual è la password del WiFi?'", correct: true},
                 { text: "D. 'Può consigliarmi un piatto locale?'", correct: false}
             ]
-        },
-    ]
-})
+        }, */
+        ]
+    })
 })

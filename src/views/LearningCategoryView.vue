@@ -3,14 +3,14 @@
 
     <h1><b>Level {{ level }}</b></h1>
     <img src="../assets/leisure-bird.png" alt="TripLingo image" class="small-img"/>
-    
+
     <div class="study-card">
       <router-link :to="`/wordsandphrases?level=${level}`">
         <b-card>
         <b-card-text>Words and Phrases🔠</b-card-text>
         </b-card>
       </router-link>
-      
+
       <router-link :to="`/readingComprehension?level=${level}`">
         <b-card>
           <b-card-text>Reading comprehension📖</b-card-text>
@@ -21,11 +21,11 @@
         <b-card-text>Listening comprehension👂</b-card-text>
       </b-card>
 
-
+        <RouterLink to="/quiz">
         <b-card>
           <b-card-text>Vocabulary quiz❓</b-card-text>
         </b-card>
-     
+        </RouterLink>
 
       <b-card>
         <b-card-text>Pronunciation guide👄</b-card-text>
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
 const level = route.params.level
@@ -53,7 +53,7 @@ h2 {
     margin-bottom: 20px;
 }
  .small-img {
-  width: 200px; 
+  width: 200px;
   height: auto;
 }
 .study-category{
@@ -72,7 +72,7 @@ h2 {
   width: 100%;
   max-width: 500px;
   font-weight: 600;
-  
+
 }
 
 .study-card .card{
@@ -85,7 +85,7 @@ h2 {
   background-color: #f0f4ff;
   border:2px solid;
   color:#0b0b62;
-  
+
 }
 
 .study-card .card:hover{
