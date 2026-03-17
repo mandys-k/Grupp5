@@ -48,13 +48,13 @@
     <!-- Placeholder cards for progress, Languages, Friends, Quiz time. NPM-Install is needed for
       installing flag-icons npm package. I've added it to list of dependencies in package.json  . SAK-->
     <div class="card p-4 coming-soon-card" style="min-width: 240px; flex: 1;">
-      <div class="d-flex align-items-center gap-3 mb-3">
+      <div class="coming-soon-badge card-corner-badge">Coming Soon</div>
+      <div class="d-flex align-items-center gap-3 mb-3 mt-3">
         <span :class="`fi fi-${languageFlag} flag-placeholder`"></span>
-        <div class="flex-grow-1">
+        <div>
           <h3 class="fw-bold mb-0" style="font-size: 1.1rem;">{{ userStore.currentLanguage || 'Not set' }}</h3>
           <p class="text-muted small mb-0">Language you're learning</p>
         </div>
-        <div class="coming-soon-badge">Coming Soon</div>
       </div>
       <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
         <span class="text-muted small">Spoken in</span>
@@ -231,6 +231,12 @@ function handleLogout() {
 .coming-soon-card {
   position: relative;
   opacity: 0.8;
+}
+
+.card-corner-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 
 .coming-soon-badge {
