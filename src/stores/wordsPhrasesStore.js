@@ -7,12 +7,17 @@ export const useWordsStore = defineStore('words', {
     saved: JSON.parse(localStorage.getItem('saved') || '[]'),
     wordsData
   }),
+
+
   actions: {
+    //Category, greeting/restaurang/hotel/airport/travel-trable
     selectCategory(category) {
       this.selectedCategory = category;
     },
+
+    //Bookmarked words and phrases
     toggleSaved(wordItem) {
-      const index = this.saved.findIndex(sav => sav.word === wordItem.word && sav.phrase === wordItem.phrase);
+      const index = this.saved.findIndex(sav => sav.word === wordItem.word && sav.phrase === wordItem.phrase && sav.sentence === wordItem.sentence);
       if (index >= 0) {
         this.saved.splice(index, 1);
       } else {
@@ -20,8 +25,8 @@ export const useWordsStore = defineStore('words', {
       }
       localStorage.setItem('saved', JSON.stringify(this.saved));
     },
-    isSaved(wordItem) {
-      return this.saved.some(sav => sav.word === wordItem.word && sav.phrase === wordItem.phrase);
+   isSaved(wordItem) {
+      return this.saved.some(sav => sav.word === wordItem.word && sav.phrase === wordItem.phrase && sav.sentence === wordItem.sentence);
     }
   }
 });
