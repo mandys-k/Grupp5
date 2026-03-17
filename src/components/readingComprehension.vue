@@ -126,6 +126,52 @@ const checkAnswers = () => {
 </script>
 
 <style>
+.reading-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+}
 
+h1 {
+  text-align: center;
+  color: #257FC9;
+}
+
+.text-box {
+  background: #B6ECFB;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.question {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 18px;
+  background: #257FC9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #07D5F1;
+}
+
+.result {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #FE9F00;
+}
 
 </style>
