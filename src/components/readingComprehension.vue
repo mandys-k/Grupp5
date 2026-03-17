@@ -19,8 +19,8 @@
 
     <div class="question">
         <h2>Domande</h2>
-       
-           
+
+
     <div class="question">
             <p>1. Perché Maria è a Roma?</p>
 
@@ -125,7 +125,7 @@ const checkAnswers = () => {
 }
 </script>
 
-<style>
+<style scoped>
 .reading-container {
   max-width: 800px;
   margin: auto;
