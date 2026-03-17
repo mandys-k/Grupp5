@@ -48,7 +48,7 @@
               <div class="icon-col">
                 <img
                   class="bookmark-icon"
-                  :src="store.isSaved(word) ? '/assets/bookmark-fill.svg' : '/assets/bookmark.svg'"
+                  :src="store.isSaved(word) ?  bookmarkFill : bookmark "
                   @click.stop="store.toggleSaved(word)"
                 />
               </div>
@@ -139,6 +139,8 @@ h2{
 <script setup>
 import { computed } from 'vue';
 import { useWordsStore } from '../stores/wordsPhrasesStore';
+import bookmark from '@/assets/bookmark.svg';
+import bookmarkFill from '@/assets/bookmark-fill.svg';
 
 
 const store = useWordsStore();
