@@ -45,16 +45,16 @@
       <RouterLink to="/levels" class="btn btn-levels mt-4">Go to Levels</RouterLink>
     </div>
 
-    <!-- Placeholder cards for progress, Languages, Friends, Quiz time. NPM-Install is needed for 
+    <!-- Placeholder cards for progress, Languages, Friends, Quiz time. NPM-Install is needed for
       installing flag-icons npm package. I've added it to list of dependencies in package.json  . SAK-->
     <div class="card p-4 coming-soon-card" style="min-width: 240px; flex: 1;">
-      <div class="coming-soon-badge">Coming Soon</div>
       <div class="d-flex align-items-center gap-3 mb-3">
         <span :class="`fi fi-${languageFlag} flag-placeholder`"></span>
-        <div>
+        <div class="flex-grow-1">
           <h3 class="fw-bold mb-0" style="font-size: 1.1rem;">{{ userStore.currentLanguage || 'Not set' }}</h3>
           <p class="text-muted small mb-0">Language you're learning</p>
         </div>
+        <div class="coming-soon-badge">Coming Soon</div>
       </div>
       <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
         <span class="text-muted small">Spoken in</span>
@@ -71,8 +71,10 @@
 
    
     <div class="card p-4 coming-soon-card" style="min-width: 240px; flex: 1;">
-      <div class="coming-soon-badge">Coming Soon</div>
-      <h3 class="fw-bold mb-4" style="font-size: 1.1rem;">Quiz Time</h3>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold mb-0" style="font-size: 1.1rem;">Quiz Time</h3>
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
       <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
         <span class="text-muted small">Total time</span>
         <span class="fw-bold">— hrs — mins</span>
@@ -93,8 +95,10 @@
 
     
     <div class="card p-4 coming-soon-card" style="min-width: 260px; flex: 1.4;">
-      <div class="coming-soon-badge">Coming Soon</div>
-      <h3 class="fw-bold mb-4" style="font-size: 1.1rem;">Friends &amp; Leaderboard</h3>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold mb-0" style="font-size: 1.1rem;">Friends &amp; Leaderboard</h3>
+        <div class="coming-soon-badge">Coming Soon</div>
+      </div>
 
       <div class="d-flex align-items-center gap-3 py-2 border-bottom">
         <img src="@/assets/avatar-alex.png" alt="Alex" class="friend-avatar" />
@@ -230,9 +234,6 @@ function handleLogout() {
 }
 
 .coming-soon-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
   background-color: #e8eaf6;
   color: #0b0b62;
   font-size: 0.7rem;
@@ -241,6 +242,8 @@ function handleLogout() {
   border-radius: 20px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .flag-placeholder {
