@@ -11,7 +11,7 @@
         :key="word.word"
         cols="12"
         md="10"
-        lg="9"
+        lg="8"
         class="mx-auto" >
         <b-card class="saved-card">
           <div class="d-flex flex-column flex-md-row align-items-start word-row">
@@ -74,7 +74,7 @@ const savedWord = computed(() => store.saved)
   margin-bottom: 80px;
 }
 .word-row{
-  gap: 20px;
+  gap: 10px;
 }
 
 .word-col {
