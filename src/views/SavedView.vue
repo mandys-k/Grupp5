@@ -46,10 +46,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useWordsStore } from '../stores/wordsPhrasesStore';
-import bookmark from '@/assets/bookmark.svg';
-import bookmarkFill from '@/assets/bookmark-fill.svg';
+import { computed } from 'vue'
+import { useWordsStore } from '../stores/wordsPhrasesStore'
+import bookmark from '@/assets/bookmark.svg'
+import bookmarkFill from '@/assets/bookmark-fill.svg'
 
 const store = useWordsStore()
 

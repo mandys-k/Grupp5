@@ -17,15 +17,15 @@
         </b-card>
       </router-link>
 
-      <b-card>
-        <b-card-text>Listening comprehension👂</b-card-text>
-      </b-card>
-
-        <RouterLink to="/quiz">
+      <RouterLink to="/quiz">
         <b-card>
           <b-card-text>Vocabulary quiz❓</b-card-text>
         </b-card>
-        </RouterLink>
+      </RouterLink>
+
+      <b-card>
+        <b-card-text>Listening comprehension👂</b-card-text>
+      </b-card>
 
       <b-card>
         <b-card-text>Pronunciation guide👄</b-card-text>
