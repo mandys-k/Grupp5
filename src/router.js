@@ -11,6 +11,7 @@ import UserDashboard from "./components/UserDashboard.vue";
 import wordsAndPhrases from "./components/wordsAndPhrases.vue";
 import LearningCategoryView from "./views/LearningCategoryView.vue";
 import readingComprehension from "./components/readingComprehension.vue";
+import listningComprehension from "./components/listningComprehension.vue";
 import LanguageSelectView from "./views/LanguageSelectView.vue";
 import TravellerSelectView from "./views/TravellerSelectView.vue";
 
@@ -71,6 +72,10 @@ const router = createRouter({
             component: LearningCategoryView,
             path: "/learning/:level",
         },
+        {
+            component: listningComprehension,
+            path: "/listningComprehension",
+        }
     ],
 });
 

@@ -17,15 +17,18 @@
         </b-card>
       </router-link>
 
-      <RouterLink to="/quiz">
+
+
         <b-card>
           <b-card-text>Vocabulary quiz❓</b-card-text>
         </b-card>
       </RouterLink>
 
+      <router-link :to="`/listningComprehension?level=${level}`">
       <b-card>
         <b-card-text>Listening comprehension👂</b-card-text>
       </b-card>
+      </router-link>
 
       <b-card>
         <b-card-text>Pronunciation guide👄</b-card-text>
