@@ -1,9 +1,5 @@
 <script>
-    export default {
-        props: {
-            msg: String
-        }
-    }
+    export default {}
 </script>
 
 <template>
@@ -12,7 +8,6 @@
     >
         <b-container>
             <b-img src="@/assets/Logo.png" fluid alt="Responsive image"></b-img>
-            <h1>{{ msg }}</h1>
             <b-button to="login" variant="success">Log in</b-button><br /><br />
             <p>
                 New User?

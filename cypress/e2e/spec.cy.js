@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('learn languages website', () => {
 
     // Test: visits my website and clicks button to start timer
@@ -8,16 +9,26 @@ describe('learn languages website', () => {
         cy.get(".min-sec-container", { timeout: 2000 }).should("contain.text", "04:58")
         cy.get(".min-sec-container", { timeout: 5000 }).should("contain.text", "04:55")
         cy.get(".min-sec-container").should("not.contain", "00:00")
-        cy.contains("Time\'s up!").should("not.exist")
+        cy.contains("Time's up!").should("not.exist")
     })
 
     // Tests to meet our "definition of done" criteria
     // Accessibility test - uses cypress-axe npm to check for accessibility issues on the page - SAK
     it("has no accessibility issues", () => {
-        cy.visit("/")
-        cy.injectAxe()
-        cy.checkA11y()
+    cy.visit("/")
+    cy.injectAxe()
+
+    cy.checkA11y(null, null, (violations) => {
+        cy.log(`${violations.length} accessibility violations found`) //Add log for output of which violations were found - SAK
+
+        violations.forEach((v) => {
+            cy.log(`ID: ${v.id}`)
+            cy.log(`Description: ${v.description}`)
+            cy.log(`Impact: ${v.impact}`)
+            cy.log(`Nodes affected: ${v.nodes.length}`)
+        })
     })
+})
 
     // Test to check prettier json file is consistent and includes tabwidth of 4, no semicolons and no trailing commas - SAK
     it("prettier config is correct", () => {
