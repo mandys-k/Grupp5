@@ -1,6 +1,6 @@
 <template>
   <div class="notes-container">
-    <h1>TripLingo – Mina reseanteckningar</h1>
+    <h1>TripLingo – My notes</h1>
 
     <div class="input-section">
       <textarea
@@ -8,11 +8,11 @@
         placeholder="Skriv ord eller meningar du vill komma ihåg..."
       ></textarea>
 
-         <button @click="addNote">Spara anteckning</button>
+         <button @click="addNote">Saved notes</button>
     </div>
 
     <div class="notes-list" v-if="notes.length > 0">
-      <h2>Mina sparade anteckningar</h2>
+      <h2>My saved notes</h2>
 
       <div v-for="(note, index) in notes" :key="index" class="note-card">
         <p>{{ note }}</p>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-<p v-else>Inga anteckningar sparade ännu ✈️</p>
+<p v-else>No notes saved yet ✈️</p>
   </div>
 </template>
 
