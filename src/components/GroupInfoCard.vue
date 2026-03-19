@@ -4,7 +4,7 @@
 
    <div class="group-card-container">
     <div class="group-card">
-        <img src="@/assets/InterestTravelers.jpg" alt="Leisure Travelers" style="width:100%">
+        <img src="@/assets/InterestTravelers.png" alt="Leisure Travelers" style="width:100%">
         <div class="container">
             <h4><b>Leisure Travelers</b></h4> 
             <p>Learn essential phrases to feel confident, connect with locals, and navigate new places with ease.</p> 
@@ -15,7 +15,7 @@
     </div>
 
     <div class="group-card">
-        <img src="@/assets/BusinessTravelers.jpg" alt="Business Travelers" style="width:100%">
+        <img src="@/assets/BusinessTravelers.png" alt="Business Travelers" style="width:100%">
         <div class="container">
             <h4><b>Business Travelers</b></h4> 
             <p>Build practical language skills for meetings, networking, and frequent international travel.</p> 
@@ -26,7 +26,7 @@
     </div>
 
     <div class="group-card">
-        <img src="@/assets/DigitalNomads.jpg" alt="Digital Nomads" style="width:100%">
+        <img src="@/assets/DigitalNomads.png" alt="Digital Nomads" style="width:100%">
         <div class="container">
             <h4><b>Digital Nomads</b></h4> 
             <p>Develop deeper language skills to integrate, work remotely, and thrive abroad long-term.</p> 
@@ -38,7 +38,7 @@
 
 
     <div class="group-card">
-        <img src="@/assets/LanguageLearners.jpg" alt="Language Enthusiasts" style="width:100%">
+        <img src="@/assets/LanguageLearners.png" alt="Language Enthusiasts" style="width:100%">
         <div class="container">
             <h4><b>Language Enthusiasts</b></h4> 
             <p>Learn a new language for personal growth, curiosity, and the joy of communication.</p> 
@@ -49,7 +49,7 @@
     </div>
    
     <div class="group-card">
-        <img src="@/assets/TravelingCompanies.jpg" alt="Traveling Companies" style="width:100%">
+        <img src="@/assets/TravelingCompanies.png" alt="Traveling Companies" style="width:100%">
         <div class="container">
             <h4><b>Traveling Companies</b></h4> 
             <p> Support employees with structured language training for smoother international operations.</p> 
@@ -60,7 +60,7 @@
     </div>
    
     <div class="group-card">
-        <img src="@/assets/EducationalInstitutions.jpg" alt="Educational Institutions" style="width:100%">
+        <img src="@/assets/EducationalInstitutions.png" alt="Educational Institutions" style="width:100%">
         <div class="container">
             <h4><b>Educational Institutions</b></h4> 
             <p>Offer travelers language support to improve confidence and customer experience abroad.</p> 
@@ -71,7 +71,7 @@
     </div>
 
     <div class="group-card">
-        <img src="@/assets/TourismAgencies.jpg" alt="Tourism Agencies" style="width:100%">
+        <img src="@/assets/TourismAgencies.png" alt="Tourism Agencies" style="width:100%">
         <div class="container">
             <h4><b>Tourism Agencies</b></h4> 
             <p>Offer travelers language support to improve confidence and customer experience abroad.</p> 
@@ -82,7 +82,7 @@
     </div>
 
     <div class="group-card">
-        <img src="@/assets/Financiers.jpg" alt="Financiers" style="width:100%">
+        <img src="@/assets/Financiers.png" alt="Financiers" style="width:100%">
         <div class="container">
             <h4><b>Financiers</b></h4> 
             <p>Invest in scalable language solutions designed for a global, mobile audience.</p> 
@@ -93,7 +93,7 @@
     </div>
 
     <div class="group-card">
-        <img src="@/assets/MarketingDepartment.jpg" alt="Marketing Department" style="width:100%">
+        <img src="@/assets/MarketingDepartment.png" alt="Marketing Department" style="width:100%">
         <div class="container">
             <h4><b>Marketing Department</b></h4> 
             <p>Leverage insights and user engagement tools to reach international markets effectively.</p> 
