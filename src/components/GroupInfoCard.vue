@@ -2,192 +2,106 @@
     
 <h1 class="text-center" >Why do you want to learn a new language?</h1>
 
-    <div class="d-flex justify-content-center ">
-    <b-card-group deck >
-        
-    <div>
-    <b-card
-        title="Leisure Travelers"
-        title-tag="h2"
-        img-src="@/assets/InterestTravelers.jpg"
-        img-alt="Leisure Travelers"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Learn essential phrases to feel confident, connect with locals, and navigate new places with ease.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Leisure Travelers">Start Learning</b-button>
-    </b-card>
+   <div class="group-card-container">
+    <div class="group-card">
+        <img src="@/assets/InterestTravelers.jpg" alt="Leisure Travelers" style="width:100%">
+        <div class="container">
+            <h4><b>Leisure Travelers</b></h4> 
+            <p>Learn essential phrases to feel confident, connect with locals, and navigate new places with ease.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
 
-    <div>
-    <b-card
-        title="Business Travelers"
-        title-tag="h2"
-        img-src="@/assets/BusinessTravelers.jpg"
-        img-alt="Business Travelers"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Build practical language skills for meetings, networking, and frequent international travel.
-        </b-card-text>
+    <div class="group-card">
+        <img src="@/assets/BusinessTravelers.jpg" alt="Business Travelers" style="width:100%">
+        <div class="container">
+            <h4><b>Business Travelers</b></h4> 
+            <p>Build practical language skills for meetings, networking, and frequent international travel.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
+    </div>
 
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Business Travelers">Start Learning</b-button>
-    </b-card>
+    <div class="group-card">
+        <img src="@/assets/DigitalNomads.jpg" alt="Digital Nomads" style="width:100%">
+        <div class="container">
+            <h4><b>Digital Nomads</b></h4> 
+            <p>Develop deeper language skills to integrate, work remotely, and thrive abroad long-term.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
 
 
-    <div>
-    <b-card
-        title="Digital Nomads"
-        title-tag="h2"
-        img-src="@/assets/DigitalNomads.jpg"
-        img-alt="Digital Nomads"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Develop deeper language skills to integrate, work remotely, and thrive abroad long-term.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Digital Nomads">Start Learning</b-button>
-    </b-card>
+    <div class="group-card">
+        <img src="@/assets/LanguageLearners.jpg" alt="Language Enthusiasts" style="width:100%">
+        <div class="container">
+            <h4><b>Language Enthusiasts</b></h4> 
+            <p>Learn a new language for personal growth, curiosity, and the joy of communication.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
+    </div>
+   
+    <div class="group-card">
+        <img src="@/assets/TravelingCompanies.jpg" alt="Traveling Companies" style="width:100%">
+        <div class="container">
+            <h4><b>Traveling Companies</b></h4> 
+            <p> Support employees with structured language training for smoother international operations.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
+    </div>
+   
+    <div class="group-card">
+        <img src="@/assets/EducationalInstitutions.jpg" alt="Educational Institutions" style="width:100%">
+        <div class="container">
+            <h4><b>Educational Institutions</b></h4> 
+            <p>Offer travelers language support to improve confidence and customer experience abroad.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
 
-    <div>
-    <b-card
-        title="Language Enthusiasts"
-        title-tag="h2"
-        img-src="@/assets/LanguageLearners.jpg"
-        img-alt="Language Enthusiasts"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Learn a new language for personal growth, curiosity, and the joy of communication.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Language Enthusiasts">Start Learning</b-button>
-    </b-card>
+    <div class="group-card">
+        <img src="@/assets/TourismAgencies.jpg" alt="Tourism Agencies" style="width:100%">
+        <div class="container">
+            <h4><b>Tourism Agencies</b></h4> 
+            <p>Offer travelers language support to improve confidence and customer experience abroad.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
 
-
-    <div>
-    <b-card
-        title="Traveling Companies"
-        title-tag="h2"
-        img-src="@/assets/TravelingCompanies.jpg"
-        img-alt="Traveling Companies"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Support employees with structured language training for smoother international operations.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Traveling Companies">Start Learning</b-button>
-    </b-card>
+    <div class="group-card">
+        <img src="@/assets/Financiers.jpg" alt="Financiers" style="width:100%">
+        <div class="container">
+            <h4><b>Financiers</b></h4> 
+            <p>Invest in scalable language solutions designed for a global, mobile audience.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
 
-    <div>
-    <b-card
-        title="Educational Institutions"
-        title-tag="h2"
-        img-src="@/assets/EducationalInstitutions.jpg"
-        img-alt="Educational Institutions"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Offer travelers language support to improve confidence and customer experience abroad.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Educational Institutions">Start Learning</b-button>
-    </b-card>
+    <div class="group-card">
+        <img src="@/assets/MarketingDepartment.jpg" alt="Marketing Department" style="width:100%">
+        <div class="container">
+            <h4><b>Marketing Department</b></h4> 
+            <p>Leverage insights and user engagement tools to reach international markets effectively.</p> 
+            <router-link to="/levels">
+              <button class="groupinfo-btn">Start Learning</button>
+            </router-link>
+        </div>
     </div>
-
-    <div>
-    <b-card
-        title="Tourism Agencies"
-        title-tag="h2"
-        img-src="@/assets/TourismAgencies.jpg"
-        img-alt="Tourism Agencies"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Offer travelers language support to improve confidence and customer experience abroad.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Tourism Agencies">Start Learning</b-button>
-    </b-card>
-    </div>
-
-
-    <div>
-    <b-card
-        title="Financiers"
-        title-tag="h2"
-        img-src="@/assets/Financiers.jpg"
-        img-alt="Financiers"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Invest in scalable language solutions designed for a global, mobile audience.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Financiers">Start Learning</b-button>
-    </b-card>
-    </div>
-
-    <div>
-    <b-card
-        title="Marketing Department"
-        title-tag="h2"
-        img-src="@/assets/MarketingDepartment.jpg"
-        img-alt="Marketing Department"
-        img-top
-        img-height="300"
-        tag="article"
-        style="max-width: 20rem;"
-        class="m-5"
-    >
-        <b-card-text>
-        Leverage insights and user engagement tools to reach international markets effectively.
-        </b-card-text>
-
-        <b-button to="/levels" variant="primary" aria-label="Start Learning: Marketing Department">Start Learning</b-button>
-    </b-card>
-    </div>
-    </b-card-group>
   </div>
 
 </template>
@@ -195,3 +109,50 @@
 <script>
 </script>
 
+<style scoped>
+
+.group-card-container{
+  display: flex;
+  flex-wrap: wrap;          
+  justify-content: center;
+  gap: 27px;  
+  margin-top: 20px;
+  margin-bottom: 100px;              
+}
+
+.group-card {
+  width: 25%; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.6s;
+  border-radius: 10px;
+}
+.group-card:hover {
+  box-shadow: 0 10px 20px 0 rgba(6, 43, 78, 0.85);
+}
+
+.groupinfo-btn{
+  background-color: rgb(255, 123, 0);
+  color:aliceblue;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.groupinfo-btn:hover{
+  background-color: orange;
+}
+
+@media (max-width: 900px) {
+  .group-card {
+    width: calc(50% - 20px);  
+  }
+}
+
+
+@media (max-width: 600px) {
+  .group-card {
+    width: 95%;             
+  }
+}
+</style>
