@@ -18,11 +18,11 @@
       </router-link>
 
 
-
+      <router-link :to="`/quiz?level=${level}`">
         <b-card>
           <b-card-text>Vocabulary quiz❓</b-card-text>
         </b-card>
-      </RouterLink>
+      </router-link>
 
       <router-link :to="`/listningComprehension?level=${level}`">
       <b-card>
