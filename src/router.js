@@ -11,6 +11,7 @@ import UserDashboard from "./components/UserDashboard.vue";
 import wordsAndPhrases from "./components/wordsAndPhrases.vue";
 import LearningCategoryView from "./views/LearningCategoryView.vue";
 import readingComprehension from "./components/readingComprehension.vue";
+import listningComprehension from "./components/listningComprehension.vue";
 
 
 const protectedRoutes = ['/UserDashboard', '/levels', '/quiz', '/notepad', '/saved']
@@ -61,6 +62,10 @@ const router = createRouter({
             component: LearningCategoryView,
             path: "/learning/:level",
         },
+        {
+            component: listningComprehension,
+            path: "/listningComprehension",
+        }
     ],
 });
 

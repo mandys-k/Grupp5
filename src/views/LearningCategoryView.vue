@@ -17,9 +17,11 @@
         </b-card>
       </router-link>
 
+      <router-link :to="`/listningComprehension?level=${level}`">
       <b-card>
         <b-card-text>Listening comprehension👂</b-card-text>
       </b-card>
+      </router-link>
 
 
         <b-card>
