@@ -6,8 +6,11 @@
         
         
       <div class="script">
-        <button class="btn script-btn"><span class="material-symbols-outlined">play_arrow</span>
-        <p>Play the sound</p></button>
+        <audio ref="audioPlayer" src="../assets/listningcomprehension.mp3"></audio>
+        <button class="btn script-btn" @click="playAudio">
+          <span class="material-symbols-outlined">play_arrow</span>
+          <p>Play the sound</p>
+        </button>
         <hr>
         <button class="btn script-btn" @click="showScript = !showScript">
             Script
@@ -92,7 +95,11 @@
 
 <script setup>
 import { ref, computed} from 'vue'
+const audioPlayer = ref(null)
 
+const playAudio = () => {
+  audioPlayer.value.play()
+}
 const showScript = ref(false)
 const showEnglish = ref(false)
 
