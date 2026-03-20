@@ -212,11 +212,12 @@ const nextQuestion = () => {
 .script-btn {
   width: 100%;
   max-width: 200px;
+  background-color: #0b0b62;
   color: white;
-  display: flex;            
-  align-items: center;      
-  justify-content: center;   
-  gap: 0.5rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .script-btn p {
   margin: 0;

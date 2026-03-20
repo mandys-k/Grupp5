@@ -136,7 +136,7 @@ const checkAnswers = () => {
 
 h1 {
   text-align: center;
-  color: #257FC9;
+  color: #1565C0;
 }
 
 .text-box {
@@ -157,7 +157,7 @@ label {
 
 button {
   padding: 10px 18px;
-  background: #257FC9;
+  background: #1565C0;
   color: white;
   border: none;
   border-radius: 8px;

@@ -46,11 +46,17 @@
               </div>
 
               <div class="icon-col">
-                <img
-                  class="bookmark-icon"
-                  :src="store.isSaved(word) ?  bookmarkFill : bookmark "
+                <button
+                  class="bookmark-btn"
+                  :aria-label="store.isSaved(word) ? 'Remove bookmark' : 'Add bookmark'"
                   @click.stop="store.toggleSaved(word)"
-                />
+                >
+                  <img
+                    class="bookmark-icon"
+                    :src="store.isSaved(word) ? bookmarkFill : bookmark"
+                    alt=""
+                  />
+                </button>
               </div>
 
             </div>
@@ -120,6 +126,13 @@ h2{
     flex: 1;
     width: auto;
   }
+}
+
+.bookmark-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
