@@ -9,7 +9,7 @@
         <b-container>
             <b-img src="@/assets/Logo.png" fluid alt="Responsive image" class="mb-4 d-block mx-auto"></b-img>
             <b-button to="login" variant="success" class="mt-2">Log in</b-button><br /><br />
-            <p>cd
+            <p>
                 New User?
                 <RouterLink class="register-link" to="register"
                     >Register Here</RouterLink

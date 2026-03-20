@@ -1,13 +1,34 @@
 /* eslint-disable no-undef */
-describe('learn languages website', () => {
-
+describe("learn languages website", () => {
     // Test: visits my website and clicks button to start timer
-    it('visits my website and clicks button to start timer', () => {
-        cy.visit('/quiz')
+    it("registers a user, logs in and starts the quiz timer", () => {
+        cy.visit("/register")
+        cy.get("#name").type("itsme")
+        cy.get("#email").type("helloitsme@gmail.com")
+        cy.get("#password").type("stillme")
+        cy.get("#confirmPassword").type("stillme")
+        cy.get(".btn-register").click()
+        cy.contains(".flag-card", "Italian").click()
+        cy.get(".btn-next").click()
+        cy.contains(".traveller-card", "Leisure Traveller").click()
+        cy.get(".btn-finish").click()
+
+        cy.visit("/login")
+        cy.get("#email").type("helloitsme@gmail.com")
+        cy.get("#password").type("stillme")
+        cy.get(".btn-login").click()
+
+        cy.visit("/quiz")
         cy.get(".five-min-button").click()
         cy.get(".timer-button").should("not.exist")
-        cy.get(".min-sec-container", { timeout: 2000 }).should("contain.text", "04:58")
-        cy.get(".min-sec-container", { timeout: 5000 }).should("contain.text", "04:55")
+        cy.get(".min-sec-container", { timeout: 2000 }).should(
+            "contain.text",
+            "04:58"
+        )
+        cy.get(".min-sec-container", { timeout: 5000 }).should(
+            "contain.text",
+            "04:55"
+        )
         cy.get(".min-sec-container").should("not.contain", "00:00")
         cy.contains("Time's up!").should("not.exist")
     })
@@ -54,5 +75,4 @@ describe('learn languages website', () => {
             })
         })
     })
-
 })
