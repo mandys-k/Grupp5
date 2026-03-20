@@ -56,7 +56,7 @@ h2 {
     margin-bottom: 20px;
 }
  .small-img {
-  width: 200px;
+  width: 250px;
   height: auto;
 }
 .study-category{
@@ -84,8 +84,8 @@ h2 {
   text-align: center;
   font-size: 1.6rem;
   transition: all 0.25s ease;
-  border-color: #0b0b62;
-  background-color: #f0f4ff;
+  border-color: #2F80ED;
+  background-color: #EAF4FF;
   border:2px solid;
   color:#0b0b62;
 
