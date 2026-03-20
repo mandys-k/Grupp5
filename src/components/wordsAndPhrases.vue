@@ -3,12 +3,12 @@
     <h2><b>Level 1</b></h2>
     <!--Situation category for words and phrases-->
     <b-row class="category-card flex-nowrap overflow-auto g-3 justify-content-center">
-      <b-col 
-        v-for="cat in categories" 
+      <b-col
+        v-for="cat in categories"
         :key="cat"
         cols="auto"
       >
-        <b-card 
+        <b-card
           class="text-center"
           @click="store.selectCategory(cat)"
         >
@@ -18,13 +18,13 @@
     </b-row>
 
     <hr>
-    
+
     <!--30 Words and phrases of selected situation category-->
     <div v-if="selectedCategory" class=" mt-4">
       <h2>- {{ selectedCategory }} -</h2>
       <b-row class="g-3">
-        <b-col 
-          v-for="word in wordsByCategory" 
+        <b-col
+          v-for="word in wordsByCategory"
           :key="word.word"
           cols="12"
           md="10"
@@ -79,7 +79,7 @@ h2{
 .category-card .card{
   text-align: center;
   font-size: 1.6rem;
-  font-weight: 600;   
+  font-weight: 600;
   transition: all 0.25s ease;
   border-color: #0b0b62;
   background-color: #f0f4ff;
@@ -108,7 +108,7 @@ h2{
 }
 .word-row{
   gap: 20px;
-  
+
 }
 
 .word-col {
@@ -130,7 +130,7 @@ h2{
   }
   .word-row {
     position: relative;
-    gap: 10px; 
+    gap: 10px;
   }
 }
 

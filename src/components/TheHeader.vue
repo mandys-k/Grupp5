@@ -70,7 +70,7 @@
                     <RouterLink to="/UserDashboard">Dashboard</RouterLink>
                     <RouterLink to="/levels">Levels</RouterLink>
                     <RouterLink to="/notepad">Notepad</RouterLink>
-                    <RouterLink to="/saved">Saved</RouterLink>
+                    <RouterLink to="/saved">Saved words</RouterLink>
                 </b-col>
             </b-row>
         </b-container>

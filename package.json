@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.43.8",
+    "canvas-confetti": "^1.9.4",
     "cypress-axe": "^1.7.0",
     "flag-icons": "^7.5.0",
     "pinia": "^3.0.4",
