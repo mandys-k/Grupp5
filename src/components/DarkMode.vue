@@ -32,7 +32,7 @@
     </button>
 </template>
 
-<style>
+<style scoped>
     .darkmode-button {
         display: flex;
         border-radius: 2em;
