@@ -41,7 +41,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: .5em;
+        gap: 0.5em;
         margin: 5em;
     }
 </style>

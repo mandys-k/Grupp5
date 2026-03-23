@@ -51,7 +51,8 @@
 
             <b-row class="align-items-center">
                 <b-col cols="6" md="4" class="triplingo">
-                    <RouterLink :to="userStore.isLoggedIn ? '/UserDashboard' : '/'"
+                    <RouterLink
+                        :to="userStore.isLoggedIn ? '/UserDashboard' : '/'"
                         ><img
                             src="@/assets/Logotext.png"
                             alt="TripLingo"

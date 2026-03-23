@@ -1,5 +1,5 @@
 <script>
-    import readingBird from '@/assets/reading-bird.png'
+    import readingBird from "@/assets/reading-bird.png"
 
     export default {
         data() {
@@ -37,9 +37,9 @@
 
                     this.replay = false
 
-                    if(this.totalSeconds < 60) {
-                    this.timeWarning = true
-                }
+                    if (this.totalSeconds < 60) {
+                        this.timeWarning = true
+                    }
                 }, 1000)
 
                 this.replayTime = this.startingMinutes
@@ -67,7 +67,7 @@
 <template>
     <div class="timer-wrapper">
         <div>
-            <p  v-if="!timer">Pick how long you want to study</p>
+            <p v-if="!timer">Pick how long you want to study</p>
             <div class="time-container">
                 <button
                     v-if="!timer"
@@ -77,7 +77,7 @@
                 >
                     5 minutes
                     <span class="material-symbols-outlined"> play_arrow </span>
-            </button>
+                </button>
                 <button
                     v-if="!timer"
                     @click="onStartTimer"
@@ -98,25 +98,34 @@
                 </button>
             </div>
             <div class="timer-container">
-                <div class="min-sec-container" :class="{ shortTime: timeWarning }" v-if="timer">
+                <div
+                    class="min-sec-container"
+                    :class="{ shortTime: timeWarning }"
+                    v-if="timer"
+                >
                     <span>{{ minutes }}</span>
                     <span>:</span>
                     <span>{{ seconds }}</span>
                 </div>
-                <span v-if="timer" class="material-symbols-outlined timer-icons"> timer_play </span>
+                <span
+                    v-if="timer"
+                    class="material-symbols-outlined timer-icons"
+                >
+                    timer_play
+                </span>
             </div>
             <div class="times-up-container">
                 <p class="times-up-paragraph" v-if="replay">TIME'S UP!</p>
                 <span
-                        v-if="replay"
-                        @click="restartTimer"
-                        class="material-symbols-outlined timer-icons replay-icon"
-                    >
-                        replay
-                    </span>
+                    v-if="replay"
+                    @click="restartTimer"
+                    class="material-symbols-outlined timer-icons replay-icon"
+                >
+                    replay
+                </span>
             </div>
         </div>
-        <img :src="bird" alt="">
+        <img :src="bird" alt="" />
     </div>
 </template>
 
@@ -125,20 +134,20 @@
         font-family: "Varela Round", sans-serif;
         display: flex;
         padding: 0.5em;
-        background-image: linear-gradient(to right, #B6ECFB 10%, #257FC9);
-        border-radius: .5em;
-        border: 2px solid #257FC9;
+        background-image: linear-gradient(to right, #b6ecfb 10%, #257fc9);
+        border-radius: 0.5em;
+        border: 2px solid #257fc9;
     }
 
     .timer-button:hover {
-        background-image: linear-gradient(to left, #B6ECFB 10%, #257FC9);
+        background-image: linear-gradient(to left, #b6ecfb 10%, #257fc9);
     }
 
     .timer-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: .2em;
+        gap: 0.2em;
         margin-right: 4.5em;
     }
 
@@ -160,13 +169,13 @@
     }
 
     .timer-icons {
-       font-size: 2em;
+        font-size: 2em;
     }
 
     .times-up-paragraph {
         color: red;
         font-size: 1.2em;
-        margin: 1em 0 .5em;
+        margin: 1em 0 0.5em;
     }
 
     .times-up-container {
@@ -196,6 +205,4 @@
         align-items: center;
         gap: 17em;
     }
-
-    
 </style>
