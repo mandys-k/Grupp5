@@ -1,0 +1,93 @@
+[
+        {
+            "id": 1,
+            "pairId": "1",
+            "text": "Happy"
+        },
+        {
+             "id": 2,
+             "pairId": "1",
+             "text": "Felice"
+            },
+
+        {
+             "id": 3,
+             "pairId": "2",
+             "text": "Bread"
+            },
+        {
+             "id": 4,
+             "pairId": "2",
+             "text": "Pane"
+            },
+        {
+             "id": 5,
+             "pairId": "3",
+             "text": "Table"
+            },
+        {
+             "id": 6,
+             "pairId": "3",
+             "text": "Tavolo"
+            },
+        {
+             "id": 7,
+             "pairId": "4",
+             "text": "Good evening"
+            },
+        {
+             "id": 8,
+             "pairId": "4",
+             "text": "Buonasera"
+            },
+        {
+             "id": 9,
+             "pairId": "5",
+             "text": "Thank you"
+            },
+        {
+             "id": 10,
+             "pairId": "5",
+             "text": "Grazie"
+            },
+        {
+             "id": 11,
+             "pairId": "6",
+             "text": "Please"
+            },
+        {
+             "id": 12,
+             "pairId": "6",
+             "text": "Per favore"
+            },
+        {
+             "id": 13,
+             "pairId": "7",
+             "text": "Sorry"
+            },
+        {
+             "id": 14,
+             "pairId": "7",
+             "text": "Mi dispiace"
+            },
+        {
+             "id": 15,
+             "pairId": "8",
+             "text": "Good morning"
+            },
+        {
+             "id": 16,
+             "pairId": "8",
+             "text": "Buongiorno"
+            },
+        {
+             "id": 17,
+             "pairId": "9",
+             "text": "Friend"
+            },
+        {
+             "id": 18,
+             "pairId": "9",
+             "text": "Amico / Amica"
+            }
+]

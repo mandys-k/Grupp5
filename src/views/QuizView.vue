@@ -14,9 +14,12 @@
     <h1>Quiz</h1>
     <CountdownTimer />
     <VocabularyQuiz />
-    <RouterLink id="levels-link" to="/learning/:level">
-        Back to all categories
-    </RouterLink>
+    <div id="levels-container">
+        <span class="material-symbols-outlined"> arrow_back </span>
+        <RouterLink id="levels-link" to="/learning/:level">
+            Back to all categories
+        </RouterLink>
+    </div>
 </template>
 
 <style scoped>
@@ -26,6 +29,19 @@
     }
 
     #levels-link {
-        display: block;
+        color: black;
+        font-size: 1.1em;
+    }
+
+    #levels-link:hover {
+        color: rgb(83, 83, 83);
+    }
+
+    #levels-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5em;
+        margin: 5em;
     }
 </style>

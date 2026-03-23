@@ -48,10 +48,6 @@ export const useQuizStore = defineStore("quiz", {
                     this.score++
                 }
             })
-
-            if(this.score >= 2) {
-                this.finishedQuiz()
-            }
         },
         previousQuestion() {
             if (this.currentQuestionIndex > 0) {

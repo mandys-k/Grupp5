@@ -197,7 +197,5 @@
         gap: 17em;
     }
 
-    /*
-        font-family: "Jost", sans-serif;
-    */
+    
 </style>
