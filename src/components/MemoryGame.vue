@@ -101,10 +101,8 @@
         </div>
     </div>
     <div class="score-container">
-        <p class="score">
-            Score:
-        </p>
-        <p> {{ score }} </p>
+        <p class="score">Score:</p>
+        <p>{{ score }}</p>
     </div>
     <div class="restart-container">
         <button class="restart-btn" @click="restart">Restart</button>
@@ -112,14 +110,14 @@
 </template>
 
 <style scoped>
-        .score {
+    .score {
         font-weight: 600;
     }
 
     .score-container {
         display: flex;
         justify-content: center;
-        gap: .5rem;
+        gap: 0.5rem;
         font-family: "Jost", sans-serif;
         font-size: 1.5rem;
     }

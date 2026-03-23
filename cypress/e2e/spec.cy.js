@@ -36,20 +36,20 @@ describe("learn languages website", () => {
     // Tests to meet our "definition of done" criteria
     // Accessibility test - uses cypress-axe npm to check for accessibility issues on the page - SAK
     it("has no accessibility issues", () => {
-    cy.visit("/")
-    cy.injectAxe()
+        cy.visit("/")
+        cy.injectAxe()
 
-    cy.checkA11y(null, null, (violations) => {
-        cy.log(`${violations.length} accessibility violations found`) //Add log for output of which violations were found - SAK
+        cy.checkA11y(null, null, (violations) => {
+            cy.log(`${violations.length} accessibility violations found`) //Add log for output of which violations were found - SAK
 
-        violations.forEach((v) => {
-            cy.log(`ID: ${v.id}`)
-            cy.log(`Description: ${v.description}`)
-            cy.log(`Impact: ${v.impact}`)
-            cy.log(`Nodes affected: ${v.nodes.length}`)
+            violations.forEach((v) => {
+                cy.log(`ID: ${v.id}`)
+                cy.log(`Description: ${v.description}`)
+                cy.log(`Impact: ${v.impact}`)
+                cy.log(`Nodes affected: ${v.nodes.length}`)
+            })
         })
     })
-})
 
     // Test to check prettier json file is consistent and includes tabwidth of 4, no semicolons and no trailing commas - SAK
     it("prettier config is correct", () => {

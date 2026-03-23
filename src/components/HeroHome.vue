@@ -7,8 +7,14 @@
         class="hero-image-container d-flex align-items-center justify-content-center text-white text-center"
     >
         <b-container>
-            <b-img src="@/assets/Logo.png" fluid alt="Responsive image" class="mb-4 d-block mx-auto"></b-img>
-            <b-button to="login" variant="success" class="mt-2">Log in</b-button><br /><br />
+            <b-img
+                src="@/assets/Logo.png"
+                fluid
+                alt="Responsive image"
+                class="mb-4 d-block mx-auto"
+            ></b-img>
+            <b-button to="login" variant="success" class="mt-2">Log in</b-button
+            ><br /><br />
             <p>
                 New User?
                 <RouterLink class="register-link" to="register"

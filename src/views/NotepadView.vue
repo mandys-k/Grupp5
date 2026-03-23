@@ -1,16 +1,13 @@
-
 <template>
     <MyNotes />
 </template>
 
 <script>
-  import MyNotes from "../components/MyNotes.vue";
+    import MyNotes from "../components/MyNotes.vue"
 
-  export default {
-    components: {
-      MyNotes,
-
+    export default {
+        components: {
+            MyNotes
+        }
     }
-  }
-
 </script>
