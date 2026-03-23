@@ -1,9 +1,9 @@
 <script>
-import MemoryGame from '../components/MemoryGame.vue';
+    import MemoryGame from "../components/MemoryGame.vue"
 
     export default {
         components: {
-           MemoryGame
+            MemoryGame
         }
     }
 </script>
@@ -15,7 +15,7 @@ import MemoryGame from '../components/MemoryGame.vue';
 
 <style scoped>
     h1 {
-            text-align: center;
-            font-family: "PT serif", serif;
-        }
+        text-align: center;
+        font-family: "PT serif", serif;
+    }
 </style>

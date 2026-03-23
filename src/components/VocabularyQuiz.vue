@@ -75,7 +75,8 @@
                 You scored {{ store.score }} out of
                 {{ store.questions.length }} !
             </p>
-            <img class="done-img"
+            <img
+                class="done-img"
                 v-if="store.finished && store.score >= 2"
                 src="../assets/well-done-bird.png"
                 alt="our mascot doing a thumbs up"
@@ -102,7 +103,7 @@
         height: auto;
     }
 
-    .done-img{
+    .done-img {
         margin-bottom: 4em;
     }
 
