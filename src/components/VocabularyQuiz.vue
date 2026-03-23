@@ -6,83 +6,6 @@
 
 <template>
     <div v-if="!store.showAnswers" class="start-container">
-<<<<<<< HEAD
-        <button id="start-button" @click="store.startQuiz()">Start quiz</button>
-    </div>
-    <div class="quiz-container" v-if="store.showAnswers">
-        <div class="quiz-wrapper">
-            <h2 v-if="store.currentQuestion && store.questionNumber > 0">
-                {{ store.questionNumber }}.
-                {{ store.currentQuestion.question }}
-            </h2>
-            <div class="answer-wrapper">
-                <div
-                    v-for="answer in store.currentQuestion.answers"
-                    :key="answer.text"
-                    class="answer-container"
-                >
-                    <button
-                        @click="store.selectAnswer(answer)"
-                        :class="{
-                            selected: store.selectedAnswer === answer,
-                            chosen:
-                                store.selectedAnswer &&
-                                store.selectedAnswer !== answer
-                        }"
-                    >
-                        <span class="option">{{ answer.option }}</span>
-                        <span class="text">{{ answer.text }}</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <button
-            @click="store.previousQuestion()"
-            v-if="store.currentQuestionIndex > 0"
-        >
-            Previous
-        </button>
-
-        <button
-            @click="store.nextQuestion()"
-            v-if="store.currentQuestionIndex < store.questions.length - 1"
-            :disabled="!store.selectedAnswer"
-            class="next-button"
-        >
-            Next
-        </button>
-
-        <button
-            @click="store.showScore()"
-            v-if="store.currentQuestionIndex === store.questions.length - 1"
-            :disabled="!store.selectedAnswer"
-        >
-            Check result
-        </button>
-
-        <p v-if="store.finished">
-            You scored {{ store.score }} out of {{ store.questions.length }} !
-        </p>
-        <img
-            v-if="store.finished && store.score >= 2"
-            src="../assets/well-done-bird.png"
-            alt="our mascot doing a thumbs up"
-        />
-        <img
-            v-else-if="store.finished"
-            src="../assets/try-again-bird.png"
-            alt="out mascot telling the user to redo the test"
-        />
-
-        <button
-            @click="store.startQuiz()"
-            v-if="store.finished && store.score < 2"
-            class="replay"
-        >
-            Redo test
-        </button>
-=======
         <button class="start-button" @click="store.startQuiz()">
             Start quiz
         </button>
@@ -170,7 +93,6 @@
                 Redo test
             </button>
         </div>
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
     </div>
 </template>
 
@@ -180,12 +102,6 @@
         height: auto;
     }
 
-<<<<<<< HEAD
-    .selected {
-        background-color: rgb(128, 128, 128);
-    }
-
-=======
     .done-img{
         margin-bottom: 4em;
     }
@@ -194,7 +110,6 @@
         background-color: rgb(128, 128, 128);
     }
 
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
     .chosen {
         cursor: no-drop;
     }
@@ -206,21 +121,12 @@
     }
 
     .answer-container button {
-<<<<<<< HEAD
-        font-family: "Varela Round", sans-serif;
-        margin: 2em;
-        padding: 2.5em;
-        border-radius: 1.5em;
-        box-shadow: 0 0 1.5em 0.5em;
-        transition: transform 0.3s;
-=======
         margin: 2em;
         padding: 3em 2.5em;
         border-radius: 1.5em;
         box-shadow: 0 0 1.5em 0.5em;
         transition: transform 0.3s ease-in-out;
         width: 80%;
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
     }
 
     .answer-container button:hover {
@@ -231,15 +137,6 @@
     .answer-container {
         margin: 1em;
         background-color: #b6ecfb;
-<<<<<<< HEAD
-        text-align: center;
-    }
-
-    .answer-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 15em;
-=======
         display: flex;
         justify-content: center;
         align-items: center;
@@ -249,41 +146,21 @@
     .answers-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
         padding: 4em;
     }
 
     h2 {
         text-align: center;
-<<<<<<< HEAD
-        margin: 2em 0;
-    }
-
-    #start-button {
-        background-image: linear-gradient(90deg, #b6ecfb, #fff, #b6ecfb);
-=======
         margin-top: 2em;
     }
 
     .start-button {
         margin: 5em auto;
         background-image: linear-gradient(90deg, #b6ecfb, seashell, #b6ecfb);
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
         background-position: right;
         transition: background-position 1s;
         background-size: 200% 100%;
         padding: 1.5em 2em;
-<<<<<<< HEAD
-        font-family: "Varela Round", sans-serif;
-    }
-
-    #start-button:hover {
-        background-position: left;
-    }
-
-    .start-container {
-        text-align: center;
-=======
         border: none;
         box-shadow: 0 0.8em 0 rgb(153, 225, 245);
         border-radius: 2em;
@@ -359,6 +236,9 @@
 
     .replay:hover {
         background-image: linear-gradient(to left, #fff 20%, #fe9f00);
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
+    }
+
+    .start-container {
+        text-align: center;
     }
 </style>

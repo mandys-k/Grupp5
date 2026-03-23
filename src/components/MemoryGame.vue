@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<!-- <script>
-    import cards from "../data/cards.json"
-
-    export default {
-        data() {
-            return { cards: [] }
-        }
-    }
-</script> -->
-
-<template>
-    <h2>Game Time</h2>
-</template>
-=======
 <script>
     import cardsData from "@/data/cards.json"
 
@@ -203,4 +188,3 @@
         backface-visibility: hidden;
     }
 </style>
->>>>>>> a4e8fd848a422ca4d3b0fc0a060ffc77b1e14e17
