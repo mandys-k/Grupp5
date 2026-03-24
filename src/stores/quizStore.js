@@ -39,6 +39,12 @@ export const useQuizStore = defineStore("quiz", {
                 this.showQuestion()
             }
         },
+        previousQuestion() {
+            if (this.currentQuestionIndex > 0) {
+                this.currentQuestionIndex--
+                this.showQuestion()
+            }
+        },
         showScore() {
             this.finished = true
 
@@ -57,12 +63,6 @@ export const useQuizStore = defineStore("quiz", {
             }
 
             this.showAnswers = false
-        },
-        previousQuestion() {
-            if (this.currentQuestionIndex > 0) {
-                this.currentQuestionIndex--
-                this.showQuestion()
-            }
         },
         finishedQuiz() {
             confetti({

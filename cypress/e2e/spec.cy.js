@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 describe("learn languages website", () => {
-    // Test: visits my website and clicks button to start timer
-    it("registers a user, logs in and starts the quiz timer", () => {
+    it("registers a user, signs in and starts the quiz timer", () => {
         cy.visit("/register")
         cy.get("#name").type("itsme")
         cy.get("#email").type("helloitsme@gmail.com")

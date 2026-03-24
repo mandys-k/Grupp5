@@ -156,8 +156,8 @@
     .cards-container {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 2rem;
-        margin: 5rem 8rem;
+        gap: 1rem;
+        margin: 5rem 6rem;
     }
 
     .front,
@@ -184,5 +184,19 @@
     .card .back {
         background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='60' height='60' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M10 50H0m60-40H50m0 40v10M10 0v10m21 30v20m0-60v20m9 10h20M0 30h20m0 10h20V20H20v10zM10 10h40v40H10zM0 0h60v60H0z'  stroke-width='1' stroke='%23fe9f00ff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
         backface-visibility: hidden;
+    }
+
+    @media (max-width: 1000px) {
+        .cards-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin: 5rem 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 </style>
