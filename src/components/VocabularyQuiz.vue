@@ -1,7 +1,19 @@
 <script setup>
+    import { watch } from "vue"
     import { useQuizStore } from "../stores/quizStore"
+    import { useUserStore } from "../stores/dataStorage.js"
 
     const store = useQuizStore()
+    const userStore = useUserStore()
+
+    watch(
+        () => store.finished,
+        (finished) => {
+            if (finished && store.score >= 16) {
+                userStore.completeLevel(1)
+            }
+        }
+    )
 </script>
 
 <template>
