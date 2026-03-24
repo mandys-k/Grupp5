@@ -65,8 +65,8 @@
 </script>
 
 <template>
-    <div class="timer-wrapper">
-        <div>
+    <div class="timer-img-wrapper">
+        <div class="timer-wrapper">
             <p v-if="!timer">Pick how long you want to study</p>
             <div class="time-container">
                 <button
@@ -125,7 +125,7 @@
                 </span>
             </div>
         </div>
-        <img :src="bird" alt="" />
+        <img :src="bird" alt="our mascot reading a book" />
     </div>
 </template>
 
@@ -143,12 +143,20 @@
         background-image: linear-gradient(to left, #b6ecfb 10%, #257fc9);
     }
 
+    .timer-wrapper {
+        width: 270px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .timer-container {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.2em;
-        margin-right: 4.5em;
     }
 
     .time-container {
@@ -196,13 +204,12 @@
     img {
         width: 200px;
         height: auto;
-        margin-right: 10em;
     }
 
-    .timer-wrapper {
+    .timer-img-wrapper {
         display: flex;
-        justify-content: flex-end;
         align-items: center;
-        gap: 17em;
+        justify-content: space-around;
+        margin-top: 4em;
     }
 </style>

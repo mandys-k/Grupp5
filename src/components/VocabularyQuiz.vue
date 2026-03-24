@@ -24,7 +24,7 @@
     </div>
     <div>
         <div class="quiz-container" v-if="store.showAnswers">
-            <div class="quiz-wrapper">
+            <div>
                 <h2 v-if="store.currentQuestion && store.questionNumber > 0">
                     {{ store.questionNumber }}.
                     {{ store.currentQuestion.question }}
@@ -83,7 +83,9 @@
         </div>
 
         <div class="result-container" v-if="store.finished">
-            <p class="congratulations-paragraph" v-if="store.score >= 16">Congratulations,</p>
+            <p class="congratulations-paragraph" v-if="store.score >= 16">
+                Congratulations,
+            </p>
             <p>
                 You scored {{ store.score }} out of
                 {{ store.questions.length }} !
@@ -99,8 +101,10 @@
                 src="../assets/try-again-bird.png"
                 alt="out mascot telling the user to redo the test"
             />
-            <p v-if="store.score >= 16"> You have now unlocked
-                <RouterLink class="level-link" to="/levels">level 2</RouterLink>🗝️
+            <p v-if="store.score >= 16">
+                You have now unlocked
+                <RouterLink class="level-link" to="/levels">level 2</RouterLink
+                >🗝️
             </p>
             <button
                 @click="store.startQuiz()"
@@ -121,7 +125,8 @@
     }
 
     .selected {
-        background-color: rgb(128, 128, 128);
+        background-color: #808080;
+        transform: scale(1.05);
     }
 
     .chosen {
@@ -136,20 +141,18 @@
 
     .answer-container button {
         margin: 2em;
-        padding: 3em 2.5em;
+        padding: 3em 0;
         border-radius: 1.5em;
         box-shadow: 0 0 1.5em 0.5em;
         transition: transform 0.3s ease-in-out;
-        width: 80%;
+        width: 100%;
     }
 
     .answer-container button:hover {
-        transform: scale(1.1);
         background-color: #a7a7a7;
     }
 
     .answer-container {
-        margin: 1em;
         background-color: #b6ecfb;
         display: flex;
         justify-content: center;
@@ -161,11 +164,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 4em;
+        gap: 1.5em;
     }
 
     h2 {
         text-align: center;
-        margin-top: 2em;
+        margin: 2em 0.5em 0;
     }
 
     .start-button {
@@ -174,7 +178,7 @@
         background-position: right;
         transition: background-position 1s;
         background-size: 200% 100%;
-        padding: 1.5em 2em;
+        padding: 2em 2.5em;
         border: none;
         box-shadow: 0 0.8em 0 rgb(153, 225, 245);
         border-radius: 2em;
@@ -192,7 +196,7 @@
 
     .quiz-container {
         border: 2px solid gray;
-        margin: 5em 15em;
+        margin: 4em 10em;
         font-family: "Varela Round", sans-serif;
     }
 
@@ -230,7 +234,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 5em 30em;
+        margin: 5em auto;
+        max-width: 35em;
         border: 10px outset #808080;
         font-family: "Varela Round", sans-serif;
         padding: 4em 0;
@@ -263,6 +268,29 @@
         color: #5d5d5d;
     }
 
+    @media (max-width: 1100px) {
+        .quiz-container {
+            margin: 4em 4em;
+        }
 
+        .answers-wrapper {
+            padding: 2em;
+            gap: 1em;
+        }
+    }
 
+    @media (max-width: 780px) {
+        .answers-wrapper {
+            grid-template-columns: 1fr;
+            padding: 1em;
+        }
+
+        .quiz-container {
+            margin: 4em 1em;
+        }
+
+        .answer-container button {
+            padding: 2em 0;
+        }
+    }
 </style>

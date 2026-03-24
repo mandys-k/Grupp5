@@ -1,15 +1,16 @@
 <script>
     import { mapStores } from "pinia"
-    import { useThemeStore } from "../stores/themeStore.js"
     import { useUserStore } from "../stores/dataStorage.js"
+    import DarkMode from "./DarkMode.vue"
+    import { useThemeStore } from "../stores/themeStore.js"
 
     export default {
         computed: {
-            ...mapStores(useThemeStore),
-            ...mapStores(useUserStore)
+            ...mapStores(useUserStore),
+            ...mapStores(useThemeStore)
         },
-        created() {
-            this.themeStore.saveTheme()
+        components: {
+            DarkMode
         },
         data() {
             return {
@@ -28,24 +29,8 @@
     <header class="header-navbar text-white">
         <b-container fluid class="px-4">
             <BRow>
-                <BCol class="d-flex justify-content-end">
-                    <button
-                        class="darkmode-button"
-                        :class="{
-                            darkmodeButtonOn: themeStore.darkModeOn,
-                            darkmodeButtonOff: !themeStore.darkModeOn
-                        }"
-                        @click="themeStore.onDarkMode"
-                        type="button"
-                    >
-                        <span
-                            class="material-symbols-outlined circle"
-                            :class="{ circleRight: themeStore.darkModeOn }"
-                        >
-                            circle
-                        </span>
-                        <span class="darkmode-text">Dark mode</span>
-                    </button>
+                <BCol class="d-none d-md-flex justify-content-end">
+                    <DarkMode />
                 </BCol>
             </BRow>
 
@@ -61,12 +46,19 @@
                 </b-col>
 
                 <b-col cols="6" class="d-md-none text-end">
-                    <button class="hamburger" @click="navbarmenu">☰</button>
+                    <button
+                        class="hamburger"
+                        @click="navbarmenu"
+                        :class="{ darkmodeHamburger: themeStore.darkModeOn }"
+                    >
+                        ☰
+                    </button>
                 </b-col>
 
                 <b-col
                     md="8"
                     class="d-none d-md-flex justify-content-end nav-links"
+                    :class="{ darkmodeLinks: themeStore.darkModeOn }"
                 >
                     <RouterLink to="/UserDashboard">Dashboard</RouterLink>
                     <RouterLink to="/levels">Levels</RouterLink>
@@ -77,6 +69,7 @@
         </b-container>
 
         <div v-if="hamburgerClicked" class="mobile-menu d-md-none">
+            <DarkMode />
             <RouterLink to="/UserDashboard" @click="navbarmenu"
                 >Dashboard</RouterLink
             >
@@ -114,6 +107,7 @@
     .nav-links a:hover {
         text-decoration: underline;
     }
+
     .logo-img {
         height: 32px;
         width: auto;
@@ -135,10 +129,12 @@
         text-decoration: none;
     }
 
-    .hamburger {
-        background: none;
-        border: none;
-        color: white;
+    .darkmodeLinks a {
+        color: #fff;
+    }
+
+    .darkmodeHamburger {
+        color: #fff;
     }
 
     .mobile-menu {
@@ -157,54 +153,9 @@
     .hamburger {
         background: none;
         border: none;
-        color: rgba(11, 11, 98, 0.95);
     }
 
     .mobile-menu a:hover {
         text-decoration: underline;
-    }
-
-    .darkmode-button {
-        display: flex;
-        border-radius: 2em;
-        padding: 0.2em 0;
-        width: 9.4em;
-        gap: 0.5em;
-        background-color: white;
-        position: relative;
-        align-items: center;
-        transition:
-            background-color 0.2s,
-            color 0.2s;
-        font-family: "Varela Round", sans-serif;
-        margin-top: 0.5em;
-    }
-
-    .darkmodeButtonOn {
-        background-color: black;
-        color: white;
-        border: 2px solid white;
-    }
-
-    .darkmodeButtonOn:hover {
-        background-color: rgb(35, 35, 35);
-    }
-
-    .darkmodeButtonOff:hover {
-        background-color: rgb(212, 212, 212);
-    }
-
-    .circle {
-        font-size: 1.8em;
-        position: absolute;
-        transition: transform 0.4s;
-    }
-
-    .circleRight {
-        transform: translateX(4em);
-    }
-
-    .darkmode-text {
-        margin-left: 2em;
     }
 </style>
