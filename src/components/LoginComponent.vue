@@ -1,4 +1,7 @@
 <template>
+    <div class="login-page-wrapper">
+        <img v-if="errorMessage" src="@/assets/thinking-bird.png" alt="" class="side-bird side-bird-left" />
+        <img v-if="errorMessage" src="@/assets/thinking-bird.png" alt="" class="side-bird side-bird-right" />
     <div class="login-container">
         <h1>Welcome to TripLingo!</h1>
         <p class="subtitle">Log in to track your progress</p>
@@ -38,6 +41,7 @@
             <RouterLink to="/register">Register here</RouterLink>
         </p>
     </div>
+    </div>
 </template>
 
 <script setup>
@@ -66,6 +70,28 @@
 </script>
 
 <style scoped>
+    .login-page-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-bird {
+        position: absolute;
+        width: 150px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .side-bird-left {
+        left: calc(50% - 340px);
+    }
+
+    .side-bird-right {
+        right: calc(50% - 340px);
+    }
+
     .login-container {
         max-width: 400px;
         margin: 60px auto;

@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div
         class="d-flex flex-wrap gap-3 mx-auto my-5 px-3"
         style="max-width: 860px"
@@ -21,10 +22,6 @@
             <p class="text-muted small mb-2">{{ userStore.currentEmail }}</p>
 
             <p class="traveller-badge mb-4">{{ userStore.travellerType }}</p>
-
-            <button class="btn btn-outline-danger" @click="handleLogout">
-                Log Out
-            </button>
         </div>
 
         <!-- RIGHT CARD (Desktop) — Progress summary - SAK -->
@@ -233,6 +230,10 @@
                 Connect with Facebook
             </button>
         </div>
+    </div>
+    <div class="d-flex justify-content-center mb-5">
+        <button class="btn btn-danger px-4" @click="handleLogout">Log Out</button>
+    </div>
     </div>
 </template>
 
