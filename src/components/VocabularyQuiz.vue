@@ -17,7 +17,7 @@
                     {{ store.questionNumber }}.
                     {{ store.currentQuestion.question }}
                 </h2>
-                <div class="answers-wrapper">
+                <div class="answers-wrapper" v-if="store.currentQuestion">
                     <div
                         v-for="answer in store.currentQuestion.answers"
                         :key="answer.text"
@@ -33,7 +33,7 @@
                             }"
                         >
                             <span class="option">{{ answer.option }}</span>
-                            <span class="text">{{ answer.text }}</span>
+                            <span>{{ answer.text }}</span>
                         </button>
                     </div>
                 </div>
@@ -71,24 +71,28 @@
         </div>
 
         <div class="result-container" v-if="store.finished">
+            <p class="congratulations-paragraph" v-if="store.score >= 16">Congratulations,</p>
             <p>
                 You scored {{ store.score }} out of
                 {{ store.questions.length }} !
             </p>
             <img
                 class="done-img"
-                v-if="store.finished && store.score >= 2"
+                v-if="store.score >= 16"
                 src="../assets/well-done-bird.png"
                 alt="our mascot doing a thumbs up"
             />
             <img
-                v-else-if="store.finished"
+                v-else
                 src="../assets/try-again-bird.png"
                 alt="out mascot telling the user to redo the test"
             />
+            <p v-if="store.score >= 16"> You have now unlocked
+                <RouterLink class="level-link" to="/levels">level 2</RouterLink>🗝️
+            </p>
             <button
                 @click="store.startQuiz()"
-                v-if="store.finished && store.score < 2"
+                v-if="store.score < 16"
                 class="replay"
             >
                 Redo test
@@ -101,10 +105,7 @@
     img {
         width: 250px;
         height: auto;
-    }
-
-    .done-img {
-        margin-bottom: 4em;
+        margin: 2em 0;
     }
 
     .selected {
@@ -220,15 +221,14 @@
         margin: 5em 30em;
         border: 10px outset #808080;
         font-family: "Varela Round", sans-serif;
+        padding: 4em 0;
     }
 
     .result-container p {
-        margin-top: 4em;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .replay {
-        margin: 1em 0 4em;
         padding: 1em 2em;
         background-image: linear-gradient(to right, #fff 20%, #fe9f00);
         transition: background-image;
@@ -242,4 +242,15 @@
     .start-container {
         text-align: center;
     }
+
+    .level-link {
+        color: #000;
+    }
+
+    .level-link:hover {
+        color: #5d5d5d;
+    }
+
+
+
 </style>
