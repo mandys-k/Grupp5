@@ -1,5 +1,6 @@
 import { defineStore } from "pinia"
 import confetti from "canvas-confetti"
+import questionsData from "@/data/quizQuestions.json"
 
 export const useQuizStore = defineStore("quiz", {
     actions: {
@@ -8,6 +9,8 @@ export const useQuizStore = defineStore("quiz", {
             this.score = 0
             this.finished = false
             this.answersGiven = []
+
+            this.questions = questionsData
 
             this.showQuestion()
         },
@@ -49,7 +52,7 @@ export const useQuizStore = defineStore("quiz", {
                 }
             })
 
-            if (this.score >= 2) {
+            if (this.score >= 16) {
                 this.finishedQuiz()
             }
 
@@ -79,81 +82,6 @@ export const useQuizStore = defineStore("quiz", {
         finished: false,
         selectedAnswer: null,
         answersGiven: [],
-
-        questions: [
-            {
-                question:
-                    "How do you say 'Hello, I would like to order' in Italian?",
-                answers: [
-                    {
-                        option: "A.",
-                        text: "Ciao, vorrei ordinare",
-                        correct: true
-                    },
-                    {
-                        option: "B.",
-                        text: "Ciao, devo partire",
-                        correct: false
-                    },
-                    {
-                        option: "C.",
-                        text: "Ciao, sto dormendo",
-                        correct: false
-                    },
-                    {
-                        option: "D.",
-                        text: "Ciao, sto lavorando",
-                        correct: false
-                    }
-                ]
-            },
-            {
-                question: "What does 'Scusi, dov'è il bagno?' mean?",
-                answers: [
-                    {
-                        option: "A.",
-                        text: "Excuse me, how much is this?",
-                        correct: false
-                    },
-                    {
-                        option: "B.",
-                        text: "Excuse me, where is the hotel?",
-                        correct: false
-                    },
-                    {
-                        option: "C.",
-                        text: "Excuse me, where is the bathroom?",
-                        correct: true
-                    },
-                    {
-                        option: "D.",
-                        text: "Excuse me, what time is it?",
-                        correct: false
-                    }
-                ]
-            },
-            {
-                question:
-                    "How do you say 'I would like a coffee', please in Italian?",
-                answers: [
-                    {
-                        option: "A.",
-                        text: "Vorrei un caffè, per favore",
-                        correct: true
-                    },
-                    {
-                        option: "B.",
-                        text: "Voglio mangiare adesso",
-                        correct: false
-                    },
-                    { option: "C", text: "Devo andare via", correct: false },
-                    {
-                        option: "D",
-                        text: "Ho bisogno di dormire",
-                        correct: false
-                    }
-                ]
-            }
-        ]
+        questions: []
     })
 })
