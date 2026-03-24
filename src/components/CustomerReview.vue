@@ -44,10 +44,15 @@
             rgba(255, 239, 70, 0.85),
             rgba(7, 213, 241, 0.85)
         );
-        color:  rgb(6, 43, 78);
         min-height: 20vh;
         padding-top: 80px;
         padding-bottom: 80px;
         margin-bottom: 40px;
+    }
+    h1 {
+        color:  rgb(6, 43, 78)
+    }
+    p {
+        color:  rgb(6, 43, 78)
     }
 </style>
