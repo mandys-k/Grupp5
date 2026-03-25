@@ -1,7 +1,15 @@
 <template>
+    <div>
+        <div class="timer-btn-container">
+            <button class="btn timer-btn" @click="showTimer = !showTimer">
+                Timer⏰
+            </button>
+        </div>
+        <div v-if="showTimer" class="card">
+            <CountdownTimer />
+        </div>
     <div class="reading-container">
         <h1>Reading Comprehension Italiano</h1>
-        <CountdownTimer />
         <div class="text-box">
             <h2>Testo</h2>
             <p>
@@ -85,11 +93,14 @@
             </p>
         </div>
     </div>
+    </div>
 </template>
 
 <script setup>
     import { ref } from "vue"
     import CountdownTimer from "./CountdownTimer.vue"
+
+    const showTimer = ref(false)
 
     const answers = ref({
         q1: null,
@@ -111,6 +122,22 @@
 </script>
 
 <style scoped>
+    .timer-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .timer-btn {
+        width: 100%;
+        max-width: 200px;
+        background-color: #0b0b62;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
     .reading-container {
         max-width: 800px;
         margin: auto;
