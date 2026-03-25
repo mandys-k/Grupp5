@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <h1>Memory cards</h1>
+    <h1>Memory game</h1>
     <MemoryGame />
 </template>
 

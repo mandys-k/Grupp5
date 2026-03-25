@@ -49,7 +49,7 @@
                     <button
                         class="hamburger"
                         @click="navbarmenu"
-                        :class="{ darkmodeHamburger: themeStore.darkModeOn }"
+                        :class="{ darkmodeHamburger: themeStore.darkMode }"
                     >
                         ☰
                     </button>
@@ -58,7 +58,7 @@
                 <b-col
                     md="8"
                     class="d-none d-md-flex justify-content-end nav-links"
-                    :class="{ darkmodeLinks: themeStore.darkModeOn }"
+                    :class="{ darkmodeLinks: themeStore.darkMode }"
                 >
                     <RouterLink to="/UserDashboard">Dashboard</RouterLink>
                     <RouterLink to="/levels">Levels</RouterLink>

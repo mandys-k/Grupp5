@@ -16,15 +16,15 @@
     <button
         class="darkmode-button"
         :class="{
-            darkmodeButtonOn: themeStore.darkModeOn,
-            darkmodeButtonOff: !themeStore.darkModeOn
+            darkmodeButtonOn: themeStore.darkMode,
+            darkmodeButtonOff: !themeStore.darkMode
         }"
         @click="themeStore.onDarkMode"
         type="button"
     >
         <span
             class="material-symbols-outlined circle"
-            :class="{ circleRight: themeStore.darkModeOn }"
+            :class="{ circleRight: themeStore.darkMode }"
         >
             circle
         </span>
@@ -55,7 +55,7 @@
     }
 
     .darkmodeButtonOn:hover {
-        background-color: rgb(35, 35, 35);
+        background-color: rgb(80, 80, 80);
     }
 
     .darkmodeButtonOff:hover {
