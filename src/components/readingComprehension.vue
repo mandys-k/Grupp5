@@ -93,6 +93,9 @@
             </p>
         </div>
     </div>
+    <div class="back-link-container">
+        <router-link to="/levels" class="back-link">← Back to levels</router-link>
+    </div>
     </div>
 </template>
 
@@ -167,7 +170,7 @@
         margin: 5px 0;
     }
 
-    button {
+    .reading-container button {
         padding: 10px 18px;
         background: #1565c0;
         color: white;
@@ -176,7 +179,7 @@
         cursor: pointer;
     }
 
-    button:hover {
+    .reading-container button:hover {
         background: #07d5f1;
     }
 
@@ -184,5 +187,23 @@
         margin-top: 1rem;
         font-weight: bold;
         color: #fe9f00;
+    }
+
+    .back-link-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .back-link {
+        color: #0b0b62;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
     }
 </style>

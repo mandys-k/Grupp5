@@ -2,9 +2,9 @@
     <div class="levels-page">
         <h1 class="page-title">Quiz Levels</h1>
         <LevelCard />
-        <RouterLink to="/UserDashboard" class="back-link"
-            >← Back to Dashboard</RouterLink
-        >
+        <div class="back-link-container">
+            <RouterLink to="/UserDashboard" class="back-link">← Back to Dashboard</RouterLink>
+        </div>
     </div>
 </template>
 
@@ -23,9 +23,14 @@
         font-size: 2rem;
     }
 
-    .back-link {
-        display: inline-block;
+    .back-link-container {
+        display: flex;
+        justify-content: center;
         margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .back-link {
         color: #0b0b62;
         font-weight: 600;
         text-decoration: none;
