@@ -6,13 +6,25 @@
         components: {
             CountdownTimer,
             VocabularyQuiz
+        },
+        data() {
+            return { showTimer: false }
         }
     }
 </script>
 
 <template>
+    <div class="timer-btn-container">
+        <button class="timer-btn" @click="showTimer = !showTimer">
+            Timer⏰
+        </button>
+    </div>
+
+    <div v-if="showTimer">
+        <CountdownTimer />
+    </div>
+
     <h1>Quiz</h1>
-    <CountdownTimer />
     <VocabularyQuiz />
     <div class="back-link-container">
         <RouterLink to="/learning/1" class="back-link">← Back to learning</RouterLink>
@@ -23,6 +35,7 @@
     h1 {
         text-align: center;
         font-family: "PT serif", serif;
+        margin-top: 1em;
     }
 
     .back-link-container {
@@ -41,5 +54,23 @@
 
     .back-link:hover {
         text-decoration: underline;
+    }
+
+    .timer-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .timer-btn {
+        width: 100%;
+        max-width: 200px;
+        background-color: #0b0b62;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
     }
 </style>
