@@ -50,7 +50,7 @@
         ]
     },
     {
-        "question": "How do you say 'I would like a coffee', please in Italian?",
+        "question": "How do you say 'I would like a coffee please' in Italian?",
         "answers": [
             {
                 "option": "A.",
@@ -198,7 +198,7 @@
         "question": "What does 'Un'acqua, per favore' mean?",
         "answers": [
             { "option": "A.", "text": "A menu, please", "correct": false },
-            { "option": "B.", "text": "A water, please", "correct": true },
+            { "option": "B.", "text": "Water, please", "correct": true },
             { "option": "C.", "text": "A table, please", "correct": false },
             { "option": "D.", "text": "A coffee, please", "correct": false }
         ]
