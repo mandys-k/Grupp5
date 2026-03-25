@@ -84,6 +84,8 @@
         display: flex;
         align-items: center;
         min-width: 180px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .category-card .card {
