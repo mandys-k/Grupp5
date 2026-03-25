@@ -26,11 +26,8 @@
 
     <h1>Quiz</h1>
     <VocabularyQuiz />
-    <div id="levels-container">
-        <span class="material-symbols-outlined"> arrow_back </span>
-        <RouterLink id="levels-link" to="/learning/1">
-            Back to all categories
-        </RouterLink>
+    <div class="back-link-container">
+        <RouterLink to="/learning/1" class="back-link">← Back to all categories</RouterLink>
     </div>
 </template>
 
@@ -41,21 +38,22 @@
         margin-top: 1em;
     }
 
-    #levels-link {
-        color: black;
-        font-size: 1.1em;
-    }
-
-    #levels-link:hover {
-        color: rgb(83, 83, 83);
-    }
-
-    #levels-container {
+    .back-link-container {
         display: flex;
-        align-items: center;
         justify-content: center;
-        gap: 0.5em;
-        margin: 5em;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .back-link {
+        color: #0b0b62;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
     }
 
     .timer-btn-container {

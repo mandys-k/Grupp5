@@ -128,14 +128,11 @@
 
     .back-link {
         margin-top: 24px;
+        margin-bottom: 24px;
         color: #0b0b62;
         font-weight: 600;
         text-decoration: none;
         font-size: 0.95rem;
-    }
-
-    .back-link:hover {
-        text-decoration: underline;
     }
 
     .back-link:hover {

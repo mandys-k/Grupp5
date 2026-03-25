@@ -19,10 +19,8 @@ const showTimer = ref(false)
 
   <WordsAndPhrases />
 
-  <div id="levels-container">
-    <router-link to="/levels" class="back-link">
-      ← Back to levels
-    </router-link>
+  <div class="back-link-container">
+    <router-link to="/levels" class="back-link">← Back to levels</router-link>
   </div>
 </template>
 
@@ -46,8 +44,14 @@ const showTimer = ref(false)
     .timer-btn p {
         margin: 0;
     }
-    .back-link {
+    .back-link-container {
+        display: flex;
+        justify-content: center;
         margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .back-link {
         color: #0b0b62;
         font-weight: 600;
         text-decoration: none;
