@@ -1,6 +1,7 @@
 <template>
     <div class="reading-container">
         <h1>Reading Comprehension Italiano</h1>
+        <CountdownTimer />
         <div class="text-box">
             <h2>Testo</h2>
             <p>
@@ -88,6 +89,7 @@
 
 <script setup>
     import { ref } from "vue"
+    import CountdownTimer from "./CountdownTimer.vue"
 
     const answers = ref({
         q1: null,

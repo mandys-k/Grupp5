@@ -3,9 +3,9 @@
         <h2><b>Level 1</b></h2>
         <!--Situation category for words and phrases-->
         <b-row
-            class="category-card flex-nowrap overflow-auto g-3 justify-content-center"
+            class="category-card g-3 justify-content-center"
         >
-            <b-col v-for="cat in categories" :key="cat" cols="auto">
+            <b-col v-for="cat in categories" :key="cat" cols="12" sm="auto">
                 <b-card class="text-center" @click="store.selectCategory(cat)">
                     {{ cat }}
                 </b-card>
@@ -83,10 +83,6 @@
     .category-card {
         display: flex;
         align-items: center;
-        padding-left: 8px;
-        padding-right: 8px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
     }
 
     .category-card .card {
