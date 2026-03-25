@@ -83,9 +83,10 @@
     .category-card {
         display: flex;
         align-items: center;
-        min-width: 180px;
         padding-left: 8px;
         padding-right: 8px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .category-card .card {
