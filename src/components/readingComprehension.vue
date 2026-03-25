@@ -94,16 +94,19 @@
         </div>
     </div>
     <div class="back-link-container">
-        <router-link to="/levels" class="back-link">← Back to levels</router-link>
+        <router-link :to="`/learning/${level}`" class="back-link">← Back to learning</router-link>
     </div>
     </div>
 </template>
 
 <script setup>
     import { ref } from "vue"
+    import { useRoute } from "vue-router"
     import CountdownTimer from "./CountdownTimer.vue"
 
     const showTimer = ref(false)
+    const route = useRoute()
+    const level = route.query.level || 1
 
     const answers = ref({
         q1: null,

@@ -15,7 +15,7 @@
     <CountdownTimer />
     <VocabularyQuiz />
     <div class="back-link-container">
-        <RouterLink to="/learning/1" class="back-link">← Back to all categories</RouterLink>
+        <RouterLink to="/learning/1" class="back-link">← Back to learning</RouterLink>
     </div>
 </template>
 

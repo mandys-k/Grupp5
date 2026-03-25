@@ -1,9 +1,12 @@
 <script setup>
 import { ref } from "vue"
+import { useRoute } from "vue-router"
 import CountdownTimer from "../components/CountdownTimer.vue"
 import WordsAndPhrases from "../components/wordsAndPhrases.vue"
 
 const showTimer = ref(false)
+const route = useRoute()
+const level = route.query.level || 1
 </script>
 
 <template>
@@ -20,7 +23,7 @@ const showTimer = ref(false)
   <WordsAndPhrases />
 
   <div class="back-link-container">
-    <router-link to="/levels" class="back-link">← Back to levels</router-link>
+    <router-link :to="`/learning/${level}`" class="back-link">← Back to learning</router-link>
   </div>
 </template>
 
