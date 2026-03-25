@@ -16,7 +16,7 @@ const level = route.query.level || 1
   </button>
   </div>
 
-  <div v-if="showTimer" class="card">
+  <div v-if="showTimer">
     <CountdownTimer />
   </div>
 
