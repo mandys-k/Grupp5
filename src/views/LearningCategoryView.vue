@@ -92,6 +92,7 @@
         background-color: #f0f4ff;
         border: 2px solid;
         color: #0b0b62;
+        margin-bottom: 20px;
     }
 
     .study-card .card:hover {
@@ -104,27 +105,6 @@
         color: inherit;
     }
 
-    .study-card .card {
-        width: 420px;
-        height: 70px;
-        text-align: center;
-        font-size: 1.6rem;
-        transition: all 0.25s ease;
-        border-color: #2f80ed;
-        background-color: #eaf4ff;
-        border: 2px solid;
-        color: #0b0b62;
-    }
-
-    .study-card .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .study-card a {
-        text-decoration: none;
-        color: inherit;
-    }
 
     .back-link {
         margin-top: 24px;
