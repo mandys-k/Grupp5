@@ -16,7 +16,7 @@
     <VocabularyQuiz />
     <div id="levels-container">
         <span class="material-symbols-outlined"> arrow_back </span>
-        <RouterLink id="levels-link" to="/learning/:level">
+        <RouterLink id="levels-link" to="/learning/1">
             Back to all categories
         </RouterLink>
     </div>

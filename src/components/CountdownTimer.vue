@@ -5,8 +5,6 @@
         data() {
             return {
                 startingMinutes: 10,
-                minutes: "00",
-                seconds: "00",
                 timer: null,
                 totalSeconds: 0,
                 replay: false,
@@ -28,13 +26,6 @@
                     }
 
                     this.totalSeconds--
-
-                    const mins = Math.floor(this.totalSeconds / 60)
-                    const secs = this.totalSeconds % 60
-
-                    this.minutes = mins < 10 ? "0" + mins : mins
-                    this.seconds = secs < 10 ? "0" + secs : secs
-
                     this.replay = false
 
                     if (this.totalSeconds < 60) {
@@ -43,7 +34,6 @@
                 }, 1000)
 
                 this.replayTime = this.startingMinutes
-                //console.log(this.timer)
             },
             onShortTimer() {
                 this.startingMinutes = 5
@@ -59,6 +49,16 @@
                 this.startingMinutes = this.replayTime
 
                 this.onStartTimer()
+            }
+        },
+        computed: {
+            minutes() {
+                const mins = Math.floor(this.totalSeconds / 60)
+                return mins < 10 ? "0" + mins : mins
+            },
+            seconds() {
+                const secs = this.totalSeconds % 60
+                return secs < 10 ? "0" + secs : secs
             }
         }
     }
