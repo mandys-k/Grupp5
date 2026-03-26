@@ -40,7 +40,8 @@ export const useUserStore = defineStore("user", {
 
     // Actions — functions that update state and sync changes to localStorage - SAK
     actions: {
-        // Step 1 of registration: validate and store pending data without creating account yet
+        // Step 1 of registration: validate and store pending data without creating account yet. This is used so that registration
+        // can be completed after the user selects language and traveller type, which are required fields for account creation - SAK
         validateNewUser(name, email, password) {
             if (
                 this.users.find(
