@@ -27,7 +27,9 @@
     <h1>Memory game</h1>
     <MemoryGame />
     <div class="back-link-container">
-        <router-link :to="`/learning/${level}`" class="back-link">← Back to learning</router-link>
+        <router-link :to="`/learning/${level}`" class="back-link"
+            >← Back to learning</router-link
+        >
     </div>
 </template>
 
@@ -56,7 +58,7 @@
     .timer-btn p {
         margin: 0;
     }
-        .back-link-container {
+    .back-link-container {
         display: flex;
         justify-content: center;
         margin-top: 24px;

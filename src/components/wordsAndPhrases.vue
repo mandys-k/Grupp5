@@ -2,9 +2,7 @@
     <b-container class="word-container mt-4">
         <h2><b>Level 1</b></h2>
         <!--Situation category for words and phrases-->
-        <b-row
-            class="category-card g-3 justify-content-center"
-        >
+        <b-row class="category-card g-3 justify-content-center">
             <b-col v-for="cat in categories" :key="cat" cols="12" sm="auto">
                 <b-card class="text-center" @click="store.selectCategory(cat)">
                     {{ cat }}

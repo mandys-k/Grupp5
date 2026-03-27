@@ -1,46 +1,58 @@
 <template>
     <div class="login-page-wrapper">
-        <img v-if="errorMessage" src="@/assets/thinking-bird.png" alt="" class="side-bird side-bird-left" />
-        <img v-if="errorMessage" src="@/assets/thinking-bird.png" alt="" class="side-bird side-bird-right" />
-    <div class="login-container">
-        <h1>Welcome to TripLingo!</h1>
-        <p class="subtitle">Log in to track your progress</p>
+        <img
+            v-if="errorMessage"
+            src="@/assets/thinking-bird.png"
+            alt=""
+            class="side-bird side-bird-left"
+        />
+        <img
+            v-if="errorMessage"
+            src="@/assets/thinking-bird.png"
+            alt=""
+            class="side-bird side-bird-right"
+        />
+        <div class="login-container">
+            <h1>Welcome to TripLingo!</h1>
+            <p class="subtitle">Log in to track your progress</p>
 
-        <!-- @submit.prevent I've read stops browser's default form submission and instead
+            <!-- @submit.prevent I've read stops browser's default form submission and instead
       ive set it to call the handleLogin function - SAK -->
-        <form @submit.prevent="handleLogin">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                    id="email"
-                    v-model="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                />
-            </div>
+            <form @submit.prevent="handleLogin">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        v-model="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                    id="password"
-                    v-model="password"
-                    type="password"
-                    placeholder="Enter your password"
-                    required
-                />
-            </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        id="password"
+                        v-model="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        required
+                    />
+                </div>
 
-            <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+                <p v-if="errorMessage" class="error-message">
+                    {{ errorMessage }}
+                </p>
 
-            <button type="submit" class="btn-login">Log In</button>
-        </form>
+                <button type="submit" class="btn-login">Log In</button>
+            </form>
 
-        <p class="register-link">
-            Don't have an account?
-            <RouterLink to="/register">Register here</RouterLink>
-        </p>
-    </div>
+            <p class="register-link">
+                Don't have an account?
+                <RouterLink to="/register">Register here</RouterLink>
+            </p>
+        </div>
     </div>
 </template>
 

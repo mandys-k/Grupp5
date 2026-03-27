@@ -1,239 +1,265 @@
 <template>
     <div>
-    <div
-        class="d-flex flex-wrap gap-3 mx-auto my-5 px-3"
-        style="max-width: 860px"
-    >
-        <!-- LEFT CARD (Desktop) — Profile summary - SAK-->
         <div
-            class="card p-4 d-flex flex-column align-items-center text-center flex-grow-1"
-            style="min-width: 240px"
+            class="d-flex flex-wrap gap-3 mx-auto my-5 px-3"
+            style="max-width: 860px"
         >
-            <img
-                src="@/assets/happy-bird.png"
-                alt="TripLingo userimage"
-                class="userimage mb-3"
-            />
-
-            <h1 class="fw-bold fs-4 mb-1">
-                Welcome back, {{ userStore.currentName }}!
-            </h1>
-
-            <p class="text-muted small mb-2">{{ userStore.currentEmail }}</p>
-
-            <p class="traveller-badge mb-4">{{ userStore.travellerType }}</p>
-        </div>
-
-        <!-- RIGHT CARD (Desktop) — Progress summary - SAK -->
-        <div class="card p-4 flex-grow-1" style="min-width: 260px">
-            <h2 class="fw-bold mb-4" style="font-size: 1.3rem">
-                Your Progress
-            </h2>
-
+            <!-- LEFT CARD (Desktop) — Profile summary - SAK-->
             <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                class="card p-4 d-flex flex-column align-items-center text-center flex-grow-1"
+                style="min-width: 240px"
             >
-                <span class="text-muted small">Current Level</span>
-                <span class="fw-bold">{{ userStore.currentLevel }}</span>
-            </div>
+                <img
+                    src="@/assets/happy-bird.png"
+                    alt="TripLingo userimage"
+                    class="userimage mb-3"
+                />
 
-            <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
-            >
-                <span class="text-muted small">Traveller Type</span>
-                <span class="fw-bold traveller-type">{{
-                    userStore.travellerType
-                }}</span>
-            </div>
+                <h1 class="fw-bold fs-4 mb-1">
+                    Welcome back, {{ userStore.currentName }}!
+                </h1>
 
-            <div class="mt-4">
-                <div
-                    class="d-flex justify-content-between small mb-2 opacity-75"
-                >
-                    <span>Overall Progress</span>
-                    <span>{{ progressPercent }}%</span>
-                </div>
+                <p class="text-muted small mb-2">
+                    {{ userStore.currentEmail }}
+                </p>
 
-                <div class="progress-bar-track">
-                    <div
-                        class="progress-bar-fill"
-                        :style="{ width: progressPercent + '%' }"
-                    ></div>
-                </div>
-
-                <p class="text-muted small mt-2">
-                    {{ levelsCompleted }} of {{ totalLevels }} levels completed
+                <p class="traveller-badge mb-4">
+                    {{ userStore.travellerType }}
                 </p>
             </div>
 
-            <RouterLink to="/levels" class="btn btn-levels mt-4"
-                >Go to Levels</RouterLink
-            >
-        </div>
+            <!-- RIGHT CARD (Desktop) — Progress summary - SAK -->
+            <div class="card p-4 flex-grow-1" style="min-width: 260px">
+                <h2 class="fw-bold mb-4" style="font-size: 1.3rem">
+                    Your Progress
+                </h2>
 
-        <!-- Placeholder cards for progress, Languages, Friends, Quiz time. NPM-Install is needed for
-      installing flag-icons npm package. I've added it to list of dependencies in package.json  . SAK-->
-        <div
-            class="card p-4 coming-soon-card"
-            style="min-width: 240px; flex: 1"
-        >
-            <div class="coming-soon-badge card-corner-badge">Coming Soon</div>
-            <div class="d-flex align-items-center gap-3 mb-3 mt-3">
-                <span :class="`fi fi-${languageFlag} flag-placeholder`"></span>
-                <div>
-                    <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
-                        {{ userStore.currentLanguage || "Not set" }}
-                    </h3>
-                    <p class="text-muted small mb-0">
-                        Language you're learning
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">Current Level</span>
+                    <span class="fw-bold">{{ userStore.currentLevel }}</span>
+                </div>
+
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">Traveller Type</span>
+                    <span class="fw-bold traveller-type">{{
+                        userStore.travellerType
+                    }}</span>
+                </div>
+
+                <div class="mt-4">
+                    <div
+                        class="d-flex justify-content-between small mb-2 opacity-75"
+                    >
+                        <span>Overall Progress</span>
+                        <span>{{ progressPercent }}%</span>
+                    </div>
+
+                    <div class="progress-bar-track">
+                        <div
+                            class="progress-bar-fill"
+                            :style="{ width: progressPercent + '%' }"
+                        ></div>
+                    </div>
+
+                    <p class="text-muted small mt-2">
+                        {{ levelsCompleted }} of {{ totalLevels }} levels
+                        completed
                     </p>
                 </div>
-            </div>
-            <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
-            >
-                <span class="text-muted small">Spoken in</span>
-                <span class="fw-bold small">20+ countries</span>
-            </div>
-            <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
-            >
-                <span class="text-muted small">Native speakers</span>
-                <span class="fw-bold small">~500 million</span>
-            </div>
-            <a
-                href="#"
-                class="btn btn-outline-secondary btn-sm mt-3 w-100 disabled"
-                tabindex="-1"
-            >
-                Explore Language &amp; Countries
-            </a>
-        </div>
 
-        <div
-            class="card p-4 coming-soon-card"
-            style="min-width: 240px; flex: 1"
-        >
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
-                    Quiz Time
-                </h3>
-                <div class="coming-soon-badge">Coming Soon</div>
-            </div>
-            <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
-            >
-                <span class="text-muted small">Total time</span>
-                <span class="fw-bold">— hrs — mins</span>
-            </div>
-            <div
-                class="d-flex justify-content-between align-items-center py-2 border-bottom"
-            >
-                <span class="text-muted small">This week</span>
-                <span class="fw-bold">— mins</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center py-2">
-                <span class="text-muted small">Daily target</span>
-                <span class="fw-bold">— / 15 mins</span>
-            </div>
-            <div class="daily-target-track mt-3">
-                <div class="daily-target-fill" style="width: 0%"></div>
-            </div>
-            <p class="text-muted small mt-2">
-                Set a daily goal to build a streak
-            </p>
-        </div>
-
-        <div
-            class="card p-4 coming-soon-card"
-            style="min-width: 260px; flex: 1.4"
-        >
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
-                    Friends &amp; Leaderboard
-                </h3>
-                <div class="coming-soon-badge">Coming Soon</div>
-            </div>
-
-            <div class="d-flex align-items-center gap-3 py-2 border-bottom">
-                <img
-                    src="@/assets/avatar-alex.png"
-                    alt="Alex"
-                    class="friend-avatar"
-                />
-                <div class="flex-grow-1">
-                    <div class="d-flex justify-content-between">
-                        <span class="fw-bold small">Alex</span>
-                        <span class="text-muted small">Level 6</span>
-                    </div>
-                    <div class="daily-target-track mt-1">
-                        <div class="daily-target-fill" style="width: 60%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center gap-3 py-2 border-bottom">
-                <img
-                    src="@/assets/avatar-jamie.png"
-                    alt="Jamie"
-                    class="friend-avatar"
-                />
-                <div class="flex-grow-1">
-                    <div class="d-flex justify-content-between">
-                        <span class="fw-bold small">Jamie</span>
-                        <span class="text-muted small">Level 4</span>
-                    </div>
-                    <div class="daily-target-track mt-1">
-                        <div class="daily-target-fill" style="width: 40%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex align-items-center gap-3 py-2">
-                <img
-                    src="@/assets/avatar-sam.png"
-                    alt="Sam"
-                    class="friend-avatar"
-                />
-                <div class="flex-grow-1">
-                    <div class="d-flex justify-content-between">
-                        <span class="fw-bold small">Sam</span>
-                        <span class="text-muted small">Level 2</span>
-                    </div>
-                    <div class="daily-target-track mt-1">
-                        <div class="daily-target-fill" style="width: 20%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <button
-                class="btn btn-outline-secondary btn-sm mt-3 w-100 disabled"
-                tabindex="-1"
-            >
-                Add Friends
-            </button>
-
-            <button
-                class="btn btn-facebook-connect mt-2 w-100 disabled"
-                tabindex="-1"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="me-2"
+                <RouterLink to="/levels" class="btn btn-levels mt-4"
+                    >Go to Levels</RouterLink
                 >
-                    <path
-                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"
+            </div>
+
+            <!-- Placeholder cards for progress, Languages, Friends, Quiz time. NPM-Install is needed for
+      installing flag-icons npm package. I've added it to list of dependencies in package.json  . SAK-->
+            <div
+                class="card p-4 coming-soon-card"
+                style="min-width: 240px; flex: 1"
+            >
+                <div class="coming-soon-badge card-corner-badge">
+                    Coming Soon
+                </div>
+                <div class="d-flex align-items-center gap-3 mb-3 mt-3">
+                    <span
+                        :class="`fi fi-${languageFlag} flag-placeholder`"
+                    ></span>
+                    <div>
+                        <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
+                            {{ userStore.currentLanguage || "Not set" }}
+                        </h3>
+                        <p class="text-muted small mb-0">
+                            Language you're learning
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">Spoken in</span>
+                    <span class="fw-bold small">20+ countries</span>
+                </div>
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">Native speakers</span>
+                    <span class="fw-bold small">~500 million</span>
+                </div>
+                <a
+                    href="#"
+                    class="btn btn-outline-secondary btn-sm mt-3 w-100 disabled"
+                    tabindex="-1"
+                >
+                    Explore Language &amp; Countries
+                </a>
+            </div>
+
+            <div
+                class="card p-4 coming-soon-card"
+                style="min-width: 240px; flex: 1"
+            >
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4"
+                >
+                    <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
+                        Quiz Time
+                    </h3>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">Total time</span>
+                    <span class="fw-bold">— hrs — mins</span>
+                </div>
+                <div
+                    class="d-flex justify-content-between align-items-center py-2 border-bottom"
+                >
+                    <span class="text-muted small">This week</span>
+                    <span class="fw-bold">— mins</span>
+                </div>
+                <div
+                    class="d-flex justify-content-between align-items-center py-2"
+                >
+                    <span class="text-muted small">Daily target</span>
+                    <span class="fw-bold">— / 15 mins</span>
+                </div>
+                <div class="daily-target-track mt-3">
+                    <div class="daily-target-fill" style="width: 0%"></div>
+                </div>
+                <p class="text-muted small mt-2">
+                    Set a daily goal to build a streak
+                </p>
+            </div>
+
+            <div
+                class="card p-4 coming-soon-card"
+                style="min-width: 260px; flex: 1.4"
+            >
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4"
+                >
+                    <h3 class="fw-bold mb-0" style="font-size: 1.1rem">
+                        Friends &amp; Leaderboard
+                    </h3>
+                    <div class="coming-soon-badge">Coming Soon</div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 py-2 border-bottom">
+                    <img
+                        src="@/assets/avatar-alex.png"
+                        alt="Alex"
+                        class="friend-avatar"
                     />
-                </svg>
-                Connect with Facebook
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold small">Alex</span>
+                            <span class="text-muted small">Level 6</span>
+                        </div>
+                        <div class="daily-target-track mt-1">
+                            <div
+                                class="daily-target-fill"
+                                style="width: 60%"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 py-2 border-bottom">
+                    <img
+                        src="@/assets/avatar-jamie.png"
+                        alt="Jamie"
+                        class="friend-avatar"
+                    />
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold small">Jamie</span>
+                            <span class="text-muted small">Level 4</span>
+                        </div>
+                        <div class="daily-target-track mt-1">
+                            <div
+                                class="daily-target-fill"
+                                style="width: 40%"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 py-2">
+                    <img
+                        src="@/assets/avatar-sam.png"
+                        alt="Sam"
+                        class="friend-avatar"
+                    />
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold small">Sam</span>
+                            <span class="text-muted small">Level 2</span>
+                        </div>
+                        <div class="daily-target-track mt-1">
+                            <div
+                                class="daily-target-fill"
+                                style="width: 20%"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="btn btn-outline-secondary btn-sm mt-3 w-100 disabled"
+                    tabindex="-1"
+                >
+                    Add Friends
+                </button>
+
+                <button
+                    class="btn btn-facebook-connect mt-2 w-100 disabled"
+                    tabindex="-1"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="me-2"
+                    >
+                        <path
+                            d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"
+                        />
+                    </svg>
+                    Connect with Facebook
+                </button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mb-5">
+            <button class="btn btn-danger px-4" @click="handleLogout">
+                Log Out
             </button>
         </div>
-    </div>
-    <div class="d-flex justify-content-center mb-5">
-        <button class="btn btn-danger px-4" @click="handleLogout">Log Out</button>
-    </div>
     </div>
 </template>
 

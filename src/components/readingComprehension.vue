@@ -1,102 +1,131 @@
 <template>
     <div>
-         <div class="timer-btn-container">
+        <div class="timer-btn-container">
             <button class="btn timer-btn" @click="showTimer = !showTimer">
                 Timer⏰
             </button>
-            </div>
-
-            <div v-if="showTimer">
-                <CountdownTimer />
-         </div>
-    <div class="reading-container">
-        <h1>Reading Comprehension Italiano</h1>
-        <div class="text-box">
-            <h2>Testo</h2>
-            <p>
-                Maria viaggia spesso per lavoro. Questa settimana è a Roma per
-                una conferenza internazionale. La mattina incontra i suoi
-                colleghi in un bar vicino all'hotel e bevono un caffè insieme.
-                Dopo la conferenza, Maria visita il Colosseo e mangia una pizza
-                in un piccolo ristorante. La sera scrive alcune note per
-                ricordare nuove parole italiane.
-            </p>
         </div>
-
-        <div class="question">
-            <h2>Domande</h2>
-
-            <div class="question">
-                <p>1. Perché Maria è a Roma?</p>
-
-                <label>
-                    <input type="radio" value="vacanza" v-model="answers.q1" />
-                    Per vacanza
-                </label>
-
-                <label>
-                    <input type="radio" value="lavoro" v-model="answers.q1" />
-                    Per lavoro
-                </label>
-
-                <label>
-                    <input type="radio" value="studio" v-model="answers.q1" />
-                    Per studiare
-                </label>
-            </div>
-
-            <div class="question">
-                <p>2. Dove incontra i suoi colleghi?</p>
-
-                <label>
-                    <input type="radio" value="bar" v-model="answers.q2" />
-                    In un bar
-                </label>
-
-                <label>
-                    <input type="radio" value="hotel" v-model="answers.q2" />
-                    In hotel
-                </label>
-
-                <label>
-                    <input
-                        type="radio"
-                        value="ristorante"
-                        v-model="answers.q2"
-                    />
-                    In un ristorante
-                </label>
-            </div>
-
-            <div class="question">
-                <p>3. Cosa mangia Maria?</p>
-
-                <label>
-                    <input type="radio" value="pizza" v-model="answers.q3" />
-                    Pizza
-                </label>
-
-                <label>
-                    <input type="radio" value="pasta" v-model="answers.q3" />
-                    Pasta
-                </label>
-
-                <label>
-                    <input type="radio" value="insalata" v-model="answers.q3" />
-                    Insalata
-                </label>
-            </div>
-
-            <button @click="checkAnswers">Check answers</button>
-
-            <p v-if="result !== null" class="result">
-                You got {{ result }} / 3 correct
-            </p>
+        <div v-if="showTimer">
+            <CountdownTimer />
         </div>
-    </div>
-    <div class="back-link-container">
-        <router-link :to="`/learning/${level}`" class="back-link">← Back to learning</router-link>
-    </div>
+        <div class="reading-container">
+            <h1>Reading Comprehension Italiano</h1>
+            <div class="text-box">
+                <h2>Testo</h2>
+                <p>
+                    Maria viaggia spesso per lavoro. Questa settimana è a Roma
+                    per una conferenza internazionale. La mattina incontra i
+                    suoi colleghi in un bar vicino all'hotel e bevono un caffè
+                    insieme. Dopo la conferenza, Maria visita il Colosseo e
+                    mangia una pizza in un piccolo ristorante. La sera scrive
+                    alcune note per ricordare nuove parole italiane.
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Domande</h2>
+
+                <div class="question">
+                    <p>1. Perché Maria è a Roma?</p>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="vacanza"
+                            v-model="answers.q1"
+                        />
+                        Per vacanza
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="lavoro"
+                            v-model="answers.q1"
+                        />
+                        Per lavoro
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="studio"
+                            v-model="answers.q1"
+                        />
+                        Per studiare
+                    </label>
+                </div>
+
+                <div class="question">
+                    <p>2. Dove incontra i suoi colleghi?</p>
+
+                    <label>
+                        <input type="radio" value="bar" v-model="answers.q2" />
+                        In un bar
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="hotel"
+                            v-model="answers.q2"
+                        />
+                        In hotel
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="ristorante"
+                            v-model="answers.q2"
+                        />
+                        In un ristorante
+                    </label>
+                </div>
+
+                <div class="question">
+                    <p>3. Cosa mangia Maria?</p>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="pizza"
+                            v-model="answers.q3"
+                        />
+                        Pizza
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="pasta"
+                            v-model="answers.q3"
+                        />
+                        Pasta
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            value="insalata"
+                            v-model="answers.q3"
+                        />
+                        Insalata
+                    </label>
+                </div>
+
+                <button @click="checkAnswers">Check answers</button>
+
+                <p v-if="result !== null" class="result">
+                    You got {{ result }} / 3 correct
+                </p>
+            </div>
+        </div>
+        <div class="back-link-container">
+            <router-link :to="`/learning/${level}`" class="back-link"
+                >← Back to learning</router-link
+            >
+        </div>
     </div>
 </template>
 
