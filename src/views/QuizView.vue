@@ -56,13 +56,11 @@
         text-decoration: underline;
     }
 
-    .timer-btn-container {
+    .timer-btn-container{
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         align-items: center;
-        margin-bottom: 1rem;
     }
-
     .timer-btn {
         width: 100%;
         max-width: 200px;
@@ -72,5 +70,8 @@
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        }
+    .timer-btn p {
+        margin: 0;
     }
 </style>

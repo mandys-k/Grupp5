@@ -10,15 +10,15 @@ const level = route.query.level || 1
 </script>
 
 <template>
-     <div class="timer-btn-container">
+    <div class="timer-btn-container">
         <button class="btn timer-btn" @click="showTimer = !showTimer">
             Timer⏰
         </button>
-        </div>
-
-        <div v-if="showTimer" >
-            <CountdownTimer />
     </div>
+
+  <div v-if="showTimer">
+    <CountdownTimer />
+  </div>
 
     <listningComprehension />
     <div class="back-link-container">

@@ -15,13 +15,13 @@
 
 <template>
     <div class="timer-btn-container">
-        <button class="timer-btn" @click="showTimer = !showTimer">
+        <button class="btn timer-btn" @click="showTimer = !showTimer">
             Timer⏰
         </button>
-    </div>
+        </div>
 
-    <div v-if="showTimer">
-        <CountdownTimer />
+        <div v-if="showTimer">
+            <CountdownTimer />
     </div>
 
     <h1>Memory game</h1>
@@ -38,12 +38,11 @@
         margin-top: 1em;
     }
 
-    .timer-btn-container {
+    .timer-btn-container{
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         align-items: center;
     }
-
     .timer-btn {
         width: 100%;
         max-width: 200px;
@@ -53,6 +52,9 @@
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        }
+    .timer-btn p {
+        margin: 0;
     }
         .back-link-container {
         display: flex;
