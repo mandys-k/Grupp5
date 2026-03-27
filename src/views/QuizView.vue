@@ -15,7 +15,7 @@
 
 <template>
     <div class="timer-btn-container">
-        <button class="timer-btn" @click="showTimer = !showTimer">
+        <button class="btn timer-btn" @click="showTimer = !showTimer">
             Timer⏰
         </button>
     </div>

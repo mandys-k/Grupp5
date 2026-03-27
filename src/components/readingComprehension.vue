@@ -1,13 +1,14 @@
 <template>
     <div>
-        <div class="timer-btn-container">
+         <div class="timer-btn-container">
             <button class="btn timer-btn" @click="showTimer = !showTimer">
                 Timer⏰
             </button>
-        </div>
-        <div v-if="showTimer" class="card">
-            <CountdownTimer />
-        </div>
+            </div>
+
+            <div v-if="showTimer">
+                <CountdownTimer />
+         </div>
     <div class="reading-container">
         <h1>Reading Comprehension Italiano</h1>
         <div class="text-box">
