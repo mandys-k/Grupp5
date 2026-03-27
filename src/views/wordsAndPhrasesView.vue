@@ -1,37 +1,38 @@
 <script setup>
-import { ref } from "vue"
-import { useRoute } from "vue-router"
-import CountdownTimer from "../components/CountdownTimer.vue"
-import WordsAndPhrases from "../components/wordsAndPhrases.vue"
+    import { ref } from "vue"
+    import { useRoute } from "vue-router"
+    import CountdownTimer from "../components/CountdownTimer.vue"
+    import WordsAndPhrases from "../components/wordsAndPhrases.vue"
 
-const showTimer = ref(false)
-const route = useRoute()
-const level = route.query.level || 1
+    const showTimer = ref(false)
+    const route = useRoute()
+    const level = route.query.level || 1
 </script>
 
 <template>
-  <div class="timer-btn-container">
-  <button class="btn timer-btn" @click="showTimer = !showTimer">
-    Timer⏰
-  </button>
-  </div>
+    <div class="timer-btn-container">
+        <button class="btn timer-btn" @click="showTimer = !showTimer">
+            Timer⏰
+        </button>
+    </div>
 
-  <div v-if="showTimer">
-    <CountdownTimer />
-  </div>
+    <div v-if="showTimer">
+        <CountdownTimer />
+    </div>
 
-  <WordsAndPhrases />
+    <WordsAndPhrases />
 
-  <div class="back-link-container">
-    <router-link :to="`/learning/${level}`" class="back-link">← Back to learning</router-link>
-  </div>
+    <div class="back-link-container">
+        <router-link :to="`/learning/${level}`" class="back-link"
+            >← Back to learning</router-link
+        >
+    </div>
 </template>
 
 <style scoped>
-
-    .timer-btn-container{
+    .timer-btn-container {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
     }
     .timer-btn {
@@ -43,7 +44,7 @@ const level = route.query.level || 1
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
-        }
+    }
     .timer-btn p {
         margin: 0;
     }

@@ -27,7 +27,9 @@
     <h1>Quiz</h1>
     <VocabularyQuiz />
     <div class="back-link-container">
-        <RouterLink to="/learning/1" class="back-link">← Back to learning</RouterLink>
+        <RouterLink to="/learning/1" class="back-link"
+            >← Back to learning</RouterLink
+        >
     </div>
 </template>
 

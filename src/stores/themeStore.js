@@ -15,5 +15,5 @@ export const useThemeStore = defineStore("theme", {
             }
         }
     },
-    state: () => ({ darkMode: false})
+    state: () => ({ darkMode: false })
 })
