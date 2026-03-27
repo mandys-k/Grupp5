@@ -74,7 +74,6 @@
     }
     .saved-card {
         border-color: rgb(0, 35, 118);
-        background-color: #f0f4ff;
         border: 2px solid;
         color: #0b0b62;
     }

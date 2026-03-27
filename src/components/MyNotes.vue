@@ -63,7 +63,6 @@
         max-width: 700px;
         margin: auto;
         padding: 2rem;
-        background: white;
         border-radius: 12px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
