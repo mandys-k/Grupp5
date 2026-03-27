@@ -105,7 +105,6 @@
         color: inherit;
     }
 
-
     .back-link {
         margin-top: 24px;
         margin-bottom: 24px;

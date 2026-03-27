@@ -50,9 +50,9 @@
         margin-bottom: 40px;
     }
     h1 {
-        color:  rgb(6, 43, 78)
+        color: rgb(6, 43, 78);
     }
     p {
-        color:  rgb(6, 43, 78)
+        color: rgb(6, 43, 78);
     }
 </style>

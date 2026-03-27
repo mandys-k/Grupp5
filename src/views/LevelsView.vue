@@ -3,7 +3,9 @@
         <h1 class="page-title">Quiz Levels</h1>
         <LevelCard />
         <div class="back-link-container">
-            <RouterLink to="/UserDashboard" class="back-link">← Back to Dashboard</RouterLink>
+            <RouterLink to="/UserDashboard" class="back-link"
+                >← Back to Dashboard</RouterLink
+            >
         </div>
     </div>
 </template>

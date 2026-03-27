@@ -15,7 +15,7 @@
 
 <template>
     <div class="timer-btn-container">
-        <button class="timer-btn" @click="showTimer = !showTimer">
+        <button class="btn timer-btn" @click="showTimer = !showTimer">
             Timer⏰
         </button>
     </div>
@@ -27,7 +27,9 @@
     <h1>Quiz</h1>
     <VocabularyQuiz />
     <div class="back-link-container">
-        <RouterLink to="/learning/1" class="back-link">← Back to learning</RouterLink>
+        <RouterLink to="/learning/1" class="back-link"
+            >← Back to learning</RouterLink
+        >
     </div>
 </template>
 
@@ -56,13 +58,11 @@
         text-decoration: underline;
     }
 
-    .timer-btn-container {
+    .timer-btn-container{
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         align-items: center;
-        margin-bottom: 1rem;
     }
-
     .timer-btn {
         width: 100%;
         max-width: 200px;
@@ -72,5 +72,8 @@
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        }
+    .timer-btn p {
+        margin: 0;
     }
 </style>
